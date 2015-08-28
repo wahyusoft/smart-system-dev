@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 314
-  Top = 90
+  Left = 618
+  Top = 420
   Width = 905
   Height = 667
   Caption = 'Data Barang'
@@ -631,7 +631,7 @@ object frmBarang: TfrmBarang
       Top = 81
       Width = 247
       Height = 447
-      ActivePage = TabSheet3
+      ActivePage = TabSheet2
       Align = alRight
       MultiLine = True
       TabOrder = 1
@@ -806,7 +806,7 @@ object frmBarang: TfrmBarang
             Left = 16
             Top = 124
             Width = 15
-            Height = 14
+            Height = 13
             Caption = '>='
           end
           object Label11: TLabel
@@ -932,6 +932,7 @@ object frmBarang: TfrmBarang
               Font.Height = -11
               Font.Name = 'MS Sans Serif'
               Font.Style = [fsBold]
+              ParentFont = False
               Position = 0
               SortType = stAlphabetic
             end
@@ -1166,6 +1167,7 @@ object frmBarang: TfrmBarang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -1186,6 +1188,7 @@ object frmBarang: TfrmBarang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnEditClick
       end
       object btnHapus: TAdvGlassButton
         Left = 176

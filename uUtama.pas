@@ -127,6 +127,9 @@ type
     procedure AdvGlowButton10Click(Sender: TObject);
     procedure AdvGlowButton1Click(Sender: TObject);
     procedure AdvGlowButton14Click(Sender: TObject);
+    procedure mnPreviewMenuItems2Click(Sender: TObject);
+    procedure mnPreviewMenuItems1Click(Sender: TObject);
+    procedure mnPreviewMenuItems0SubItems0Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -269,6 +272,31 @@ begin
       tbSet.AddTab(frmSatuan);
       frmSatuan.Show;
     end;
+end;
+
+procedure TfUtama.mnPreviewMenuItems2Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfUtama.mnPreviewMenuItems1Click(Sender: TObject);
+begin
+  flogin := tflogin.Create(application);
+  try
+    flogin.ShowModal;
+  finally
+    flogin.Free;
+  end;
+end;
+
+procedure TfUtama.mnPreviewMenuItems0SubItems0Click(Sender: TObject);
+begin
+   frmSetting := tfrmSetting.Create(application);
+try
+  frmSetting.showmodal;
+finally
+  frmSetting.Free;
+end;
 end;
 
 end.

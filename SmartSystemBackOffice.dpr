@@ -10,7 +10,8 @@ uses
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
   uBarang in 'uBarang.pas' {frmBarang},
-  uKelompok in 'uKelompok.pas' {frmKelompok};
+  uKelompok in 'uKelompok.pas' {frmKelompok},
+  utambahbrg in 'utambahbrg.pas' {frmtambahbrg};
 
 {$R *.res}
 

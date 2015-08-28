@@ -136,6 +136,8 @@ type
     procedure CBStsKKKeyPress(Sender: TObject; var Key: Char);
     procedure CBCacatKeyPress(Sender: TObject; var Key: Char);
     procedure BtnTutupClick(Sender: TObject);
+    procedure btnBaruClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -154,7 +156,7 @@ var
 
 implementation
 
-uses uDM, DB, DBTables;
+uses uDM, DB, DBTables, utambahbrg;
 
 {$R *.dfm}
 
@@ -223,6 +225,29 @@ end;
 procedure TfrmBarang.BtnTutupClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TfrmBarang.btnBaruClick(Sender: TObject);
+begin
+  frmtambahbrg := Tfrmtambahbrg.Create(Application);
+  try
+    frmtambahbrg.panelfrmbarang.Caption := 'Tambah Barang'; 
+    frmtambahbrg.ShowModal;
+  finally
+    frmtambahbrg.Free;
+  end;
+
+end;
+
+procedure TfrmBarang.btnEditClick(Sender: TObject);
+begin
+  frmtambahbrg := Tfrmtambahbrg.Create(Application);
+  try
+    frmtambahbrg.panelfrmbarang.Caption := 'Edit Barang'; 
+    frmtambahbrg.ShowModal;
+  finally
+    frmtambahbrg.Free;
+  end;
 end;
 
 end.

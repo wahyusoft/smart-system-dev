@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 53
-  Top = 651
+  Left = 631
+  Top = 612
   Align = alClient
   BorderStyle = bsNone
   ClientHeight = 532
@@ -2901,6 +2901,7 @@ object fUtama: TfUtama
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000000000000000000000000000}
       ParentFont = False
+      PopupMenu = AdvPopupMenu4
       TabOrder = 8
       Version = '1.0.1.0'
     end
@@ -3422,6 +3423,7 @@ object fUtama: TfUtama
               'menggunakannya...')
             OfficeHint.Picture.Data = {}
             Visible = True
+            OnClick = mnPreviewMenuItems0SubItems0Click
           end
           item
             Title = 'Pengaturan Tanggal'
@@ -3711,6 +3713,7 @@ object fUtama: TfUtama
         Separator = True
         SubMenuItemSpacing = 4
         Visible = True
+        OnClick = mnPreviewMenuItems1Click
       end
       item
         CanSelect = False
@@ -3777,6 +3780,7 @@ object fUtama: TfUtama
         Separator = False
         SubMenuItemSpacing = 4
         Visible = True
+        OnClick = mnPreviewMenuItems2Click
       end>
     MenuSpacing = 8
     MenuWidth = 0
