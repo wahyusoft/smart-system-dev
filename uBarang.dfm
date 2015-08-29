@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 618
-  Top = 420
+  Left = 408
+  Top = 67
   Width = 905
   Height = 667
   Caption = 'Data Barang'
@@ -1065,6 +1065,7 @@ object frmBarang: TfrmBarang
           Height = 20
           Caption = 'F3'
           TabOrder = 3
+          OnClick = btnSearchClick
         end
         object btnCari: TAdvGlassButton
           Left = 728
@@ -1120,6 +1121,7 @@ object frmBarang: TfrmBarang
           Height = 20
           Caption = 'F7'
           TabOrder = 7
+          OnClick = Button1Click
         end
         object Edit2: TEdit
           Left = 177
@@ -1229,6 +1231,7 @@ object frmBarang: TfrmBarang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnHistoriClick
       end
       object btnRefresh: TAdvGlassButton
         Left = 352

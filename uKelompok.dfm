@@ -1,8 +1,8 @@
 object frmKelompok: TfrmKelompok
-  Left = 369
-  Top = 56
+  Left = 649
+  Top = 246
   Width = 905
-  Height = 667
+  Height = 661
   Caption = 'Data Kelompok'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -25,7 +25,7 @@ object frmKelompok: TfrmKelompok
     Left = 0
     Top = 0
     Width = 889
-    Height = 629
+    Height = 623
     Align = alClient
     Caption = 'Data Kelompok'
     HeaderFont.Charset = ANSI_CHARSET
@@ -321,13 +321,14 @@ object frmKelompok: TfrmKelompok
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'MAX PROFIT'
+        ParentFont = False
         Position = 4
         SortType = stAlphabetic
       end
     end
     object GroupBox7: TGroupBox
       Left = 9
-      Top = 536
+      Top = 530
       Width = 870
       Height = 87
       Align = alBottom

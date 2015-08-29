@@ -138,6 +138,9 @@ type
     procedure BtnTutupClick(Sender: TObject);
     procedure btnBaruClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
+    procedure btnHistoriClick(Sender: TObject);
+    procedure btnSearchClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
 
@@ -156,7 +159,8 @@ var
 
 implementation
 
-uses uDM, DB, DBTables, utambahbrg;
+uses uDM, DB, DBTables, utambahbrg, uHistoryTransaksi, uCariKelompok,
+  uKelompok, uCariSupplier;
 
 {$R *.dfm}
 
@@ -248,6 +252,38 @@ begin
   finally
     frmtambahbrg.Free;
   end;
+end;
+
+procedure TfrmBarang.btnHistoriClick(Sender: TObject);
+begin
+  frmHistoryTransaksi := tfrmHistoryTransaksi.Create(Application);
+  try
+    frmHistoryTransaksi.ShowModal;
+  finally
+    frmHistoryTransaksi.Free;
+  end;
+end;
+
+procedure TfrmBarang.btnSearchClick(Sender: TObject);
+begin
+  frmCariSupplier  := tfrmCariSupplier.Create(Application);
+  try
+    frmCariSupplier.ShowModal
+  finally
+    frmCariSupplier.Free;
+  end;
+
+end;
+
+procedure TfrmBarang.Button1Click(Sender: TObject);
+begin
+  frmCariKelompok := TfrmCariKelompok.Create(Application);
+  try
+    frmCariKelompok.ShowModal;
+  finally
+    frmCariKelompok.Free;
+  end;
+
 end;
 
 end.

@@ -11,7 +11,10 @@ uses
   JpegConv in 'JpegConv.pas',
   uBarang in 'uBarang.pas' {frmBarang},
   uKelompok in 'uKelompok.pas' {frmKelompok},
-  utambahbrg in 'utambahbrg.pas' {frmtambahbrg};
+  utambahbrg in 'utambahbrg.pas' {frmtambahbrg},
+  uHistoryTransaksi in 'uHistoryTransaksi.pas' {frmHistoryTransaksi},
+  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier};
 
 {$R *.res}
 
