@@ -1,6 +1,6 @@
 object frmCariSupplier: TfrmCariSupplier
-  Left = 499
-  Top = 351
+  Left = 363
+  Top = 234
   BorderStyle = bsNone
   Caption = 'frmCariSupplier'
   ClientHeight = 338
@@ -151,6 +151,7 @@ object frmCariSupplier: TfrmCariSupplier
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'NO.FAX'
+        ParentFont = False
         Position = 5
         SortType = stAlphabetic
       end
@@ -161,6 +162,7 @@ object frmCariSupplier: TfrmCariSupplier
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'EMAIL'
+        ParentFont = False
         Position = 6
         SortType = stAlphabetic
       end
@@ -171,6 +173,7 @@ object frmCariSupplier: TfrmCariSupplier
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'NAMA PRODUK'
+        ParentFont = False
         Position = 7
         SortType = stAlphabetic
       end
@@ -181,6 +184,7 @@ object frmCariSupplier: TfrmCariSupplier
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'KONTAK PERSON'
+        ParentFont = False
         Position = 8
         SortType = stAlphabetic
       end
@@ -191,6 +195,7 @@ object frmCariSupplier: TfrmCariSupplier
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'BATAS HUTANG'
+        ParentFont = False
         Position = 9
         SortType = stAlphabetic
       end

@@ -9,12 +9,16 @@ uses
   uUtama in 'uUtama.pas' {fUtama},
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
-  uBarang in 'uBarang.pas' {frmBarang},
+  uPromo in 'uPromo.pas' {frmPromo},
   uKelompok in 'uKelompok.pas' {frmKelompok},
   utambahbrg in 'utambahbrg.pas' {frmtambahbrg},
   uHistoryTransaksi in 'uHistoryTransaksi.pas' {frmHistoryTransaksi},
   uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
-  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier};
+  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
+  uAddPromo in 'uAddPromo.pas' {frmAddPromo},
+  uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
+  uBarang in 'uBarang.pas' {frmBarang},
+  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok};
 
 {$R *.res}
 

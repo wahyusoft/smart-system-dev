@@ -130,6 +130,7 @@ type
     procedure mnPreviewMenuItems2Click(Sender: TObject);
     procedure mnPreviewMenuItems1Click(Sender: TObject);
     procedure mnPreviewMenuItems0SubItems0Click(Sender: TObject);
+    procedure AdvGlowButton2Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -147,7 +148,7 @@ var
 
 implementation
 
-uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan;
+uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo;
 
 {$R *.dfm}
 
@@ -297,6 +298,16 @@ try
 finally
   frmSetting.Free;
 end;
+end;
+
+procedure TfUtama.AdvGlowButton2Click(Sender: TObject);
+begin
+   if not(isAktif('frmPromo'))then
+    begin
+      frmPromo  := TfrmPromo.Create(Self);
+      tbSet.AddTab(frmPromo);
+      frmPromo.Show;
+    end;
 end;
 
 end.

@@ -18,7 +18,6 @@ type
     btnBaru: TAdvGlassButton;
     btnEdit: TAdvGlassButton;
     btnHapus: TAdvGlassButton;
-    btnHistori: TAdvGlassButton;
     btnRefresh: TAdvGlassButton;
     btnFirst: TAdvGlassButton;
     btnPrior: TAdvGlassButton;
@@ -50,6 +49,8 @@ type
     procedure CBStsKKKeyPress(Sender: TObject; var Key: Char);
     procedure CBCacatKeyPress(Sender: TObject; var Key: Char);
     procedure BtnTutupClick(Sender: TObject);
+    procedure btnBaruClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -68,7 +69,7 @@ var
 
 implementation
 
-uses uDM, DB, DBTables;
+uses uDM, DB, DBTables, uAddKelompok;
 
 {$R *.dfm}
 
@@ -137,6 +138,30 @@ end;
 procedure TfrmKelompok.BtnTutupClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TfrmKelompok.btnBaruClick(Sender: TObject);
+begin
+  frmAddKelompok := TfrmAddKelompok.Create(Application); 
+  try
+    frmAddKelompok.panelfrmkelompok.Caption := 'Tambah Satuan';
+    frmAddKelompok.ShowModal;
+  finally
+    frmAddKelompok.Free;
+  end;
+
+end;
+
+procedure TfrmKelompok.btnEditClick(Sender: TObject);
+begin
+  frmAddKelompok := TfrmAddKelompok.Create(Application);
+  try
+    frmAddKelompok.panelfrmkelompok.Caption := 'Edit Satuan';
+    frmAddKelompok.ShowModal;
+  finally
+    frmAddKelompok.Free;
+  end;
+
 end;
 
 end.

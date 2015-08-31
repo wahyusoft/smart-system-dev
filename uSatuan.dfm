@@ -1,9 +1,10 @@
 object frmSatuan: TfrmSatuan
-  Left = 492
-  Top = 72
-  Width = 905
-  Height = 667
+  Left = 286
+  Top = 358
+  BorderStyle = bsNone
   Caption = 'Data Satuan'
+  ClientHeight = 629
+  ClientWidth = 889
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -77,6 +78,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -97,6 +99,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnEditClick
       end
       object btnHapus: TAdvGlassButton
         Left = 176
@@ -118,28 +121,8 @@ object frmSatuan: TfrmSatuan
         ShineColor = clWhite
         Version = '1.0.1.0'
       end
-      object btnHistori: TAdvGlassButton
-        Left = 264
-        Top = 0
-        Width = 89
-        Height = 39
-        BackColor = clPurple
-        Caption = 'Histori Transaksi'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ForeColor = clWhite
-        GlowColor = 16760205
-        InnerBorderColor = clBlack
-        OuterBorderColor = clWhite
-        ParentFont = False
-        ShineColor = clWhite
-        Version = '1.0.1.0'
-      end
       object btnRefresh: TAdvGlassButton
-        Left = 352
+        Left = 268
         Top = 0
         Width = 89
         Height = 39

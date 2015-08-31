@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 298
-  Top = 218
+  Left = 757
+  Top = 461
   Align = alClient
   BorderStyle = bsNone
   Caption = 'v'
@@ -360,6 +360,7 @@ object fUtama: TfUtama
           NotesFont.Name = 'Tahoma'
           NotesFont.Style = []
           TabOrder = 0
+          OnClick = AdvGlowButton2Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219

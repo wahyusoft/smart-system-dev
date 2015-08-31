@@ -1,0 +1,184 @@
+unit uAddPromo;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, AdvGlassButton, NxColumns, NxColumnClasses, NxScrollControl,
+  NxCustomGridControl, NxCustomGrid, NxGrid, StdCtrls, ExtCtrls,
+  NxCollection, ComCtrls;
+
+type
+  TfrmAddPromo = class(TForm)
+    panelfrmpromo: TNxHeaderPanel;
+    Panel2: TPanel;
+    Label2: TLabel;
+    IDSatuan: TEdit;
+    btnBaru: TAdvGlassButton;
+    btnEdit: TAdvGlassButton;
+    btnHapus: TAdvGlassButton;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    edMinprofit: TEdit;
+    Label5: TLabel;
+    edMaxprofit: TEdit;
+    DateTimePicker1: TDateTimePicker;
+    DateTimePicker2: TDateTimePicker;
+    btnSearch: TButton;
+    Button1: TButton;
+    Label6: TLabel;
+    Edit1: TEdit;
+    Label7: TLabel;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    Label8: TLabel;
+    Edit2: TEdit;
+    Label9: TLabel;
+    Edit3: TEdit;
+    Label10: TLabel;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    NextGrid1: TNextGrid;
+    NxTextColumn13: TNxTextColumn;
+    NxTextColumn2: TNxTextColumn;
+    NxTextColumn3: TNxTextColumn;
+    NextGrid2: TNextGrid;
+    NxTextColumn1: TNxTextColumn;
+    NxTextColumn4: TNxTextColumn;
+    NxTextColumn5: TNxTextColumn;
+    NxTextColumn6: TNxTextColumn;
+    NxTextColumn7: TNxTextColumn;
+    NxTextColumn8: TNxTextColumn;
+    Button8: TButton;
+    Button9: TButton;
+    procedure btnHapusClick(Sender: TObject);
+    procedure btnSearchClick(Sender: TObject);
+    procedure Panel2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAddPromo: TfrmAddPromo;
+
+implementation
+
+uses uCariSupplier;
+
+{$R *.dfm}
+
+procedure TfrmAddPromo.btnHapusClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmAddPromo.btnSearchClick(Sender: TObject);
+begin
+  frmCariSupplier  := tfrmCariSupplier.Create(Application);
+  try
+    frmCariSupplier.ShowModal
+  finally
+    frmCariSupplier.Free;
+  end;
+end;
+
+procedure TfrmAddPromo.Panel2Click(Sender: TObject);
+begin
+object NextGrid1: TNextGrid
+  Left = 9
+  Top = 86
+  Width = 870
+  Height = 403
+  Align = alTop
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = [fsBold]
+  HeaderSize = 20
+  Options = [goGrid, goHeader, goIndicator]
+  ParentFont = False
+  TabOrder = 1
+  TabStop = True
+  object NxTextColumn13: TNxTextColumn
+    DefaultWidth = 50
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Header.Caption = 'ID'
+    Header.Alignment = taCenter
+    ParentFont = False
+    Position = 0
+    SortType = stAlphabetic
+    Width = 50
+  end
+  object NxTextColumn2: TNxTextColumn
+    DefaultWidth = 100
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Header.Caption = 'KATEGORI'
+    Header.Alignment = taCenter
+    ParentFont = False
+    Position = 1
+    SortType = stAlphabetic
+    Width = 100
+  end
+  object NxTextColumn3: TNxTextColumn
+    DefaultWidth = 200
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Header.Caption = 'QTYG'
+    Header.Alignment = taCenter
+    ParentFont = False
+    Position = 2
+    SortType = stAlphabetic
+    Width = 200
+  end
+  object NxTextColumn4: TNxTextColumn
+    Alignment = taCenter
+    DefaultWidth = 100
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Footer.Alignment = taCenter
+    Header.Caption = 'MIN PROFIT'
+    Header.Alignment = taCenter
+    ParentFont = False
+    Position = 3
+    SortType = stAlphabetic
+    Width = 100
+    MultiLine = True
+  end
+  object NxTextColumn1: TNxTextColumn
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    Header.Caption = 'MAX PROFIT'
+    ParentFont = False
+    Position = 4
+    SortType = stAlphabetic
+  end
+end
+
+end;
+
+end.

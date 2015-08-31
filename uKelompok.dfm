@@ -1,6 +1,6 @@
 object frmKelompok: TfrmKelompok
-  Left = 649
-  Top = 246
+  Left = 638
+  Top = 655
   Width = 905
   Height = 661
   Caption = 'Data Kelompok'
@@ -77,6 +77,7 @@ object frmKelompok: TfrmKelompok
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -97,6 +98,7 @@ object frmKelompok: TfrmKelompok
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnEditClick
       end
       object btnHapus: TAdvGlassButton
         Left = 176
@@ -118,28 +120,8 @@ object frmKelompok: TfrmKelompok
         ShineColor = clWhite
         Version = '1.0.1.0'
       end
-      object btnHistori: TAdvGlassButton
-        Left = 264
-        Top = 0
-        Width = 89
-        Height = 39
-        BackColor = clPurple
-        Caption = 'Histori Transaksi'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ForeColor = clWhite
-        GlowColor = 16760205
-        InnerBorderColor = clBlack
-        OuterBorderColor = clWhite
-        ParentFont = False
-        ShineColor = clWhite
-        Version = '1.0.1.0'
-      end
       object btnRefresh: TAdvGlassButton
-        Left = 352
+        Left = 264
         Top = 0
         Width = 89
         Height = 39
