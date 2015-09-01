@@ -1,6 +1,6 @@
 object frmCariSupplier: TfrmCariSupplier
-  Left = 363
-  Top = 234
+  Left = 819
+  Top = 351
   BorderStyle = bsNone
   Caption = 'frmCariSupplier'
   ClientHeight = 338
@@ -14,6 +14,7 @@ object frmCariSupplier: TfrmCariSupplier
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object wwwww: TNxHeaderPanel
@@ -56,9 +57,10 @@ object frmCariSupplier: TfrmCariSupplier
         ParentCtl3D = False
         TabOrder = 0
         Text = 'edCariSupplier'
+        OnChange = edCariSupplierChange
       end
     end
-    object NextGrid1: TNextGrid
+    object GridSupplier: TNextGrid
       Left = 9
       Top = 104
       Width = 591
@@ -70,7 +72,7 @@ object frmCariSupplier: TfrmCariSupplier
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator]
+      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
       ParentFont = False
       TabOrder = 1
       TabStop = True

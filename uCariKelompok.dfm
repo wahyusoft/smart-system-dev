@@ -1,6 +1,6 @@
 object frmCariKelompok: TfrmCariKelompok
-  Left = 605
-  Top = 311
+  Left = 842
+  Top = 261
   BorderStyle = bsNone
   Caption = 'frmCariKelompok'
   ClientHeight = 338
@@ -14,6 +14,7 @@ object frmCariKelompok: TfrmCariKelompok
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object wwwww: TNxHeaderPanel
@@ -58,7 +59,7 @@ object frmCariKelompok: TfrmCariKelompok
         Text = 'edCariSupplier'
       end
     end
-    object NextGrid1: TNextGrid
+    object GridKelompok: TNextGrid
       Left = 9
       Top = 104
       Width = 417

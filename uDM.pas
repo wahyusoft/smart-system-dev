@@ -10,12 +10,23 @@ type
   TDM = class(TDataModule)
     dsBarang: TDataSource;
     dsPengguna: TDataSource;
-    Connection: TZConnection;
+    connection: TZConnection;
     QBarang: TZQuery;
     QTemp2: TZQuery;
     QTemp1: TZQuery;
     QTemp: TZQuery;
     QPengguna: TZQuery;
+    QBarangkodebrg: TStringField;
+    QBarangkdbarcode: TStringField;
+    QBarangnamabrg: TStringField;
+    QBaranghrgbeli: TFloatField;
+    QBaranghrgjual: TFloatField;
+    QBarangstock: TFloatField;
+    QBarangsatuan: TStringField;
+    QBarangtotalaset: TFloatField;
+    QBarangtotalomzet: TFloatField;
+    QBarangnama: TStringField;
+    QBarangkategori: TStringField;
   private
     { Private declarations }
   public

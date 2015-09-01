@@ -12,7 +12,7 @@ type
   TfrmCariKelompok = class(TForm)
     wwwww: TNxHeaderPanel;
     Panel2: TPanel;
-    NextGrid1: TNextGrid;
+    GridKelompok: TNextGrid;
     NxTextColumn13: TNxTextColumn;
     NxTextColumn2: TNxTextColumn;
     Label2: TLabel;
@@ -24,6 +24,8 @@ type
     procedure btnHapusClick(Sender: TObject);
   private
     { Private declarations }
+  procedure Tampil(strSQL : String);
+  procedure Kosongkan(const All : boolean);  
   public
     { Public declarations }
   end;
@@ -33,7 +35,48 @@ var
 
 implementation
 
+uses uVirtualEngine, uDM;
+
 {$R *.dfm}
+
+
+procedure TfrmCariKelompok.Tampil(strSQL : String);
+var x : integer;
+begin
+  strSQL := 'SELECT * FROM tblkategori '+strSQL+' ORDER BY kategori ASC';
+  CommandSQL(DM.QTemp,strSQL,True);
+  GridKelompok.ClearRows;
+  with DM.QTemp do
+  begin
+        First;
+        while not eof do
+        begin
+             with GridKelompok do
+             begin
+                for x:= 0 to RecordCount-1 do
+                begin
+                   AddRow; 
+                   Cell[0,x].AsString := FieldbyName('idkat').AsString;
+                   Cell[1,x].AsString := FieldbyName('kategori').AsString;
+                   Next;
+                end;
+             end;
+        end;
+  end;
+end;
+
+
+
+procedure TfrmCariKelompok.Kosongkan(const All: boolean);
+var i  : integer;
+begin
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+        end;
+    end;
+  edCariSupplier.SetFocus;
+end;
 
 procedure TfrmCariKelompok.FormClose(Sender: TObject;
   var Action: TCloseAction);

@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 86
-  Top = 138
+  Left = 584
+  Top = 380
   Width = 905
   Height = 667
   Caption = 'Data Barang'
@@ -19,6 +19,7 @@ object frmBarang: TfrmBarang
   WindowState = wsMaximized
   OnClose = FormClose
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object wwwww: TNxHeaderPanel
@@ -42,7 +43,7 @@ object frmBarang: TfrmBarang
       Top = 81
       Width = 623
       Height = 447
-      ActivePage = NxTabSheet1
+      ActivePage = Halaman1
       ActivePageIndex = 0
       Align = alClient
       TabOrder = 0
@@ -52,7 +53,7 @@ object frmBarang: TfrmBarang
       Spacing = 0
       TabHeight = 17
       TabStyle = tsFlat
-      object NxTabSheet1: TNxTabSheet
+      object Halaman1: TNxTabSheet
         Caption = 'Barang Aktif'
         PageIndex = 0
         TabFont.Charset = DEFAULT_CHARSET
@@ -60,7 +61,7 @@ object frmBarang: TfrmBarang
         TabFont.Height = -11
         TabFont.Name = 'MS Sans Serif'
         TabFont.Style = []
-        object NextGrid1: TNextGrid
+        object GridBrgAktif: TNextGrid
           Left = 0
           Top = 0
           Width = 623
@@ -71,11 +72,13 @@ object frmBarang: TfrmBarang
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
+          GridStyle = gsSlides
           HeaderSize = 30
-          Options = [goGrid, goHeader, goIndicator]
+          Options = [goGrid, goHeader, goIndicator, goMultiSelect, goSelectFullRow]
           ParentFont = False
           TabOrder = 0
           TabStop = True
+          OnCustomDrawCell = GridBrgAktifCustomDrawCell
           object NxTextColumn13: TNxTextColumn
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -117,7 +120,7 @@ object frmBarang: TfrmBarang
             Width = 200
           end
           object NxTextColumn4: TNxTextColumn
-            Alignment = taCenter
+            Alignment = taRightJustify
             DefaultWidth = 100
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -135,6 +138,7 @@ object frmBarang: TfrmBarang
             MultiLine = True
           end
           object NxTextColumn5: TNxTextColumn
+            Alignment = taRightJustify
             DefaultWidth = 100
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -190,6 +194,7 @@ object frmBarang: TfrmBarang
             SortType = stAlphabetic
           end
           object NxTextColumn9: TNxTextColumn
+            Alignment = taRightJustify
             DefaultWidth = 120
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -204,6 +209,7 @@ object frmBarang: TfrmBarang
             Width = 120
           end
           object NxTextColumn10: TNxTextColumn
+            Alignment = taRightJustify
             DefaultWidth = 120
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -631,12 +637,12 @@ object frmBarang: TfrmBarang
       Top = 81
       Width = 247
       Height = 447
-      ActivePage = TabSheet2
+      ActivePage = TabStock
       Align = alRight
       MultiLine = True
       TabOrder = 1
       TabPosition = tpRight
-      object TabSheet1: TTabSheet
+      object TabStock: TTabSheet
         Caption = 'STOCK'
         object GroupBox1: TGroupBox
           Left = 8
@@ -1058,14 +1064,14 @@ object frmBarang: TfrmBarang
           Height = 19
           TabOrder = 2
         end
-        object btnSearch: TButton
+        object btnF3: TButton
           Left = 141
           Top = 17
           Width = 25
           Height = 20
           Caption = 'F3'
           TabOrder = 3
-          OnClick = btnSearchClick
+          OnClick = btnF3Click
         end
         object btnCari: TAdvGlassButton
           Left = 728
@@ -1114,14 +1120,14 @@ object frmBarang: TfrmBarang
           Height = 19
           TabOrder = 6
         end
-        object Button1: TButton
+        object btnF7: TButton
           Left = 141
           Top = 41
           Width = 25
           Height = 20
           Caption = 'F7'
           TabOrder = 7
-          OnClick = Button1Click
+          OnClick = btnF7Click
         end
         object Edit2: TEdit
           Left = 177

@@ -1,10 +1,10 @@
 object frmCariKelompok: TfrmCariKelompok
-  Left = 605
-  Top = 311
+  Left = 842
+  Top = 261
   BorderStyle = bsNone
   Caption = 'frmCariKelompok'
   ClientHeight = 338
-  ClientWidth = 610
+  ClientWidth = 436
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object frmCariKelompok: TfrmCariKelompok
   object wwwww: TNxHeaderPanel
     Left = 0
     Top = 0
-    Width = 610
+    Width = 436
     Height = 338
     Align = alClient
     Caption = 'Pilih Kelompok'
@@ -31,11 +31,11 @@ object frmCariKelompok: TfrmCariKelompok
     HeaderSize = 40
     ParentHeaderFont = False
     TabOrder = 0
-    FullWidth = 610
+    FullWidth = 436
     object Panel2: TPanel
       Left = 9
       Top = 45
-      Width = 591
+      Width = 417
       Height = 59
       Align = alTop
       Color = clWhite
@@ -50,7 +50,7 @@ object frmCariKelompok: TfrmCariKelompok
       object edCariSupplier: TEdit
         Left = 16
         Top = 27
-        Width = 489
+        Width = 377
         Height = 19
         Ctl3D = False
         ParentCtl3D = False
@@ -58,10 +58,10 @@ object frmCariKelompok: TfrmCariKelompok
         Text = 'edCariSupplier'
       end
     end
-    object NextGrid1: TNextGrid
+    object GridKelompok: TNextGrid
       Left = 9
       Top = 104
-      Width = 591
+      Width = 417
       Height = 177
       Align = alTop
       Font.Charset = DEFAULT_CHARSET
@@ -122,7 +122,7 @@ object frmCariKelompok: TfrmCariKelompok
       Version = '1.0.1.0'
     end
     object btnEdit: TAdvGlassButton
-      Left = 416
+      Left = 232
       Top = 288
       Width = 89
       Height = 39
@@ -142,7 +142,7 @@ object frmCariKelompok: TfrmCariKelompok
       Version = '1.0.1.0'
     end
     object btnHapus: TAdvGlassButton
-      Left = 504
+      Left = 320
       Top = 288
       Width = 89
       Height = 39

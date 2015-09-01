@@ -16,11 +16,11 @@ type
     dlgGambar : TOpenPictureDialog;
     wwwww: TNxHeaderPanel;
     NxPageControl1: TNxPageControl;
-    NxTabSheet1: TNxTabSheet;
+    Halaman1: TNxTabSheet;
     NxTabSheet2: TNxTabSheet;
     NxTabSheet3: TNxTabSheet;
     PageControl1: TPageControl;
-    TabSheet1: TTabSheet;
+    TabStock: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
     GroupBox1: TGroupBox;
@@ -28,7 +28,7 @@ type
     GroupBox4: TGroupBox;
     GroupBox5: TGroupBox;
     GroupBox6: TGroupBox;
-    NextGrid1: TNextGrid;
+    GridBrgAktif: TNextGrid;
     NxTextColumn13: TNxTextColumn;
     NxTextColumn2: TNxTextColumn;
     NxTextColumn3: TNxTextColumn;
@@ -84,12 +84,12 @@ type
     NxTextColumn1: TNxTextColumn;
     NextGrid3: TNextGrid;
     NxTextColumn14: TNxTextColumn;
-    btnSearch: TButton;
+    btnF3: TButton;
     btnCari: TAdvGlassButton;
     btnCetak: TAdvGlassButton;
     Label13: TLabel;
     edcrKelompok: TEdit;
-    Button1: TButton;
+    btnF7: TButton;
     Edit2: TEdit;
     CheckBox1: TCheckBox;
     NextGrid4: TNextGrid;
@@ -139,11 +139,15 @@ type
     procedure btnBaruClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure btnHistoriClick(Sender: TObject);
-    procedure btnSearchClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnF3Click(Sender: TObject);
+    procedure btnF7Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure GridBrgAktifCustomDrawCell(Sender: TObject; ACol,
+      ARow: Integer; CellRect: TRect; CellState: TCellState);
   private
     { Private declarations }
-
+    procedure TampilBarang(strSQL : String);
+    procedure Kosongkan(const All : boolean);
   public
     { Public declarations }
   end;
@@ -151,7 +155,6 @@ type
 var
   frmBarang       : TfrmBarang;
   nmVield,nmFalue   : TStringList;
-  sFoto, sFotoLama  : string;
   kode              : string;
 
 
@@ -165,6 +168,66 @@ uses uDM, DB, DBTables, utambahbrg, uHistoryTransaksi, uCariKelompok,
 {$R *.dfm}
 
 
+procedure TfrmBarang.TampilBarang(strSQL : String);
+var x : integer;
+begin
+  strSQL := 'SELECT DISTINCT b.kodebrg,b.kdbarcode, b.namabrg,b.hrgbeli,b.hrgjual,b.stock,s.satuan, SUM(b.hrgbeli) AS totalaset, '+
+            'SUM(b.hrgjual) AS totalomzet,p.nama, k.kategori FROM tblbarang AS b JOIN tblkategori AS k ON b.idkat=k.idkat '+
+            'JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsupplier AS p ON b.kdsup =p.kdsup '+strSQL+
+            'GROUP BY b.kodebrg,b.kdbarcode, b.namabrg,b.hrgbeli,b.hrgjual,b.stock,s.satuan,p.nama, k.kategori LIMIT 300';
+  CommandSQL(DM.QBarang,strSQL,True);
+  GridBrgAktif.ClearRows;
+  with DM.QBarang do
+  begin
+        First;
+        while not eof do
+        begin
+             with GridBrgAktif do
+             begin
+                for x:= 0 to RecordCount-1 do
+                begin
+                   AddRow;
+                   Cell[0,x].AsString := FieldbyName('kodebrg').AsString;
+                   Cell[1,x].AsString := FieldbyName('kdbarcode').AsString;
+                   Cell[2,x].AsString := FieldbyName('namabrg').AsString;
+                   Cell[3,x].AsString := TampilDuit(FieldbyName('hrgbeli').AsString);
+                   Cell[4,x].AsString := TampilDuit(FieldbyName('hrgjual').AsString);
+                   Cell[5,x].AsString := '?';
+                   Cell[6,x].AsString := FieldbyName('stock').AsString;
+                   Cell[7,x].AsString := FieldbyName('satuan').AsString;
+                   Cell[8,x].AsString := TampilDuit(FieldbyName('totalaset').AsString);
+                   Cell[9,x].AsString := TampilDuit(FieldbyName('totalomzet').AsString);
+                   Cell[10,x].AsString := FieldbyName('nama').AsString;
+                   Cell[11,x].AsString := FieldbyName('kategori').AsString;
+                   Next;
+                end;
+             end;
+        end;
+  end;
+end;
+
+
+
+procedure TfrmBarang.Kosongkan(const All: boolean);
+var i  : integer;
+    sl : String;
+begin
+  sl := edKataKunci.Text;
+  Halaman1.PageIndex:=0;
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+          if not (copy(TEdit(Components[i]).Name,1,5) = 'edKataKunci') then TEdit(Components[i]).Clear;
+        end;  
+        if Components[i] is TComboBox then TComboBox(Components[i]).Text :='';
+        if Components[i] is TMemo then TMemo(Components[i]).Clear;
+        if Components[i] is TDateTimePicker then TDateTimePicker(Components[i]).Date:= Now;
+    end;
+  if not All then edKataKunci.Text:= sl;
+  edKataKunci.SetFocus;
+
+end;
+
 procedure TfrmBarang.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
@@ -174,6 +237,8 @@ procedure TfrmBarang.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
      if Key=VK_RETURN then Perform(WM_NEXTDLGCTL, 0, 0);
+     if Key=VK_F3 then btnF3Click(Self);
+     if Key=VK_F7 then btnF7Click(Self);
 end;
 
 procedure TfrmBarang.CBKelaminKeyPress(Sender: TObject; var Key: Char);
@@ -264,7 +329,7 @@ begin
   end;
 end;
 
-procedure TfrmBarang.btnSearchClick(Sender: TObject);
+procedure TfrmBarang.btnF3Click(Sender: TObject);
 begin
   frmCariSupplier  := tfrmCariSupplier.Create(Application);
   try
@@ -275,7 +340,7 @@ begin
 
 end;
 
-procedure TfrmBarang.Button1Click(Sender: TObject);
+procedure TfrmBarang.btnF7Click(Sender: TObject);
 begin
   frmCariKelompok := TfrmCariKelompok.Create(Application);
   try
@@ -286,4 +351,23 @@ begin
 
 end;
 
+procedure TfrmBarang.FormShow(Sender: TObject);
+begin
+  Kosongkan(true);
+  TabStock.PageIndex:=0;
+  TampilBarang('');
+end;
+
+procedure TfrmBarang.GridBrgAktifCustomDrawCell(Sender: TObject; ACol,
+  ARow: Integer; CellRect: TRect; CellState: TCellState);
+begin
+  with GridBrgAktif do
+  begin
+    with Canvas.Brush do
+     
+         Color := $D2EFE9;
+  end;
+end;
+
 end.
+

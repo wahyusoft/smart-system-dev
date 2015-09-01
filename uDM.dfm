@@ -1,30 +1,78 @@
 object DM: TDM
   OldCreateOrder = False
-  Left = 190
-  Top = 160
+  Left = 764
+  Top = 249
   Height = 285
   Width = 377
   object dsBarang: TDataSource
-    Left = 104
-    Top = 80
+    Left = 176
+    Top = 160
   end
   object dsPengguna: TDataSource
     Left = 1064
     Top = 136
   end
-  object Connection: TZConnection
+  object connection: TZConnection
     Protocol = 'postgresql'
     HostName = 'localhost'
-    Database = 'kependudukan'
-    User = 'root'
+    Port = 5432
+    Database = 'dbposretail'
+    User = 'postgres'
+    Password = 'bismillah'
+    Connected = True
     Left = 24
     Top = 16
   end
   object QBarang: TZQuery
-    Connection = Connection
+    Connection = connection
     Params = <>
-    Left = 104
-    Top = 24
+    Left = 24
+    Top = 72
+    object QBarangkodebrg: TStringField
+      FieldName = 'kodebrg'
+      Required = True
+      Size = 15
+    end
+    object QBarangkdbarcode: TStringField
+      FieldName = 'kdbarcode'
+    end
+    object QBarangnamabrg: TStringField
+      FieldName = 'namabrg'
+      Required = True
+      Size = 200
+    end
+    object QBaranghrgbeli: TFloatField
+      FieldName = 'hrgbeli'
+    end
+    object QBaranghrgjual: TFloatField
+      FieldName = 'hrgjual'
+    end
+    object QBarangstock: TFloatField
+      FieldName = 'stock'
+      Required = True
+    end
+    object QBarangsatuan: TStringField
+      FieldName = 'satuan'
+      Required = True
+      Size = 50
+    end
+    object QBarangtotalaset: TFloatField
+      FieldName = 'totalaset'
+      ReadOnly = True
+    end
+    object QBarangtotalomzet: TFloatField
+      FieldName = 'totalomzet'
+      ReadOnly = True
+    end
+    object QBarangnama: TStringField
+      FieldName = 'nama'
+      Size = 100
+    end
+    object QBarangkategori: TStringField
+      FieldName = 'kategori'
+      Required = True
+      Size = 100
+    end
   end
   object QTemp2: TZQuery
     Params = <>
@@ -37,9 +85,10 @@ object DM: TDM
     Top = 112
   end
   object QTemp: TZQuery
+    Connection = connection
     Params = <>
-    Left = 88
-    Top = 144
+    Left = 80
+    Top = 80
   end
   object QPengguna: TZQuery
     Params = <>
