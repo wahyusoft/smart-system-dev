@@ -23,7 +23,7 @@ type
     btnPrior: TAdvGlassButton;
     btnNext: TAdvGlassButton;
     btnLast: TAdvGlassButton;
-    NextGrid1: TNextGrid;
+    GridKelompok: TNextGrid;
     NxTextColumn13: TNxTextColumn;
     NxTextColumn2: TNxTextColumn;
     NxTextColumn3: TNxTextColumn;
@@ -51,8 +51,11 @@ type
     procedure BtnTutupClick(Sender: TObject);
     procedure btnBaruClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    procedure TampilBarang(strSQL : String);
+    procedure Kosongkan(const All : boolean);
 
   public
     { Public declarations }
@@ -61,7 +64,6 @@ type
 var
   frmKelompok       : TfrmKelompok;
   nmVield,nmFalue   : TStringList;
-  sFoto, sFotoLama  : string;
   kode              : string;
 
 
@@ -72,6 +74,48 @@ implementation
 uses uDM, DB, DBTables, uAddKelompok;
 
 {$R *.dfm}
+
+
+procedure TfrmKelompok.TampilBarang(strSQL : String);
+var x : integer;
+begin
+  strSQL := 'SELECT * FROM tblkategori '+strSQL;
+  CommandSQL(DM.QTemp,strSQL,True);
+  GridKelompok.ClearRows;
+  with DM.QTemp do
+  begin
+        First;
+        while not eof do
+        begin
+             with GridKelompok do
+             begin
+                for x:= 0 to RecordCount-1 do
+                begin
+                   AddRow;
+                   Cell[0,x].AsString := FieldbyName('idkat').AsString;
+                   Cell[1,x].AsString := FieldbyName('kategori').AsString;
+                   Cell[2,x].AsString := FieldbyName('qty').AsString;
+                   Cell[3,x].AsString := TampilDuit(FieldbyName('minprofit').AsString);
+                   Cell[4,x].AsString := TampilDuit(FieldbyName('maxprofit').AsString);
+                   Next;
+                end;
+             end;
+        end;
+  end;
+end;
+
+
+
+procedure TfrmKelompok.Kosongkan(const All: boolean);
+var i  : integer;
+begin
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+        end;
+    end;
+  edKataKunci.SetFocus;
+end;
 
 
 procedure TfrmKelompok.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -162,6 +206,12 @@ begin
     frmAddKelompok.Free;
   end;
 
+end;
+
+procedure TfrmKelompok.FormShow(Sender: TObject);
+begin
+  Kosongkan(True);
+  TampilBarang('');
 end;
 
 end.

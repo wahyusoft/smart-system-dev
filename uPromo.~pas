@@ -15,20 +15,6 @@ type
   TfrmPromo = class(TForm)
     dlgGambar : TOpenPictureDialog;
     wwwww: TNxHeaderPanel;
-    NxPageControl1: TNxPageControl;
-    NxTabSheet1: TNxTabSheet;
-    NxTabSheet2: TNxTabSheet;
-    NxTabSheet3: TNxTabSheet;
-    NextGrid1: TNextGrid;
-    NxTextColumn13: TNxTextColumn;
-    NxTextColumn2: TNxTextColumn;
-    NxTextColumn3: TNxTextColumn;
-    NxTextColumn4: TNxTextColumn;
-    NxTextColumn5: TNxTextColumn;
-    NxTextColumn6: TNxTextColumn;
-    NxTextColumn8: TNxTextColumn;
-    NxTextColumn9: TNxTextColumn;
-    NxTextColumn10: TNxTextColumn;
     Panel1: TPanel;
     GroupBox7: TGroupBox;
     Label1: TLabel;
@@ -41,37 +27,21 @@ type
     btnRefresh: TAdvGlassButton;
     btnCari: TAdvGlassButton;
     btnCetak: TAdvGlassButton;
-    NextGrid4: TNextGrid;
-    NxTextColumn15: TNxTextColumn;
-    NxTextColumn16: TNxTextColumn;
-    NxTextColumn17: TNxTextColumn;
-    NxTextColumn18: TNxTextColumn;
-    NxTextColumn19: TNxTextColumn;
-    NxTextColumn20: TNxTextColumn;
-    NxTextColumn21: TNxTextColumn;
-    NxTextColumn22: TNxTextColumn;
-    NxTextColumn23: TNxTextColumn;
-    NxTextColumn24: TNxTextColumn;
-    NxTextColumn25: TNxTextColumn;
-    NxTextColumn26: TNxTextColumn;
-    NextGrid5: TNextGrid;
-    NxTextColumn27: TNxTextColumn;
-    NxTextColumn28: TNxTextColumn;
-    NxTextColumn29: TNxTextColumn;
-    NxTextColumn30: TNxTextColumn;
-    NxTextColumn31: TNxTextColumn;
-    NxTextColumn32: TNxTextColumn;
-    NxTextColumn33: TNxTextColumn;
-    NxTextColumn34: TNxTextColumn;
-    NxTextColumn35: TNxTextColumn;
-    NxTextColumn36: TNxTextColumn;
-    NxTextColumn37: TNxTextColumn;
-    NxTextColumn38: TNxTextColumn;
     btnFirst: TAdvGlassButton;
     btnPrior: TAdvGlassButton;
     btnNext: TAdvGlassButton;
     btnLast: TAdvGlassButton;
+    GridPromo: TNextGrid;
+    NxTextColumn13: TNxTextColumn;
+    NxTextColumn2: TNxTextColumn;
+    NxTextColumn3: TNxTextColumn;
+    NxTextColumn4: TNxTextColumn;
+    NxTextColumn5: TNxTextColumn;
+    NxTextColumn6: TNxTextColumn;
     NxTextColumn7: TNxCheckBoxColumn;
+    NxTextColumn8: TNxTextColumn;
+    NxTextColumn9: TNxTextColumn;
+    NxTextColumn10: TNxCheckBoxColumn;
     NxTextColumn11: TNxCheckBoxColumn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyDown(Sender: TObject; var Key: Word;
@@ -92,8 +62,11 @@ type
     procedure btnHistoriClick(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    procedure Tampil(strSQL : String);
+    procedure Kosongkan(const All : boolean);
 
   public
     { Public declarations }
@@ -102,7 +75,6 @@ type
 var
   frmPromo       : TfrmPromo;
   nmVield,nmFalue   : TStringList;
-  sFoto, sFotoLama  : string;
   kode              : string;
 
 
@@ -114,6 +86,53 @@ uses uDM, DB, DBTables, utambahbrg, uHistoryTransaksi, uCariKelompok,
   uKelompok, uCariSupplier, uAddPromo;
 
 {$R *.dfm}
+
+
+procedure TfrmPromo.Tampil(strSQL : String);
+var x : integer;
+begin
+  strSQL := 'SELECT * FROM tblpromo '+strSQL;
+  CommandSQL(DM.QTemp,strSQL,True);
+  GridPromo.ClearRows;
+  with DM.QTemp do
+  begin
+        First;
+        while not eof do
+        begin
+             with GridPromo do
+             begin
+                for x:= 0 to RecordCount-1 do
+                begin
+                   AddRow;
+                   Cell[0,x].AsString := FieldbyName('nama').AsString;
+                   Cell[1,x].AsString := KonversiTgl(FieldbyName('tanggal1').AsDateTime);
+                   Cell[2,x].AsString := KonversiTgl(FieldbyName('tanggal2').AsDateTime);
+                   Cell[5,x].AsString := TampilDuit(FieldbyName('jumlah').AsString);
+                   Cell[6,x].AsString := FieldbyName('berlakukelipatan').AsString;
+                   Cell[7,x].AsString := FieldbyName('hadiah').AsString;
+                   Cell[8,x].AsString := FieldbyName('keterangan').AsString;
+                   Cell[9,x].AsString := FieldbyName('khususmember').AsString;
+                   Cell[10,x].AsString := FieldbyName('aktif').AsString;
+                   Next;
+                end;
+             end;
+        end;
+  end;
+end;
+
+
+
+procedure TfrmPromo.Kosongkan(const All: boolean);
+var i  : integer;
+begin
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+        end;
+
+   end;
+  edKataKunci.SetFocus;
+end;
 
 
 procedure TfrmPromo.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -235,6 +254,12 @@ begin
     frmCariKelompok.Free;
   end;
 
+end;
+
+procedure TfrmPromo.FormShow(Sender: TObject);
+begin
+  Kosongkan(True);
+  Tampil('');
 end;
 
 end.

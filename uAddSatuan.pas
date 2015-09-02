@@ -22,8 +22,10 @@ type
     Label3: TLabel;
     edJumlah: TEdit;
     procedure btnHapusClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    procedure Kosongkan(const All : boolean);
   public
     { Public declarations }
   end;
@@ -33,11 +35,36 @@ var
 
 implementation
 
+uses uDM, uVirtualEngine;
+
 {$R *.dfm}
+
+
+procedure TfrmAddSatuan.Kosongkan(const All: boolean);
+var i  : integer;
+    sl : String;
+begin
+  sl := IDSatuan.Text;
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+          if not (copy(TEdit(Components[i]).Name,1,8) = 'IDSatuan') then TEdit(Components[i]).Clear;
+        end;
+    end;
+  if not All then IDSatuan.Text:= sl;
+  IDSatuan.SetFocus;
+
+end;
+
 
 procedure TfrmAddSatuan.btnHapusClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmAddSatuan.FormShow(Sender: TObject);
+begin
+  Kosongkan(True);
 end;
 
 end.

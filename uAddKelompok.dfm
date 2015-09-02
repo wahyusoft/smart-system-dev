@@ -1,6 +1,6 @@
 object frmAddKelompok: TfrmAddKelompok
-  Left = 590
-  Top = 224
+  Left = 692
+  Top = 204
   BorderStyle = bsNone
   Caption = 'frmAddKelompok'
   ClientHeight = 289
@@ -13,6 +13,7 @@ object frmAddKelompok: TfrmAddKelompok
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object panelfrmkelompok: TNxHeaderPanel
@@ -82,7 +83,6 @@ object frmAddKelompok: TfrmAddKelompok
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'IDSatuan'
       end
       object edNamaKelompok: TEdit
         Left = 80

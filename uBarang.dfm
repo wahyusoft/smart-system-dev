@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 584
-  Top = 380
+  Left = 649
+  Top = 62
   Width = 905
   Height = 667
   Caption = 'Data Barang'

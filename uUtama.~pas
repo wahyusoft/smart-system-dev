@@ -304,9 +304,9 @@ procedure TfUtama.AdvGlowButton2Click(Sender: TObject);
 begin
    if not(isAktif('frmPromo'))then
     begin
-      frmBarang  := TfrmBarang.Create(Self);
-      tbSet.AddTab(frmBarang);
-      frmBarang.Show;
+      frmPromo  := TfrmPromo.Create(Self);
+      tbSet.AddTab(frmPromo);
+      frmPromo.Show;
     end;
 end;
 

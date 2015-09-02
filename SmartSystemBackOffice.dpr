@@ -13,12 +13,13 @@ uses
   uKelompok in 'uKelompok.pas' {frmKelompok},
   utambahbrg in 'utambahbrg.pas' {frmtambahbrg},
   uHistoryTransaksi in 'uHistoryTransaksi.pas' {frmHistoryTransaksi},
-  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
   uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
   uAddPromo in 'uAddPromo.pas' {frmAddPromo},
   uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
   uBarang in 'uBarang.pas' {frmBarang},
-  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok};
+  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
+  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok};
 
 {$R *.res}
 

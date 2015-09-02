@@ -85,6 +85,7 @@ object DM: TDM
     Top = 112
   end
   object QTemp: TZQuery
+    Connection = connection
     Params = <>
     Left = 80
     Top = 80

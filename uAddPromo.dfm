@@ -1,6 +1,6 @@
 object frmAddPromo: TfrmAddPromo
-  Left = 220
-  Top = 129
+  Left = 411
+  Top = 145
   BorderStyle = bsNone
   Caption = 'frmAddPromo'
   ClientHeight = 530
@@ -13,6 +13,7 @@ object frmAddPromo: TfrmAddPromo
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object panelfrmpromo: TNxHeaderPanel
@@ -117,7 +118,6 @@ object frmAddPromo: TfrmAddPromo
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'IDSatuan'
       end
       object edMinprofit: TEdit
         Left = 135
@@ -173,6 +173,7 @@ object frmAddPromo: TfrmAddPromo
         Height = 20
         Caption = 'F2'
         TabOrder = 6
+        OnClick = Button1Click
       end
       object Edit1: TEdit
         Left = 135
@@ -388,6 +389,7 @@ object frmAddPromo: TfrmAddPromo
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           Header.Caption = 'HARGA SPESIAL'
+          ParentFont = False
           Position = 3
           SortType = stAlphabetic
         end
@@ -398,6 +400,7 @@ object frmAddPromo: TfrmAddPromo
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           Header.Caption = 'DISKON PERSEN'
+          ParentFont = False
           Position = 4
           SortType = stAlphabetic
         end
@@ -408,6 +411,7 @@ object frmAddPromo: TfrmAddPromo
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           Header.Caption = 'DISKON RUPIAH'
+          ParentFont = False
           Position = 5
           SortType = stAlphabetic
         end

@@ -1,6 +1,6 @@
 object frmSatuan: TfrmSatuan
-  Left = 286
-  Top = 358
+  Left = 244
+  Top = 24
   BorderStyle = bsNone
   Caption = 'Data Satuan'
   ClientHeight = 629
@@ -20,6 +20,7 @@ object frmSatuan: TfrmSatuan
   WindowState = wsMaximized
   OnClose = FormClose
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object wwwww: TNxHeaderPanel
@@ -160,6 +161,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnFirstClick
       end
       object btnPrior: TAdvGlassButton
         Left = 537
@@ -222,7 +224,7 @@ object frmSatuan: TfrmSatuan
         Version = '1.0.1.0'
       end
     end
-    object NextGrid1: TNextGrid
+    object GridSatuan: TNextGrid
       Left = 9
       Top = 86
       Width = 870
@@ -234,7 +236,7 @@ object frmSatuan: TfrmSatuan
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator]
+      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
       ParentFont = False
       TabOrder = 1
       TabStop = True
@@ -267,7 +269,6 @@ object frmSatuan: TfrmSatuan
         Width = 200
       end
       object NxTextColumn3: TNxTextColumn
-        DefaultWidth = 200
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -278,7 +279,6 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         Position = 2
         SortType = stAlphabetic
-        Width = 200
       end
     end
     object GroupBox7: TGroupBox

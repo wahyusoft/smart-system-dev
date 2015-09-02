@@ -206,8 +206,6 @@ begin
   end;
 end;
 
-
-
 procedure TfrmBarang.Kosongkan(const All: boolean);
 var i  : integer;
     sl : String;

@@ -1,6 +1,6 @@
 object frmAddKelompok: TfrmAddKelompok
-  Left = 590
-  Top = 224
+  Left = 692
+  Top = 204
   BorderStyle = bsNone
   Caption = 'frmAddKelompok'
   ClientHeight = 289
@@ -60,6 +60,20 @@ object frmAddKelompok: TfrmAddKelompok
         Height = 13
         Caption = 'Jumlah'
       end
+      object Label4: TLabel
+        Left = 24
+        Top = 110
+        Width = 44
+        Height = 13
+        Caption = 'Min Profit'
+      end
+      object Label5: TLabel
+        Left = 24
+        Top = 142
+        Width = 47
+        Height = 13
+        Caption = 'Max Profit'
+      end
       object IDSatuan: TEdit
         Left = 80
         Top = 11
@@ -68,9 +82,8 @@ object frmAddKelompok: TfrmAddKelompok
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'IDSatuan'
       end
-      object edNamaSatuan: TEdit
+      object edNamaKelompok: TEdit
         Left = 80
         Top = 43
         Width = 321
@@ -85,9 +98,31 @@ object frmAddKelompok: TfrmAddKelompok
         Top = 75
         Width = 161
         Height = 19
+        Color = 16744576
         Ctl3D = False
         ParentCtl3D = False
+        ReadOnly = True
         TabOrder = 2
+        Text = 'IDSatuan'
+      end
+      object edMinprofit: TEdit
+        Left = 80
+        Top = 107
+        Width = 161
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 3
+        Text = 'IDSatuan'
+      end
+      object edMaxprofit: TEdit
+        Left = 80
+        Top = 139
+        Width = 161
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 4
         Text = 'IDSatuan'
       end
     end

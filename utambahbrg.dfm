@@ -1,10 +1,10 @@
 object frmtambahbrg: Tfrmtambahbrg
-  Left = 283
-  Top = 147
+  Left = 787
+  Top = 258
   BorderStyle = bsNone
   Caption = 'frm_tambahbarang'
   ClientHeight = 557
-  ClientWidth = 920
+  ClientWidth = 946
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,12 +14,14 @@ object frmtambahbrg: Tfrmtambahbrg
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object panelfrmbarang: TNxHeaderPanel
     Left = 0
     Top = 0
-    Width = 920
+    Width = 946
     Height = 557
     Align = alClient
     Caption = 'Tambah Barang'
@@ -31,7 +33,7 @@ object frmtambahbrg: Tfrmtambahbrg
     HeaderSize = 35
     ParentHeaderFont = False
     TabOrder = 0
-    FullWidth = 920
+    FullWidth = 946
     object Label1: TLabel
       Left = 24
       Top = 56
@@ -105,14 +107,14 @@ object frmtambahbrg: Tfrmtambahbrg
     object Panel1: TPanel
       Left = 9
       Top = 494
-      Width = 901
+      Width = 927
       Height = 57
       Align = alBottom
       BorderStyle = bsSingle
       Color = clWhite
       TabOrder = 0
       object btnBaru: TAdvGlassButton
-        Left = 600
+        Left = 632
         Top = 6
         Width = 89
         Height = 39
@@ -132,7 +134,7 @@ object frmtambahbrg: Tfrmtambahbrg
         Version = '1.0.1.0'
       end
       object btnHapus: TAdvGlassButton
-        Left = 792
+        Left = 824
         Top = 6
         Width = 89
         Height = 39
@@ -153,7 +155,7 @@ object frmtambahbrg: Tfrmtambahbrg
         OnClick = btnHapusClick
       end
       object btnRefresh: TAdvGlassButton
-        Left = 696
+        Left = 728
         Top = 6
         Width = 89
         Height = 39
@@ -182,7 +184,6 @@ object frmtambahbrg: Tfrmtambahbrg
       Ctl3D = False
       ParentCtl3D = False
       TabOrder = 1
-      Text = 'edKode'
     end
     object edBarcode: TEdit
       Left = 118
@@ -246,6 +247,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Height = 19
       Caption = 'F4'
       TabOrder = 7
+      OnClick = Button1Click
     end
     object Button2: TButton
       Left = 217
@@ -254,6 +256,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Height = 19
       Caption = 'F5'
       TabOrder = 8
+      OnClick = Button2Click
     end
     object Button3: TButton
       Left = 217
@@ -262,6 +265,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Height = 19
       Caption = 'F6'
       TabOrder = 9
+      OnClick = Button3Click
     end
     object ednmkelompok: TEdit
       Left = 246
@@ -358,10 +362,10 @@ object frmtambahbrg: Tfrmtambahbrg
     object NxPageControl1: TNxPageControl
       Left = 9
       Top = 264
-      Width = 901
+      Width = 927
       Height = 230
-      ActivePage = NxTabSheet8
-      ActivePageIndex = 6
+      ActivePage = Halaman1
+      ActivePageIndex = 0
       Align = alBottom
       TabOrder = 18
       BackgroundColor = clSilver
@@ -369,7 +373,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Margin = 0
       Spacing = 0
       TabHeight = 17
-      object NxTabSheet1: TNxTabSheet
+      object Halaman1: TNxTabSheet
         Caption = 'HARGA JUAL'
         PageIndex = 0
         TabFont.Charset = DEFAULT_CHARSET
@@ -1679,15 +1683,6 @@ object frmtambahbrg: Tfrmtambahbrg
             Text = 'Edit38'
           end
         end
-      end
-      object NxTabSheet7: TNxTabSheet
-        Caption = 'KETERANGAN'
-        PageIndex = 7
-        TabFont.Charset = DEFAULT_CHARSET
-        TabFont.Color = clWindowText
-        TabFont.Height = -11
-        TabFont.Name = 'MS Sans Serif'
-        TabFont.Style = []
       end
     end
   end

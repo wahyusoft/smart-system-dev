@@ -23,7 +23,7 @@ type
     btnPrior: TAdvGlassButton;
     btnNext: TAdvGlassButton;
     btnLast: TAdvGlassButton;
-    NextGrid1: TNextGrid;
+    GridSatuan: TNextGrid;
     NxTextColumn13: TNxTextColumn;
     NxTextColumn2: TNxTextColumn;
     NxTextColumn3: TNxTextColumn;
@@ -49,8 +49,11 @@ type
     procedure BtnTutupClick(Sender: TObject);
     procedure btnBaruClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    procedure TampilBarang(strSQL : String);
+    procedure Kosongkan(const All : boolean);
 
   public
     { Public declarations }
@@ -59,7 +62,6 @@ type
 var
   frmSatuan       : TfrmSatuan;
   nmVield,nmFalue   : TStringList;
-  sFoto, sFotoLama  : string;
   kode              : string;
 
 
@@ -70,6 +72,47 @@ implementation
 uses uDM, DB, DBTables, uAddSatuan;
 
 {$R *.dfm}
+
+
+procedure TfrmSatuan.TampilBarang(strSQL : String);
+var x : integer;
+begin
+  strSQL := 'SELECT * FROM tblsatuan '+strSQL;
+  CommandSQL(DM.QTemp,strSQL,True);
+  GridSatuan.ClearRows;
+  with DM.QTemp do
+  begin
+        First;
+        while not eof do
+        begin
+             with GridSatuan do
+             begin
+                for x:= 0 to RecordCount-1 do
+                begin
+                   AddRow;
+                   Cell[0,x].AsString := FieldbyName('idsat').AsString;
+                   Cell[1,x].AsString := FieldbyName('satuan').AsString;
+                   Cell[2,x].AsString := FieldbyName('qty').AsString;
+                   Next;
+                end;
+             end;
+        end;
+  end;
+end;
+
+
+
+procedure TfrmSatuan.Kosongkan(const All: boolean);
+var i  : integer;
+begin
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+        end;
+
+    end;
+  edKataKunci.SetFocus;
+end;
 
 
 procedure TfrmSatuan.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -159,6 +202,12 @@ begin
   finally
     frmAddSatuan.Free;
   end;
+end;
+
+procedure TfrmSatuan.FormShow(Sender: TObject);
+begin
+  Kosongkan(True);
+  TampilBarang('');
 end;
 
 end.

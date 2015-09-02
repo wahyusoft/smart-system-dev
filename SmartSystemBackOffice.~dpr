@@ -13,11 +13,13 @@ uses
   uKelompok in 'uKelompok.pas' {frmKelompok},
   utambahbrg in 'utambahbrg.pas' {frmtambahbrg},
   uHistoryTransaksi in 'uHistoryTransaksi.pas' {frmHistoryTransaksi},
-  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
   uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
-  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
+  uAddPromo in 'uAddPromo.pas' {frmAddPromo},
   uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
-  uBarang in 'uBarang.pas' {frmBarang};
+  uBarang in 'uBarang.pas' {frmBarang},
+  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
+  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok};
 
 {$R *.res}
 
@@ -26,5 +28,6 @@ begin
   Application.Title := 'Sistem Informasi Kependudukan';
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfUtama, fUtama);
+  Application.CreateForm(TfrmCariKelompok, frmCariKelompok);
   Application.Run;
 end.

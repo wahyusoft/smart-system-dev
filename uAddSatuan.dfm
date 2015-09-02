@@ -13,6 +13,7 @@ object frmAddSatuan: TfrmAddSatuan
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object panelfrmsatuan: TNxHeaderPanel
@@ -68,7 +69,6 @@ object frmAddSatuan: TfrmAddSatuan
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'IDSatuan'
       end
       object edNamaSatuan: TEdit
         Left = 80

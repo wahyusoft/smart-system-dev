@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 584
-  Top = 380
+  Left = 555
+  Top = 201
   Width = 905
   Height = 667
   Caption = 'Data Barang'
@@ -72,7 +72,7 @@ object frmBarang: TfrmBarang
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
-          GridStyle = gsSlides
+          GridLinesStyle = lsActiveRows
           HeaderSize = 30
           Options = [goGrid, goHeader, goIndicator, goMultiSelect, goSelectFullRow]
           ParentFont = False

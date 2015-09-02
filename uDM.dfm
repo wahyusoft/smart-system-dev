@@ -88,7 +88,7 @@ object DM: TDM
     Connection = connection
     Params = <>
     Left = 80
-    Top = 80
+    Top = 72
   end
   object QPengguna: TZQuery
     Params = <>

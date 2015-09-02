@@ -43,14 +43,13 @@ type
     btnHapus: TAdvGlassButton;
     btnRefresh: TAdvGlassButton;
     NxPageControl1: TNxPageControl;
-    NxTabSheet1: TNxTabSheet;
+    Halaman1: TNxTabSheet;
     NxTabSheet2: TNxTabSheet;
     NxTabSheet3: TNxTabSheet;
     NxTabSheet4: TNxTabSheet;
     NxTabSheet5: TNxTabSheet;
     NxTabSheet6: TNxTabSheet;
     NxTabSheet8: TNxTabSheet;
-    NxTabSheet7: TNxTabSheet;
     GroupBox1: TGroupBox;
     Label11: TLabel;
     edMargin: TEdit;
@@ -185,8 +184,15 @@ type
     Label49: TLabel;
     procedure btnHapusClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button3Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
+  procedure Kosongkan(const All: boolean);  
   public
     { Public declarations }
   end;
@@ -196,7 +202,28 @@ var
 
 implementation
 
+uses uVirtualEngine, uDM, uCariSupplier, uCariKelompok, uCariSatuan;
+
 {$R *.dfm}
+
+procedure Tfrmtambahbrg.Kosongkan(const All: boolean);
+var i  : integer;
+    sl : String;
+begin
+  sl := edKode.Text;
+  Halaman1.PageIndex:=0;
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+          if not (copy(TEdit(Components[i]).Name,1,5) = 'edKode') then TEdit(Components[i]).Clear;
+        end;  
+        if Components[i] is TComboBox then TComboBox(Components[i]).Text :='';
+        if Components[i] is TMemo then TMemo(Components[i]).Clear;
+    end;
+  if not All then edKode.Text:= sl;
+  edKode.SetFocus;
+  Halaman1.PageIndex:=0;
+end;
 
 procedure Tfrmtambahbrg.btnHapusClick(Sender: TObject);
 begin
@@ -207,6 +234,52 @@ procedure Tfrmtambahbrg.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   action := cafree;
+end;
+
+procedure Tfrmtambahbrg.Button3Click(Sender: TObject);
+begin
+  frmCariSupplier  := tfrmCariSupplier.Create(Application);
+  try
+    frmCariSupplier.ShowModal
+  finally
+    frmCariSupplier.Free;
+  end;
+end;
+
+procedure Tfrmtambahbrg.Button1Click(Sender: TObject);
+begin
+  frmCariKelompok := TfrmCariKelompok.Create(Application);
+  try
+    frmCariKelompok.ShowModal;
+  finally
+    frmCariKelompok.Free;
+  end;
+
+end;
+
+procedure Tfrmtambahbrg.FormShow(Sender: TObject);
+begin
+  Kosongkan(true);
+end;
+
+procedure Tfrmtambahbrg.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+   if Key=VK_RETURN then Perform(WM_NEXTDLGCTL, 0, 0);
+   if Key=VK_F4 then Button1Click(Self);
+   if Key=VK_F5 then Button2Click(Self);
+   if Key=VK_F7 then Button3Click(Self);
+end;
+
+procedure Tfrmtambahbrg.Button2Click(Sender: TObject);
+begin
+  frmCariSatuan := TfrmCariSatuan.Create(Application);
+  try
+    frmCariSatuan.ShowModal;
+  finally
+    frmCariSatuan.Free;
+  end;
+
 end;
 
 end.

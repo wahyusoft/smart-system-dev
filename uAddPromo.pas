@@ -58,20 +58,44 @@ type
     Button9: TButton;
     procedure btnHapusClick(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
+    procedure Kosongkan(const All : boolean);
   public
     { Public declarations }
   end;
 
 var
   frmAddPromo: TfrmAddPromo;
+  nmVield,nmFalue   : TStringList;
+  kode              : string;
 
 implementation
 
-uses uCariSupplier;
+uses uCariSupplier, uCariKelompok;
 
 {$R *.dfm}
+
+procedure TfrmAddPromo.Kosongkan(const All: boolean);
+var i  : integer;
+    sl : String;
+begin
+  sl := IDSatuan.Text;
+  for i:= 1 to ComponentCount -1 do begin
+        if Components[i] is TEdit then begin
+          if All then begin TEdit(Components[i]).Clear; end else
+          if not (copy(TEdit(Components[i]).Name,1,8) = 'IDsatuan') then TEdit(Components[i]).Clear;
+        end;  
+        if Components[i] is TComboBox then TComboBox(Components[i]).Text :='';
+        if Components[i] is TMemo then TMemo(Components[i]).Clear;
+        if Components[i] is TDateTimePicker then TDateTimePicker(Components[i]).Date:= Now;
+    end;
+  if not All then IDSatuan.Text:= sl;
+  IDSatuan.SetFocus;
+
+end;
 
 procedure TfrmAddPromo.btnHapusClick(Sender: TObject);
 begin
@@ -86,6 +110,22 @@ begin
   finally
     frmCariSupplier.Free;
   end;
+end;
+
+procedure TfrmAddPromo.FormShow(Sender: TObject);
+begin
+  Kosongkan(True);
+end;
+
+procedure TfrmAddPromo.Button1Click(Sender: TObject);
+begin
+    frmCariKelompok := TfrmCariKelompok.Create(Application);
+  try
+    frmCariKelompok.ShowModal;
+  finally
+    frmCariKelompok.Free;
+  end;
+
 end;
 
 end.

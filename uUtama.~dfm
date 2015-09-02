@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 298
-  Top = 218
+  Left = 465
+  Top = 321
   Align = alClient
   BorderStyle = bsNone
   Caption = 'v'

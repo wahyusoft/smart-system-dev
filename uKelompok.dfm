@@ -1,6 +1,6 @@
 object frmKelompok: TfrmKelompok
-  Left = 638
-  Top = 655
+  Left = 623
+  Top = 71
   Width = 905
   Height = 661
   Caption = 'Data Kelompok'
@@ -19,6 +19,7 @@ object frmKelompok: TfrmKelompok
   WindowState = wsMaximized
   OnClose = FormClose
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object wwwww: TNxHeaderPanel
@@ -221,7 +222,7 @@ object frmKelompok: TfrmKelompok
         Version = '1.0.1.0'
       end
     end
-    object NextGrid1: TNextGrid
+    object GridKelompok: TNextGrid
       Left = 9
       Top = 86
       Width = 870
@@ -233,7 +234,7 @@ object frmKelompok: TfrmKelompok
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator]
+      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
       ParentFont = False
       TabOrder = 1
       TabStop = True
@@ -252,7 +253,7 @@ object frmKelompok: TfrmKelompok
         Width = 50
       end
       object NxTextColumn2: TNxTextColumn
-        DefaultWidth = 100
+        DefaultWidth = 200
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -263,10 +264,10 @@ object frmKelompok: TfrmKelompok
         ParentFont = False
         Position = 1
         SortType = stAlphabetic
-        Width = 100
+        Width = 200
       end
       object NxTextColumn3: TNxTextColumn
-        DefaultWidth = 200
+        Alignment = taCenter
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -277,7 +278,6 @@ object frmKelompok: TfrmKelompok
         ParentFont = False
         Position = 2
         SortType = stAlphabetic
-        Width = 200
       end
       object NxTextColumn4: TNxTextColumn
         Alignment = taCenter
@@ -297,11 +297,12 @@ object frmKelompok: TfrmKelompok
         MultiLine = True
       end
       object NxTextColumn1: TNxTextColumn
+        Alignment = taCenter
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
+        Font.Style = []
         Header.Caption = 'MAX PROFIT'
         ParentFont = False
         Position = 4

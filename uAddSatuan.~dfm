@@ -68,7 +68,6 @@ object frmAddSatuan: TfrmAddSatuan
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'IDSatuan'
       end
       object edNamaSatuan: TEdit
         Left = 80
