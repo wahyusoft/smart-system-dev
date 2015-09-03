@@ -1,6 +1,6 @@
 object frmSatuan: TfrmSatuan
-  Left = 244
-  Top = 24
+  Left = 434
+  Top = 90
   BorderStyle = bsNone
   Caption = 'Data Satuan'
   ClientHeight = 629
@@ -141,6 +141,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnRefreshClick
       end
       object btnFirst: TAdvGlassButton
         Left = 480
@@ -308,7 +309,9 @@ object frmSatuan: TfrmSatuan
         Top = 41
         Width = 230
         Height = 19
+        CharCase = ecUpperCase
         TabOrder = 0
+        OnKeyDown = edKataKunciKeyDown
       end
       object btnCari: TAdvGlassButton
         Left = 408
@@ -329,6 +332,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnCariClick
       end
       object btnCetak: TAdvGlassButton
         Left = 469

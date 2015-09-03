@@ -63,6 +63,10 @@ type
     procedure btnSearchClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btnRefreshClick(Sender: TObject);
+    procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure btnCariClick(Sender: TObject);
   private
     { Private declarations }
     procedure Tampil(strSQL : String);
@@ -260,6 +264,23 @@ procedure TfrmPromo.FormShow(Sender: TObject);
 begin
   Kosongkan(True);
   Tampil('');
+end;
+
+procedure TfrmPromo.btnRefreshClick(Sender: TObject);
+begin
+  FormShow(Self);
+end;
+
+procedure TfrmPromo.edKataKunciKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key=13 then btnCariClick(Self);
+end;
+
+procedure TfrmPromo.btnCariClick(Sender: TObject);
+begin
+  if Trim(edKataKunci.Text)='' then exit;
+  Tampil('WHERE nama LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
 end;
 
 end.

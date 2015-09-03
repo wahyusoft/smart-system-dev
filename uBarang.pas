@@ -144,6 +144,10 @@ type
     procedure FormShow(Sender: TObject);
     procedure GridBrgAktifCustomDrawCell(Sender: TObject; ACol,
       ARow: Integer; CellRect: TRect; CellState: TCellState);
+    procedure btnCariClick(Sender: TObject);
+    procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure btnRefreshClick(Sender: TObject);
   private
     { Private declarations }
     procedure TampilBarang(strSQL : String);
@@ -173,8 +177,8 @@ var x : integer;
 begin
   strSQL := 'SELECT DISTINCT b.kodebrg,b.kdbarcode, b.namabrg,b.hrgbeli,b.hrgjual,b.stock,s.satuan, SUM(b.hrgbeli) AS totalaset, '+
             'SUM(b.hrgjual) AS totalomzet,p.nama, k.kategori FROM tblbarang AS b JOIN tblkategori AS k ON b.idkat=k.idkat '+
-            'JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsupplier AS p ON b.kdsup =p.kdsup '+strSQL+
-            'GROUP BY b.kodebrg,b.kdbarcode, b.namabrg,b.hrgbeli,b.hrgjual,b.stock,s.satuan,p.nama, k.kategori LIMIT 300';
+            'JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsupplier AS p ON b.kdsup =p.kdsup '+strSQL+' GROUP BY b.kodebrg,b.kdbarcode, '+
+            'b.namabrg,b.hrgbeli,b.hrgjual,b.stock,s.satuan,p.nama, k.kategori LIMIT 300';
   CommandSQL(DM.QBarang,strSQL,True);
   GridBrgAktif.ClearRows;
   with DM.QBarang do
@@ -365,6 +369,23 @@ begin
      
          Color := $D2EFE9;
   end;
+end;
+
+procedure TfrmBarang.btnCariClick(Sender: TObject);
+begin
+  if Trim(edKataKunci.Text)='' then exit;
+  TampilBarang('WHERE b.namabrg LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
+end;
+
+procedure TfrmBarang.edKataKunciKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+   IF Key=13 then btnCariClick(Self);
+end;
+
+procedure TfrmBarang.btnRefreshClick(Sender: TObject);
+begin
+  FormShow(Self);
 end;
 
 end.

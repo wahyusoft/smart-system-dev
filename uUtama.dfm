@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 343
-  Top = 248
+  Left = 235
+  Top = 225
   Align = alClient
   BorderStyle = bsNone
   Caption = 'v'
@@ -109,7 +109,7 @@ object fUtama: TfUtama
       Height = 81
       Caption = 'Master Data'
       object AdvToolBar1: TAdvToolBar
-        Left = 619
+        Left = 626
         Top = 3
         Width = 85
         Height = 75
@@ -426,6 +426,7 @@ object fUtama: TfUtama
           NotesFont.Name = 'Tahoma'
           NotesFont.Style = []
           TabOrder = 0
+          OnClick = AdvGlowButton3Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -455,10 +456,11 @@ object fUtama: TfUtama
           Appearance.GradientDown = ggVertical
           Appearance.GradientMirrorDown = ggVertical
           Appearance.GradientChecked = ggVertical
+          DropDownMenu = AdvPopupMenu4
         end
       end
       object AdvToolBar7: TAdvToolBar
-        Left = 469
+        Left = 476
         Top = 3
         Width = 71
         Height = 75
@@ -525,7 +527,7 @@ object fUtama: TfUtama
       object AdvToolBar8: TAdvToolBar
         Left = 372
         Top = 3
-        Width = 94
+        Width = 101
         Height = 75
         AllowFloating = True
         AutoSize = False
@@ -544,10 +546,10 @@ object fUtama: TfUtama
         TextOptionMenu = 'Options'
         ParentOptionPicture = True
         ToolBarIndex = 3
-        object AdvGlowButton4: TAdvGlowButton
+        object AdvGlowMenuButton1: TAdvGlowMenuButton
           Left = 2
           Top = 2
-          Width = 89
+          Width = 95
           Height = 58
           Caption = 'Customer'
           NotesFont.Charset = DEFAULT_CHARSET
@@ -555,6 +557,7 @@ object fUtama: TfUtama
           NotesFont.Height = -11
           NotesFont.Name = 'Tahoma'
           NotesFont.Style = []
+          PopupMenu = AdvPopupMenu4
           TabOrder = 0
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
@@ -585,10 +588,13 @@ object fUtama: TfUtama
           Appearance.GradientDown = ggVertical
           Appearance.GradientMirrorDown = ggVertical
           Appearance.GradientChecked = ggVertical
+          DropDownButton = True
+          DropDownPosition = dpBottom
+          DropDownMenu = AdvPopupMenu4
         end
       end
       object AdvToolBar9: TAdvToolBar
-        Left = 543
+        Left = 550
         Top = 3
         Width = 73
         Height = 75
@@ -4068,13 +4074,10 @@ object fUtama: TfUtama
     Version = '2.5.2.0'
     Left = 176
     object mnLogin: TMenuItem
-      Caption = 'Login'
+      Caption = 'Jenis Customer'
     end
     object mnLogout: TMenuItem
-      Caption = 'Logout'
-    end
-    object Keluar1: TMenuItem
-      Caption = 'Keluar'
+      Caption = 'Data Customer'
     end
   end
   object AdvOfficeHint1: TAdvOfficeHint

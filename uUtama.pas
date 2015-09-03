@@ -55,7 +55,6 @@ type
     AdvPopupMenu4: TAdvPopupMenu;
     mnLogin: TMenuItem;
     mnLogout: TMenuItem;
-    Keluar1: TMenuItem;
     Halaman: TAdvToolBarPager;
     AdvToolBarPager12: TAdvPage;
     AdvToolBarPager13: TAdvPage;
@@ -79,7 +78,6 @@ type
     AdvGlowButton1: TAdvGlowButton;
     AdvGlowButton2: TAdvGlowButton;
     AdvGlowButton3: TAdvGlowButton;
-    AdvGlowButton4: TAdvGlowButton;
     AdvGlowButton5: TAdvGlowButton;
     AdvGlowButton6: TAdvGlowButton;
     AdvGlowButton9: TAdvGlowButton;
@@ -116,6 +114,7 @@ type
     AdvGlowMenuButton5: TAdvGlowMenuButton;
     AdvGlowButton25: TAdvGlowButton;
     AdvGlowButton34: TAdvGlowButton;
+    AdvGlowMenuButton1: TAdvGlowMenuButton;
     procedure Exit1Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure Login1Click(Sender: TObject);
@@ -131,6 +130,7 @@ type
     procedure mnPreviewMenuItems1Click(Sender: TObject);
     procedure mnPreviewMenuItems0SubItems0Click(Sender: TObject);
     procedure AdvGlowButton2Click(Sender: TObject);
+    procedure AdvGlowButton3Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -148,7 +148,7 @@ var
 
 implementation
 
-uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo;
+uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier;
 
 {$R *.dfm}
 
@@ -307,6 +307,16 @@ begin
       frmPromo  := TfrmPromo.Create(Self);
       tbSet.AddTab(frmPromo);
       frmPromo.Show;
+    end;
+end;
+
+procedure TfUtama.AdvGlowButton3Click(Sender: TObject);
+begin
+    if not(isAktif('frmSupplier'))then
+    begin
+      frmSupplier  := TfrmSupplier.Create(Self);
+      tbSet.AddTab(frmSupplier);
+      frmSupplier.Show;
     end;
 end;
 

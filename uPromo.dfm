@@ -1,6 +1,6 @@
 object frmPromo: TfrmPromo
-  Left = 918
-  Top = 208
+  Left = 602
+  Top = 69
   Width = 905
   Height = 667
   Caption = 'Data Promo'
@@ -86,7 +86,9 @@ object frmPromo: TfrmPromo
           Top = 33
           Width = 230
           Height = 19
+          CharCase = ecUpperCase
           TabOrder = 0
+          OnKeyDown = edKataKunciKeyDown
         end
         object btnCari: TAdvGlassButton
           Left = 448
@@ -107,6 +109,7 @@ object frmPromo: TfrmPromo
           ParentFont = False
           ShineColor = clWhite
           Version = '1.0.1.0'
+          OnClick = btnCariClick
         end
         object btnCetak: TAdvGlassButton
           Left = 509
@@ -219,6 +222,7 @@ object frmPromo: TfrmPromo
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnRefreshClick
       end
       object btnFirst: TAdvGlassButton
         Left = 480

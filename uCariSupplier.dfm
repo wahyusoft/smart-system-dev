@@ -1,6 +1,6 @@
 object frmCariSupplier: TfrmCariSupplier
-  Left = 819
-  Top = 351
+  Left = 557
+  Top = 306
   BorderStyle = bsNone
   Caption = 'frmCariSupplier'
   ClientHeight = 338

@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 649
-  Top = 62
+  Left = 479
+  Top = 6
   Width = 905
   Height = 667
   Caption = 'Data Barang'
@@ -1062,7 +1062,9 @@ object frmBarang: TfrmBarang
           Top = 41
           Width = 230
           Height = 19
+          CharCase = ecUpperCase
           TabOrder = 2
+          OnKeyDown = edKataKunciKeyDown
         end
         object btnF3: TButton
           Left = 141
@@ -1092,6 +1094,7 @@ object frmBarang: TfrmBarang
           ParentFont = False
           ShineColor = clWhite
           Version = '1.0.1.0'
+          OnClick = btnCariClick
         end
         object btnCetak: TAdvGlassButton
           Left = 789
@@ -1258,6 +1261,7 @@ object frmBarang: TfrmBarang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnRefreshClick
       end
       object btnFirst: TAdvGlassButton
         Left = 480

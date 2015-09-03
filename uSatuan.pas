@@ -50,6 +50,10 @@ type
     procedure btnBaruClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btnCariClick(Sender: TObject);
+    procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure btnRefreshClick(Sender: TObject);
   private
     { Private declarations }
     procedure TampilBarang(strSQL : String);
@@ -208,6 +212,23 @@ procedure TfrmSatuan.FormShow(Sender: TObject);
 begin
   Kosongkan(True);
   TampilBarang('');
+end;
+
+procedure TfrmSatuan.btnCariClick(Sender: TObject);
+begin
+  if Trim(edKataKunci.Text)='' then exit;
+  TampilBarang('WHERE satuan LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
+end;
+
+procedure TfrmSatuan.edKataKunciKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+    if Key=13 then btnCariClick(Self);
+end;
+
+procedure TfrmSatuan.btnRefreshClick(Sender: TObject);
+begin
+  FormShow(Self);
 end;
 
 end.

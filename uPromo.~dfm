@@ -1,6 +1,6 @@
 object frmPromo: TfrmPromo
-  Left = 918
-  Top = 208
+  Left = 602
+  Top = 69
   Width = 905
   Height = 667
   Caption = 'Data Promo'
@@ -86,7 +86,9 @@ object frmPromo: TfrmPromo
           Top = 33
           Width = 230
           Height = 19
+          CharCase = ecUpperCase
           TabOrder = 0
+          OnKeyDown = edKataKunciKeyDown
         end
         object btnCari: TAdvGlassButton
           Left = 448
@@ -107,6 +109,7 @@ object frmPromo: TfrmPromo
           ParentFont = False
           ShineColor = clWhite
           Version = '1.0.1.0'
+          OnClick = btnCariClick
         end
         object btnCetak: TAdvGlassButton
           Left = 509
@@ -219,6 +222,7 @@ object frmPromo: TfrmPromo
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnRefreshClick
       end
       object btnFirst: TAdvGlassButton
         Left = 480
@@ -326,13 +330,13 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'NAMA'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 0
         SortType = stAlphabetic
         Width = 200
       end
       object NxTextColumn2: TNxTextColumn
+        DefaultWidth = 120
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -340,12 +344,13 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'TANGGAL'#13#10'MULAI'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 1
         SortType = stAlphabetic
+        Width = 120
       end
       object NxTextColumn3: TNxTextColumn
+        DefaultWidth = 120
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -353,10 +358,10 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'TANGGAL BERAKHIR'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 2
         SortType = stAlphabetic
+        Width = 120
       end
       object NxTextColumn4: TNxTextColumn
         Alignment = taCenter
@@ -369,7 +374,6 @@ object frmPromo: TfrmPromo
         Footer.Alignment = taCenter
         Header.Caption = 'KATEGORI'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 3
         SortType = stAlphabetic
@@ -385,7 +389,6 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'SUPPLIER'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 4
         SortType = stAlphabetic
@@ -402,13 +405,13 @@ object frmPromo: TfrmPromo
         Footer.Alignment = taCenter
         Header.Caption = 'JUMLAH'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 5
         SortType = stAlphabetic
         Width = 100
       end
       object NxTextColumn7: TNxCheckBoxColumn
+        DefaultWidth = 150
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -417,11 +420,11 @@ object frmPromo: TfrmPromo
         Footer.Alignment = taCenter
         Header.Caption = 'BERLAKU KELIPATAN'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
         ParentFont = False
         Position = 6
         SortType = stBoolean
+        Width = 150
       end
       object NxTextColumn8: TNxTextColumn
         DefaultWidth = 150
@@ -432,7 +435,6 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'HADIAH'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 7
         SortType = stAlphabetic
@@ -447,7 +449,6 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'KETERANGAN'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         ParentFont = False
         Position = 8
         SortType = stAlphabetic
@@ -461,7 +462,6 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'KHUSUS '#13#10'MEMBER'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
         ParentFont = False
         Position = 9
@@ -475,7 +475,6 @@ object frmPromo: TfrmPromo
         Font.Style = []
         Header.Caption = 'AKTIF'
         Header.Alignment = taCenter
-        Header.MultiLine = True
         Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
         ParentFont = False
         Position = 10
