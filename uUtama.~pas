@@ -55,7 +55,6 @@ type
     AdvPopupMenu4: TAdvPopupMenu;
     mnLogin: TMenuItem;
     mnLogout: TMenuItem;
-    Keluar1: TMenuItem;
     Halaman: TAdvToolBarPager;
     AdvToolBarPager12: TAdvPage;
     AdvToolBarPager13: TAdvPage;
@@ -132,6 +131,7 @@ type
     procedure mnPreviewMenuItems0SubItems0Click(Sender: TObject);
     procedure AdvGlowButton2Click(Sender: TObject);
     procedure AdvGlowButton3Click(Sender: TObject);
+    procedure mnLoginClick(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -149,7 +149,8 @@ var
 
 implementation
 
-uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier;
+uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
+  uJenisCustomer;
 
 {$R *.dfm}
 
@@ -318,6 +319,16 @@ begin
       frmSupplier  := TfrmSupplier.Create(Self);
       tbSet.AddTab(frmSupplier);
       frmSupplier.Show;
+    end;
+end;
+
+procedure TfUtama.mnLoginClick(Sender: TObject);
+begin
+    if not(isAktif('frmjenissupplier'))then
+    begin
+      frmJenisCustomer  := TfrmJenisCustomer.Create(Self);
+      tbSet.AddTab(frmJenisCustomer);
+      frmJenisCustomer.Show;
     end;
 end;
 

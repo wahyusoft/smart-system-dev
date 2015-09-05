@@ -1,8 +1,8 @@
 object frmSupplier: TfrmSupplier
-  Left = 486
-  Top = 654
+  Left = 287
+  Top = 65
   Width = 905
-  Height = 661
+  Height = 541
   Caption = 'Data Supplier'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -26,7 +26,7 @@ object frmSupplier: TfrmSupplier
     Left = 0
     Top = 0
     Width = 889
-    Height = 623
+    Height = 503
     Align = alClient
     Caption = 'Data Supplier'
     HeaderFont.Charset = ANSI_CHARSET
@@ -39,8 +39,8 @@ object frmSupplier: TfrmSupplier
     TabOrder = 0
     FullWidth = 889
     object Label1: TLabel
-      Left = 10
-      Top = 508
+      Left = 18
+      Top = 404
       Width = 60
       Height = 13
       Caption = 'Record >>'
@@ -225,9 +225,9 @@ object frmSupplier: TfrmSupplier
     end
     object GroupBox7: TGroupBox
       Left = 9
-      Top = 530
+      Top = 426
       Width = 870
-      Height = 87
+      Height = 71
       Align = alBottom
       Caption = '[ISIAN PENCARIAN]'
       Ctl3D = False
@@ -241,14 +241,14 @@ object frmSupplier: TfrmSupplier
       TabOrder = 1
       object Label3: TLabel
         Left = 53
-        Top = 44
+        Top = 36
         Width = 113
         Height = 13
         Caption = 'Masukan Pencarian'
       end
       object edKataKunci: TEdit
         Left = 171
-        Top = 41
+        Top = 33
         Width = 230
         Height = 19
         CharCase = ecUpperCase
@@ -257,7 +257,7 @@ object frmSupplier: TfrmSupplier
       end
       object btnCari: TAdvGlassButton
         Left = 408
-        Top = 36
+        Top = 28
         Width = 57
         Height = 37
         BackColor = clSilver
@@ -278,7 +278,7 @@ object frmSupplier: TfrmSupplier
       end
       object btnCetak: TAdvGlassButton
         Left = 469
-        Top = 36
+        Top = 28
         Width = 57
         Height = 37
         BackColor = clSilver
@@ -301,8 +301,8 @@ object frmSupplier: TfrmSupplier
       Left = 9
       Top = 86
       Width = 870
-      Height = 444
-      Align = alClient
+      Height = 283
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

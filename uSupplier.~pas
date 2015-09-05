@@ -214,7 +214,7 @@ procedure TfrmSupplier.btnEditClick(Sender: TObject);
 begin
     frmAddSupplier := TfrmAddSupplier.Create(Application);
   try
-    frmAddSupplier.panelfrmkelompok.Caption := 'Tambah Supplier';
+    frmAddSupplier.panelfrmkelompok.Caption := 'Edit Supplier';
     frmAddSupplier.ShowModal;
   finally
     frmAddSupplier.Free;
