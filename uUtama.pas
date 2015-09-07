@@ -132,6 +132,10 @@ type
     procedure AdvGlowButton2Click(Sender: TObject);
     procedure AdvGlowButton3Click(Sender: TObject);
     procedure mnLoginClick(Sender: TObject);
+    procedure mnLogoutClick(Sender: TObject);
+    procedure AdvGlowButton5Click(Sender: TObject);
+    procedure AdvGlowButton6Click(Sender: TObject);
+    procedure AdvGlowButton9Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -150,7 +154,7 @@ var
 implementation
 
 uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
-  uJenisCustomer;
+  uJenisCustomer, uCustomer, uBank, uKassa, uCabang;
 
 {$R *.dfm}
 
@@ -330,6 +334,48 @@ begin
       tbSet.AddTab(frmJenisCustomer);
       frmJenisCustomer.Show;
     end;
+end;
+
+procedure TfUtama.mnLogoutClick(Sender: TObject);
+begin
+   if not(isAktif('frmCustomer'))then
+    begin
+      frmCustomer  := TfrmCustomer.Create(Self);
+      tbSet.AddTab(frmCustomer);
+      frmCustomer.Show;
+    end;
+end;
+
+procedure TfUtama.AdvGlowButton5Click(Sender: TObject);
+begin
+   if not(isAktif('frmBank'))then
+    begin
+      frmBank  := TfrmBank.Create(Self);
+      tbSet.AddTab(frmBank);
+      frmBank.Show;
+    end;
+end;
+
+procedure TfUtama.AdvGlowButton6Click(Sender: TObject);
+begin
+  if not(isAktif('frmKassa'))then
+    begin
+      frmKassa  := TfrmKassa.Create(Self);
+      tbSet.AddTab(frmKassa);
+      frmKassa.Show;
+  end;
+
+end;
+
+procedure TfUtama.AdvGlowButton9Click(Sender: TObject);
+begin
+   if not(isAktif('frmCabang'))then
+    begin
+      frmCabang  := TfrmCabang.Create(Self);
+      tbSet.AddTab(frmCabang);
+      frmCabang.Show;
+  end;
+
 end;
 
 end.

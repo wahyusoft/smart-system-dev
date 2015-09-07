@@ -1,9 +1,9 @@
 object fUtama: TfUtama
-  Left = 194
-  Top = 224
+  Left = 271
+  Top = 308
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'v'
+  Caption = 'ah'
   ClientHeight = 532
   ClientWidth = 1073
   Color = clWhite
@@ -235,6 +235,7 @@ object fUtama: TfUtama
             FEF34F07E6FAF307CC1022FF014A86730D57690BA10000000049454E44AE4260
             82}
           TabOrder = 0
+          OnClick = AdvGlowButton9Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -980,6 +981,7 @@ object fUtama: TfUtama
             4E44AE426082}
           Transparent = True
           TabOrder = 0
+          OnClick = AdvGlowButton5Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -1291,6 +1293,7 @@ object fUtama: TfUtama
             3EFA93BD716F266496BCFBEB3F1F7F35FBFEFF7846FF0DE0BF00BC35A540A3D4
             C8BE0000000049454E44AE426082}
           TabOrder = 0
+          OnClick = AdvGlowButton6Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -5503,6 +5506,7 @@ object fUtama: TfUtama
     end
     object mnLogout: TMenuItem
       Caption = 'Data Customer'
+      OnClick = mnLogoutClick
     end
   end
   object AdvOfficeHint1: TAdvOfficeHint

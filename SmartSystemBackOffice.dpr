@@ -10,7 +10,7 @@ uses
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
   uPromo in 'uPromo.pas' {frmPromo},
-  uJenisCustomer in 'uJenisCustomer.pas' {frmJenisCustomer},
+  uCabang in 'uCabang.pas' {frmCabang},
   utambahbrg in 'utambahbrg.pas' {frmtambahbrg},
   uHistoryTransaksi in 'uHistoryTransaksi.pas' {frmHistoryTransaksi},
   uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
@@ -23,7 +23,10 @@ uses
   uKelompok in 'uKelompok.pas' {frmKelompok},
   uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
   uSupplier in 'uSupplier.pas' {frmSupplier},
-  uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier};
+  uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier},
+  uCustomer in 'uCustomer.pas' {frmCustomer},
+  uBank in 'uBank.pas' {frmBank},
+  uKassa in 'uKassa.pas' {frmKassa};
 
 {$R *.res}
 
