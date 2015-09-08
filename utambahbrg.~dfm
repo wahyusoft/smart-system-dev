@@ -1,6 +1,6 @@
 object frmtambahbrg: Tfrmtambahbrg
-  Left = 787
-  Top = 258
+  Left = 763
+  Top = 99
   BorderStyle = bsNone
   Caption = 'frm_tambahbarang'
   ClientHeight = 557
@@ -183,7 +183,9 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = 16765390
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 1
+      OnChange = edKodeChange
     end
     object edBarcode: TEdit
       Left = 118
@@ -215,6 +217,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = clWhite
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 4
       Text = 'edKode'
     end
@@ -226,6 +229,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = clWhite
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 5
       Text = 'edKode'
     end
@@ -237,6 +241,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = clWhite
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 6
       Text = 'edKode'
     end
@@ -275,6 +280,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = 16765390
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 10
       Text = 'edKode'
     end
@@ -286,6 +292,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = 16765390
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 11
       Text = 'edKode'
     end
@@ -297,6 +304,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = 16765390
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 12
       Text = 'edKode'
     end
@@ -308,6 +316,7 @@ object frmtambahbrg: Tfrmtambahbrg
       Color = 16765390
       Ctl3D = False
       ParentCtl3D = False
+      ReadOnly = True
       TabOrder = 13
       Text = 'edKode'
     end

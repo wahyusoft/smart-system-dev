@@ -148,6 +148,11 @@ type
     procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure btnRefreshClick(Sender: TObject);
+    procedure btnFirstClick(Sender: TObject);
+    procedure btnLastClick(Sender: TObject);
+    procedure GridBrgAktifSelectCell(Sender: TObject; ACol, ARow: Integer);
+    procedure GridBrgAktifCellDblClick(Sender: TObject; ACol,
+      ARow: Integer);
   private
     { Private declarations }
     procedure TampilBarang(strSQL : String);
@@ -157,7 +162,7 @@ type
   end;
 
 var
-  frmBarang       : TfrmBarang;
+  frmBarang         : TfrmBarang;
   nmVield,nmFalue   : TStringList;
   kode              : string;
 
@@ -208,6 +213,7 @@ begin
              end;
         end;
   end;
+  GridBrgAktif.SelectFirstRow;
 end;
 
 procedure TfrmBarang.Kosongkan(const All: boolean);
@@ -314,7 +320,8 @@ procedure TfrmBarang.btnEditClick(Sender: TObject);
 begin
   frmtambahbrg := Tfrmtambahbrg.Create(Application);
   try
-    frmtambahbrg.panelfrmbarang.Caption := 'Edit Barang'; 
+    frmtambahbrg.panelfrmbarang.Caption := 'Edit Barang';
+    kode := GridBrgAktif.Cell[0,GridBrgAktif.SelectedRow].AsString;
     frmtambahbrg.ShowModal;
   finally
     frmtambahbrg.Free;
@@ -386,6 +393,36 @@ end;
 procedure TfrmBarang.btnRefreshClick(Sender: TObject);
 begin
   FormShow(Self);
+end;
+
+procedure TfrmBarang.btnFirstClick(Sender: TObject);
+begin
+  GridBrgAktif.SelectFirstRow;
+end;
+
+procedure TfrmBarang.btnLastClick(Sender: TObject);
+begin
+  GridBrgAktif.SelectFirstRow;
+end;
+
+procedure TfrmBarang.GridBrgAktifSelectCell(Sender: TObject; ACol,
+  ARow: Integer);
+begin
+   with GridBrgAktif do
+  begin
+    edKelompok.Text := Cell[11,SelectedRow].AsString;
+    edSupplier.Text := Cell[10,SelectedRow].AsString;
+  end;
+end;
+
+procedure TfrmBarang.GridBrgAktifCellDblClick(Sender: TObject; ACol,
+  ARow: Integer);
+begin
+  with GridBrgAktif do
+  begin
+    kode := Cell[0,SelectedRow].AsString;
+  end;
+  btnEditClick(Self);
 end;
 
 end.

@@ -364,7 +364,6 @@ begin
       tbSet.AddTab(frmKassa);
       frmKassa.Show;
   end;
-
 end;
 
 procedure TfUtama.AdvGlowButton9Click(Sender: TObject);
@@ -375,7 +374,6 @@ begin
       tbSet.AddTab(frmCabang);
       frmCabang.Show;
   end;
-
 end;
 
 end.

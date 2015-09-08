@@ -1,6 +1,6 @@
 object frmBarang: TfrmBarang
-  Left = 479
-  Top = 6
+  Left = 327
+  Top = 57
   Width = 905
   Height = 667
   Caption = 'Data Barang'
@@ -78,7 +78,9 @@ object frmBarang: TfrmBarang
           ParentFont = False
           TabOrder = 0
           TabStop = True
+          OnCellDblClick = GridBrgAktifCellDblClick
           OnCustomDrawCell = GridBrgAktifCustomDrawCell
+          OnSelectCell = GridBrgAktifSelectCell
           object NxTextColumn13: TNxTextColumn
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1282,6 +1284,7 @@ object frmBarang: TfrmBarang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnFirstClick
       end
       object btnPrior: TAdvGlassButton
         Left = 537
@@ -1342,6 +1345,7 @@ object frmBarang: TfrmBarang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnLastClick
       end
     end
   end

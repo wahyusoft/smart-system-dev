@@ -1,6 +1,6 @@
 object frmCustomer: TfrmCustomer
-  Left = 560
-  Top = 188
+  Left = 818
+  Top = 655
   Width = 905
   Height = 541
   Caption = 'Data Customer'
@@ -288,6 +288,7 @@ object frmCustomer: TfrmCustomer
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'TELP'
+        ParentFont = False
         Position = 4
         SortType = stAlphabetic
         Width = 100

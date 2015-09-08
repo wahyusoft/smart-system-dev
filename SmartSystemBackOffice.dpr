@@ -18,7 +18,7 @@ uses
   uAddPromo in 'uAddPromo.pas' {frmAddPromo},
   uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
   uBarang in 'uBarang.pas' {frmBarang},
-  uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer},
+  uAddCustomer in 'uAddCustomer.pas' {frmAddCustomer},
   uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
   uKelompok in 'uKelompok.pas' {frmKelompok},
   uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
@@ -26,7 +26,8 @@ uses
   uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier},
   uCustomer in 'uCustomer.pas' {frmCustomer},
   uBank in 'uBank.pas' {frmBank},
-  uKassa in 'uKassa.pas' {frmKassa};
+  uKassa in 'uKassa.pas' {frmKassa},
+  uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer};
 
 {$R *.res}
 

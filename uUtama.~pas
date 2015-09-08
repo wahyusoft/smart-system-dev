@@ -154,7 +154,7 @@ var
 implementation
 
 uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
-  uJenisCustomer, uCustomer, uBank, uKassa;
+  uJenisCustomer, uCustomer, uBank, uKassa, uCabang;
 
 {$R *.dfm}
 
@@ -364,18 +364,16 @@ begin
       tbSet.AddTab(frmKassa);
       frmKassa.Show;
   end;
-
 end;
 
 procedure TfUtama.AdvGlowButton9Click(Sender: TObject);
 begin
    if not(isAktif('frmCabang'))then
     begin
-      frmKassa  := TfrmKassa.Create(Self);
-      tbSet.AddTab(frmKassa);
-      frmKassa.Show;
+      frmCabang  := TfrmCabang.Create(Self);
+      tbSet.AddTab(frmCabang);
+      frmCabang.Show;
   end;
-
 end;
 
 end.

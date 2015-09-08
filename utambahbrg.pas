@@ -190,6 +190,7 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure Button2Click(Sender: TObject);
+    procedure edKodeChange(Sender: TObject);
   private
     { Private declarations }
   procedure Kosongkan(const All: boolean);  
@@ -202,7 +203,8 @@ var
 
 implementation
 
-uses uVirtualEngine, uDM, uCariSupplier, uCariKelompok, uCariSatuan;
+uses uVirtualEngine, uDM, uCariSupplier, uCariKelompok, uCariSatuan,uBarang,
+  DB;
 
 {$R *.dfm}
 
@@ -222,6 +224,7 @@ begin
     end;
   if not All then edKode.Text:= sl;
   edKode.SetFocus;
+  edKode.Text := kode;
   Halaman1.PageIndex:=0;
 end;
 
@@ -280,6 +283,33 @@ begin
     frmCariSatuan.Free;
   end;
 
+end;
+
+procedure Tfrmtambahbrg.edKodeChange(Sender: TObject);
+var
+ strSQL : String;
+begin
+  if trim(edKode.Text)='' then exit;
+  strSQL := 'SELECT * FROM tblbarang AS b JOIN tblkategori AS k ON b.idkat=k.idkat '+
+            'JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsupplier AS p ON b.kdsup =p.kdsup '+
+            'AND b.kodebrg='''+Trim(edKode.Text)+'''';
+  CommandSQL(DM.QTemp2,strSQL,True);
+  if DM.QTemp2.IsEmpty then
+  begin
+    Kosongkan(true);
+  end else
+  begin
+    with DM.QTemp2 do
+    begin
+       edBarcode.Text  := FieldbyName('kdbarcode').AsString;
+       edNamaBrg.Text  := FieldbyName('namabrg').AsString;
+       edKelompok.Text := FieldbyName('idkat').AsString;
+       edSatuan.Text   := FieldbyName('idsatuan').AsString;
+       edSupplier.Text := FieldbyName('kdsup').AsString;
+       edhpppcs.Text   := FieldbyName('hpp').AsString;
+       edHargabeli.Text:= FieldbyName('hrgbeli').AsString;
+    end;
+  end;
 end;
 
 end.

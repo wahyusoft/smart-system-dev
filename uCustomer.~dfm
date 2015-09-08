@@ -288,6 +288,7 @@ object frmCustomer: TfrmCustomer
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'TELP'
+        ParentFont = False
         Position = 4
         SortType = stAlphabetic
         Width = 100

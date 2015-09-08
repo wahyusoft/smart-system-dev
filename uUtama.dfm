@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 271
-  Top = 308
+  Left = 588
+  Top = 667
   Align = alClient
   BorderStyle = bsNone
   Caption = 'ah'
@@ -93,7 +93,7 @@ object fUtama: TfUtama
     Width = 1073
     Height = 137
     Cursor = crHandPoint
-    ActivePage = AdvToolBarPager12
+    ActivePage = AdvToolBarPager13
     CanMove = True
     CaptionButtons = [cbClose, cbMinimize]
     TabGroups = <>
