@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 588
-  Top = 667
+  Left = 348
+  Top = 380
   Align = alClient
   BorderStyle = bsNone
   Caption = 'ah'
@@ -135,12 +135,12 @@ object fUtama: TfUtama
           Top = 2
           Width = 82
           Height = 58
-          Caption = 'Cabang       [Alt + G]'
+          Caption = 'Cabang         [Alt + G]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -301,7 +301,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -345,12 +345,12 @@ object fUtama: TfUtama
           Top = 0
           Width = 81
           Height = 60
-          Caption = 'Barang [Ctrl+B]'
+          Caption = 'Barang  [Ctrl+B]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -475,7 +475,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -547,7 +547,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -746,12 +746,12 @@ object fUtama: TfUtama
           Top = 2
           Width = 87
           Height = 58
-          Caption = 'Supplier [Ctrl+S]'
+          Caption = 'Supplier   [Ctrl+S]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -889,7 +889,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1046,7 +1046,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1214,7 +1214,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1365,7 +1365,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1527,7 +1527,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1667,7 +1667,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1758,6 +1758,7 @@ object fUtama: TfUtama
             FCBE91D13D6B73F357FF5FFE1DE8BF01B90A7FEB0DDCB6FC0000000049454E44
             AE426082}
           TabOrder = 1
+          OnClick = AdvGlowButton16Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -1799,7 +1800,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -1932,7 +1933,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -2046,7 +2047,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -2199,7 +2200,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -2333,7 +2334,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -2472,7 +2473,7 @@ object fUtama: TfUtama
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
@@ -2593,7 +2594,7 @@ object fUtama: TfUtama
       Height = 81
       Caption = 'Laporan'
       object AdvToolBar15: TAdvToolBar
-        Left = 672
+        Left = 671
         Top = 3
         Width = 93
         Height = 75
@@ -2660,7 +2661,7 @@ object fUtama: TfUtama
       object AdvToolBar16: TAdvToolBar
         Left = 3
         Top = 3
-        Width = 101
+        Width = 100
         Height = 75
         AllowFloating = True
         AutoSize = False
@@ -2682,14 +2683,94 @@ object fUtama: TfUtama
         object AdvGlowButton24: TAdvGlowButton
           Left = 2
           Top = 2
-          Width = 97
-          Height = 58
+          Width = 95
+          Height = 57
           Caption = 'Kartu Stok [Shift+F1]'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
           NotesFont.Height = -11
           NotesFont.Name = 'Tahoma'
           NotesFont.Style = []
+          ParentFont = False
+          Picture.Data = {
+            89504E470D0A1A0A0000000D49484452000000240000001D0806000000C275CE
+            FD0000000467414D410000B18F0BFC61050000001974455874536F6674776172
+            650041646F626520496D616765526561647971C9653C000008AC494441545847
+            C597095054471EC61FE8CCE080289778EDA21B0F50D418B534969152D7889BD2
+            DAEC4AC4C444250415458D1B8D261A94648D1B5D91202A9EC006755040446E19
+            EE4BC00304B91960388699616680B98F6FBB87987253AB60ED96E9AAAE37F5EA
+            55F7AFBEEFFBFFBBC78221030C6351EFC9B0ED66316C1197D1BA1F65F403AF7F
+            834161F2D732E3EB7C38FEF2A3232E371F606D39B380191BC83096BF010EC394
+            F931DC065F76A0EC3857658AB581F447E7CE62FF59C72FF9AC9D1E18E831FCB5
+            43C9768F1ADDB5CF2AD9706904FA6FDAA13EFE233C8D0B9116449D3C7FCC7FE3
+            140264F15AA19A3731560FD70DDFD7BE759846FA8F5178C8F3474971011E65C4
+            C9E377AC3AB26E86ADFD6B05A219BA319BE59EBF9A93D3BDDF09EDD7D6A3901F
+            8FEC8C349484EC6EBDB676BC0F011AD43A4D8183ABF2E9F4F93577C639FECFF9
+            3BB172B675D2AEB5DBAA823F93C8E3BF40D3ADEDE0275C46463C0F85DF7E587D
+            D89579FB65D6A1CCC6D1906A9760685C54A86E5911DDDFB4F44B45D59B7F6AC9
+            18F387E41086F3CA0A03B0B8B03F60E2ED4F169F7CBC65529F2CD00E15679723
+            E9F675A4F1228CFCBDABE29659312ECF2F1C1292CC391115655DE73985638C65
+            8E19EF72B49AF8F1265DB6BBD650B958626C595EAF15ACC855352E3927AB7CD3
+            B7256DDCBCA88D8CF590E1A8CCC13319B7F8854C4CED064B8322C80A05E7DE47
+            42723A6A53AECB93D7390791C546D20513131327A4F373BFBDC7CF4BC949898E
+            91247A4AD47726C294C086F1161BDA1B5CA8798ED0264F311ACAE6AB8C4D1E12
+            6DA347ABAA6EF15DF913F76FBAF2C6FFB1E222E34C967A796BA150675D9945C9
+            4B2C725B365B9A64DF8F407EA40F6485874CA2839C9688A5CC0777A3A3EDB273
+            F3BFA9A96BECE912890DC28E4E434D4D2D6ACAD320283E0949E1475015B8C390
+            6D4BC058E80B66411939129A58029C37C760AA59A23108DE91AB6B1755292BE7
+            44488A277FDA9966E79E7595B17AA17AA1AEC356662DB32C136D1B6ED086B0A0
+            4F2433DA4ADFB8975B1417F6F7E0AAA775ADA26E3124D21EC815BDE8EB5742A1
+            D442A2D0A253DC8B8EB65A881A6FA33BFF6BC8333CA12B9804FDBDD1D0DEB482
+            2A6A04D4D163A04F990AD3FDB930154E8128C249FCE37AFB4F3D5C5C5E086571
+            79D6B075F73D2D9FF4EC61194D1156401207AA6817632BFFA24ED8DE8936A1D0
+            3C45E26E28089446A381C1602071048C2640A3037A957AF4C8BA2011E6A1A7FE
+            0C9415DE30168D81319DD81ACB86EA270E34D1B628D9EBA0F07163EF9ECDBC24
+            63D4BEAB732C3757FCD9B25EF9350BA61B0E40E95AE81E8742F6341312890462
+            89146231518A3CE57239942A15B43A9D19CC68349AE1081B74E4678F4283C686
+            4A288ADF018AD8403117A6626BB45F71D486BE6B1BBBC076F8FC41DBCB3C8661
+            C52CB6F46DDAE72E52F1FE0AD3C32F60CA5C8CDE4C7F88DB9BA0E8ED875AAD31
+            435085944A15FAFBFBCD5345E074E4BDC96432C391BCE17E490E9A53E7C398CF
+            3103F5253920759B43B5F724D6263B861935A45321D0CF8F5BC00B2FEAB8B815
+            EAB3AE30C5DA4156B003C2A66A748BA9328A0165B45AF3C6745210B55AFD8B8D
+            0A850265E595C8BEBD0FC23BF630168C80217734AA7E7096052DB20D99CD66A6
+            119861436A09A93939EB6B6AEB3A85E911683AB90A0DD737A2B93209EDEDED24
+            CC542135FA954AF4F5F51165944419B51988825175341A356AEA9B9178EB1CAA
+            625CA0CD21EA14D9A0FBFA58FD352F47FE4ABB61AB09C8D0FA533A9FEF51F1A4
+            AA825693542A81A0EA010A733291935B808ACA2A6259EF2F96E8F57AA292CE6C
+            1585A439A2B3B34B8CF4B464645DF0405F0AC94E1117AA7B0EC8DF3FB175D734
+            ABFD0E0C337ED07E44A54B4F4F772B2B7F94D125EAD6CB89E4B4B4956A2D64F2
+            5ED4D4D62337AF0055D54F49150D84F959853DCB0C5588565F71693992CEFBA2
+            EDF22898D2B830E68C44FD3917D5F76F8FBEE1CA65484C8770B42427273B9594
+            965EEEE8EC529A61FA06C2ABD70F540FCD8B40D082BAFA7AB35D34C4B4CAE877
+            54293AE8F7D4AA3B51275071C205BA7F7181046BC879134C517F9950BDCCDA72
+            0381193CC8595959364545A54784ED1DD2DE5E920BB221CD057DD2F26E6B6B43
+            5D5D1D84A407D1CA7A36A8323A024381E86CEF14212D2106794716A2EF943570
+            C51A3A9E03F8BBA6F67C3C86759C74C0DF0D6A554C4C0C3BAFB070539340D04C
+            E5A64032990C2251B719A4A1A101B5B5B5686D6D35E7E4BF0D83C168B6B1202F
+            17A9DF79A3FD00A9AA1F6C80F3C4AA636E86CFA7DB65920371D190ACE2F1784E
+            29E9E9E1A5E50F4CCDC412DA893B3A3A4845759821040201BABABAFE4399E7A1
+            A84A344F4F9E542331EC302A76FD1E9A03449D6F4742193C19A7974FEE788BC5
+            7C4660E8A56FF09B687878383724342CE04CD8F99AAB1191FDA96969A68A8A4A
+            3435359B81A452A9B9A45F34743A3D5ADA8448E54580BF7B1EC401A4DFECB786
+            FEA83332B6CC34ACB61D7E89804C1DB4233FDF90F67CF5D5B8EDDB777A6DDF11
+            702AF048D0BD73E72F08121212B58F0998582C312BF0ACCF3C0F46C32E91CA90
+            9F750F0907DE47AD8F0DFA03AC08D048D4EC7143C0B431D54E0CF32ED98B3BA4
+            06F8AB8F2C96BCF79E9DB7B7F75CDFADFE1B0E1D3A12729D77939FC9CF6E7FF8
+            B8522F147690F21F28770A474B5E49425F555D8DB8530750F2B123C43E9650EE
+            6043FC3717FCD363B26201877594EC41EF40835B3508B1E59A356B9C0F0705CD
+            3B7D3AF4C3A89FA28353D333728A4B4AC50D4D0283B467E00AD24AACBA157505
+            97362FC543DF8910EFB087E27327C4AD7335AD19679F44CE2A7A0D1EF46EFE4A
+            EA797979B10F1E3CE81C161636FBEAD528EFC494D453C525F78BCB1F3CEABB79
+            2B56B57BE307B95FCEB42F8F58315699F7C93464FBCC85FF8C094D6F7058BE3F
+            07F995F67B958F2D02020238A1A1A10E919191D3C2C32F796DDFB9D3FFADA953
+            176E7162E604BEC1F13D3BD73AFEBB1936CD2BED58A1360CE3F67F57E725B416
+            7E7E7E2C4F4F4FFAEF829ED816813318B6DF38C6D1DB91993B8BCD4C27EF5E7C
+            3DFDD5C2FF06B42D7C79B29DC33F0000000049454E44AE426082}
           TabOrder = 0
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
@@ -2720,10 +2801,11 @@ object fUtama: TfUtama
           Appearance.GradientDown = ggVertical
           Appearance.GradientMirrorDown = ggVertical
           Appearance.GradientChecked = ggVertical
+          Layout = blGlyphTop
         end
       end
       object AdvToolBar18: TAdvToolBar
-        Left = 107
+        Left = 106
         Top = 3
         Width = 116
         Height = 75
@@ -2788,7 +2870,7 @@ object fUtama: TfUtama
         end
       end
       object AdvToolBar19: TAdvToolBar
-        Left = 226
+        Left = 225
         Top = 3
         Width = 443
         Height = 75

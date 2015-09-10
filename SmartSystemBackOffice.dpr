@@ -5,7 +5,7 @@ uses
   uDM in 'uDM.pas' {DM: TDataModule},
   uVirtualEngine in 'uVirtualEngine.pas',
   uLogin in 'uLogin.pas' {fLogin},
-  uSatuan in 'uSatuan.pas' {frmSatuan},
+  uPurchase in 'uPurchase.pas' {frmPurchase},
   uUtama in 'uUtama.pas' {fUtama},
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
@@ -13,7 +13,7 @@ uses
   uCabang in 'uCabang.pas' {frmCabang},
   utambahbrg in 'utambahbrg.pas' {frmtambahbrg},
   uHistoryTransaksi in 'uHistoryTransaksi.pas' {frmHistoryTransaksi},
-  uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
+  uCariCabang in 'uCariCabang.pas' {frmCariCabang},
   uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
   uAddPromo in 'uAddPromo.pas' {frmAddPromo},
   uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
@@ -27,7 +27,10 @@ uses
   uCustomer in 'uCustomer.pas' {frmCustomer},
   uBank in 'uBank.pas' {frmBank},
   uKassa in 'uKassa.pas' {frmKassa},
-  uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer};
+  uAddKassa in 'uAddKassa.pas' {frmAddKassa},
+  uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer},
+  uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
+  uSatuan in 'uSatuan.pas' {frmSatuan};
 
 {$R *.res}
 

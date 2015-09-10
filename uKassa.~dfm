@@ -1,6 +1,6 @@
 object frmKassa: TfrmKassa
-  Left = 524
-  Top = 382
+  Left = 449
+  Top = 159
   Width = 905
   Height = 541
   Caption = 'Data Kassa'
@@ -292,11 +292,13 @@ object frmKassa: TfrmKassa
         Font.Style = [fsBold]
         Header.Caption = 'KONEKSI'
         Header.Alignment = taCenter
+        ParentFont = False
         Position = 4
         SortType = stAlphabetic
         Width = 100
       end
       object NxTextColumn3: TNxCheckBoxColumn
+        Alignment = taCenter
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -305,6 +307,7 @@ object frmKassa: TfrmKassa
         Header.Caption = 'STATUS'
         Header.Alignment = taCenter
         Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
+        ParentFont = False
         Position = 5
         SortType = stBoolean
       end

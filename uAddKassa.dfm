@@ -1,0 +1,298 @@
+object frmAddKassa: TfrmAddKassa
+  Left = 548
+  Top = 432
+  BorderStyle = bsNone
+  Caption = 'frmAddKassa'
+  ClientHeight = 391
+  ClientWidth = 490
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object panelfrmkelompok: TNxHeaderPanel
+    Left = 0
+    Top = 0
+    Width = 490
+    Height = 391
+    Align = alClient
+    Caption = 'Tambah Kassa'
+    HeaderFont.Charset = ANSI_CHARSET
+    HeaderFont.Color = clWindowText
+    HeaderFont.Height = -19
+    HeaderFont.Name = 'Arial'
+    HeaderFont.Style = []
+    HeaderSize = 40
+    ParentHeaderFont = False
+    TabOrder = 0
+    FullWidth = 490
+    object Panel2: TPanel
+      Left = 9
+      Top = 45
+      Width = 471
+      Height = 292
+      Align = alTop
+      Color = clWhite
+      TabOrder = 0
+      object Label2: TLabel
+        Left = 24
+        Top = 9
+        Width = 37
+        Height = 13
+        Caption = 'Cabang'
+      end
+      object Label1: TLabel
+        Left = 24
+        Top = 35
+        Width = 57
+        Height = 13
+        Caption = 'Kode Kassa'
+      end
+      object Label4: TLabel
+        Left = 24
+        Top = 62
+        Width = 51
+        Height = 13
+        Caption = 'IP Address'
+      end
+      object Label6: TLabel
+        Left = 24
+        Top = 88
+        Width = 46
+        Height = 13
+        Caption = 'Database'
+      end
+      object Label9: TLabel
+        Left = 26
+        Top = 254
+        Width = 21
+        Height = 13
+        Caption = 'Aktif'
+      end
+      object Label3: TLabel
+        Left = 24
+        Top = 115
+        Width = 48
+        Height = 13
+        Caption = 'Username'
+      end
+      object Label5: TLabel
+        Left = 24
+        Top = 140
+        Width = 46
+        Height = 13
+        Caption = 'Password'
+      end
+      object Label7: TLabel
+        Left = 24
+        Top = 167
+        Width = 55
+        Height = 13
+        Caption = 'Keterangan'
+      end
+      object Label8: TLabel
+        Left = 24
+        Top = 193
+        Width = 55
+        Height = 13
+        Caption = 'Folder Data'
+      end
+      object Label10: TLabel
+        Left = 24
+        Top = 220
+        Width = 93
+        Height = 28
+        AutoSize = False
+        Caption = 'Status Koneksi Ke BackOffice'
+        WordWrap = True
+      end
+      object IDSatuan: TEdit
+        Left = 121
+        Top = 6
+        Width = 121
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+      end
+      object edNamaKelompok: TEdit
+        Left = 121
+        Top = 32
+        Width = 120
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        Text = 'edCariSupplier'
+      end
+      object edMinprofit: TEdit
+        Left = 121
+        Top = 59
+        Width = 328
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 2
+        Text = 'IDSatuan'
+      end
+      object Edit1: TEdit
+        Left = 121
+        Top = 85
+        Width = 328
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 3
+        Text = 'IDSatuan'
+      end
+      object ComboBox1: TComboBox
+        Left = 121
+        Top = 251
+        Width = 105
+        Height = 21
+        Ctl3D = False
+        ItemHeight = 13
+        ItemIndex = 0
+        ParentCtl3D = False
+        TabOrder = 4
+        Text = 'YA'
+        Items.Strings = (
+          'YA'
+          'TIDAK')
+      end
+      object btnF3: TButton
+        Left = 215
+        Top = 6
+        Width = 26
+        Height = 20
+        Caption = 'F3'
+        TabOrder = 5
+        OnClick = btnF3Click
+      end
+      object Edit2: TEdit
+        Left = 121
+        Top = 112
+        Width = 328
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 6
+        Text = 'IDSatuan'
+      end
+      object Edit3: TEdit
+        Left = 121
+        Top = 137
+        Width = 328
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 7
+        Text = 'IDSatuan'
+      end
+      object Edit4: TEdit
+        Left = 121
+        Top = 164
+        Width = 328
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 8
+        Text = 'IDSatuan'
+      end
+      object Edit5: TEdit
+        Left = 121
+        Top = 190
+        Width = 328
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 9
+        Text = 'IDSatuan'
+      end
+      object ComboBox2: TComboBox
+        Left = 121
+        Top = 219
+        Width = 105
+        Height = 21
+        Ctl3D = False
+        ItemHeight = 13
+        ItemIndex = 0
+        ParentCtl3D = False
+        TabOrder = 10
+        Text = 'PUTUS'
+        Items.Strings = (
+          'PUTUS'
+          'TERHUBUNG')
+      end
+    end
+    object btnBaru: TAdvGlassButton
+      Left = 186
+      Top = 344
+      Width = 89
+      Height = 39
+      BackColor = clGreen
+      Caption = 'Simpan'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ForeColor = clWhite
+      GlowColor = 16760205
+      InnerBorderColor = clBlack
+      OuterBorderColor = clWhite
+      ParentFont = False
+      ShineColor = clWhite
+      Version = '1.0.1.0'
+    end
+    object btnEdit: TAdvGlassButton
+      Left = 277
+      Top = 344
+      Width = 89
+      Height = 39
+      BackColor = clYellow
+      Caption = 'Reset'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ForeColor = clWhite
+      GlowColor = 16760205
+      InnerBorderColor = clBlack
+      OuterBorderColor = clWhite
+      ParentFont = False
+      ShineColor = clWhite
+      Version = '1.0.1.0'
+    end
+    object btnHapus: TAdvGlassButton
+      Left = 368
+      Top = 344
+      Width = 89
+      Height = 39
+      BackColor = clRed
+      Caption = 'TUTUP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ForeColor = clWhite
+      GlowColor = 16760205
+      InnerBorderColor = clBlack
+      OuterBorderColor = clWhite
+      ParentFont = False
+      ShineColor = clWhite
+      Version = '1.0.1.0'
+      OnClick = btnHapusClick
+    end
+  end
+end

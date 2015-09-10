@@ -65,7 +65,6 @@ object frmBank: TfrmBank
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
-        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -86,7 +85,6 @@ object frmBank: TfrmBank
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
-        OnClick = btnEditClick
       end
       object btnHapus: TAdvGlassButton
         Left = 176
@@ -288,6 +286,7 @@ object frmBank: TfrmBank
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'ID.USER'
+        ParentFont = False
         Position = 4
         SortType = stAlphabetic
         Width = 100
@@ -299,6 +298,7 @@ object frmBank: TfrmBank
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'TGL.AKSES'
+        ParentFont = False
         Position = 5
         SortType = stAlphabetic
       end

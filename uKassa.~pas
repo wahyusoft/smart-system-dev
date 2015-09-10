@@ -77,7 +77,8 @@ var
 
 implementation
 
-uses uDM, DB, DBTables, uAddKelompok, uAddSupplier, uAddJenisCustomer;
+uses uDM, DB, DBTables, uAddKelompok, uAddSupplier, uAddJenisCustomer,
+  uAddKassa;
 
 {$R *.dfm}
 
@@ -193,12 +194,12 @@ end;
 
 procedure TfrmKassa.btnBaruClick(Sender: TObject);
 begin
-  frmAddJenisCustomer := TfrmAddJenisCustomer.Create(Application);
+  frmAddKassa := TfrmAddKassa.Create(Application);
   try
-    frmAddJenisCustomer.panelfrmkelompok.Caption := 'Tambah Jenis Customer';
-    frmAddJenisCustomer.ShowModal;
+    frmAddKassa.panelfrmkelompok.Caption := 'Tambah Kassa';
+    frmAddKassa.ShowModal;
   finally
-    frmAddJenisCustomer.Free;
+    frmAddKassa.Free;
   end;
 
 end;

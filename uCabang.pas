@@ -56,8 +56,6 @@ type
     procedure CBStsKKKeyPress(Sender: TObject; var Key: Char);
     procedure CBCacatKeyPress(Sender: TObject; var Key: Char);
     procedure BtnTutupClick(Sender: TObject);
-    procedure btnBaruClick(Sender: TObject);
-    procedure btnEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnRefreshClick(Sender: TObject);
     procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
@@ -199,31 +197,6 @@ end;
 procedure TfrmCabang.BtnTutupClick(Sender: TObject);
 begin
   Close;
-end;
-
-procedure TfrmCabang.btnBaruClick(Sender: TObject);
-begin
-  frmAddJenisCustomer := TfrmAddJenisCustomer.Create(Application);
-  try
-    frmAddJenisCustomer.panelfrmkelompok.Caption := 'Tambah Jenis Customer';
-    frmAddJenisCustomer.ShowModal;
-  finally
-    frmAddJenisCustomer.Free;
-  end;
-
-end;
-
-procedure TfrmCabang.btnEditClick(Sender: TObject);
-begin
-    frmAddJenisCustomer := TfrmAddJenisCustomer.Create(Application);
-  try
-    frmAddJenisCustomer.panelfrmkelompok.Caption := 'Edit Jenis Customer';
-    frmAddJenisCustomer.ShowModal;
-  finally
-    frmAddJenisCustomer.Free;
-  end;
-
-
 end;
 
 procedure TfrmCabang.FormShow(Sender: TObject);

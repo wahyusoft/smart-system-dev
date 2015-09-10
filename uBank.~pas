@@ -51,7 +51,6 @@ type
     procedure CBStsKKKeyPress(Sender: TObject; var Key: Char);
     procedure CBCacatKeyPress(Sender: TObject; var Key: Char);
     procedure BtnTutupClick(Sender: TObject);
-    procedure btnBaruClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnRefreshClick(Sender: TObject);
@@ -98,7 +97,7 @@ begin
                 for x:= 0 to RecordCount-1 do
                 begin
                    AddRow; 
-                   Cell[0,x].AsString := FieldbyName('idbanks').AsString;
+                   Cell[0,x].AsString := FieldbyName('idbank').AsString;
                    Cell[1,x].AsString := FieldbyName('namabank').AsString;
                    Cell[2,x].AsString := FieldbyName('ket').AsString;
                    Cell[3,x].AsString := FieldbyName('status').AsString;
@@ -189,18 +188,6 @@ end;
 procedure TfrmBank.BtnTutupClick(Sender: TObject);
 begin
   Close;
-end;
-
-procedure TfrmBank.btnBaruClick(Sender: TObject);
-begin
-  frmAddJenisCustomer := TfrmAddJenisCustomer.Create(Application);
-  try
-    frmAddJenisCustomer.panelfrmkelompok.Caption := 'Tambah Jenis Customer';
-    frmAddJenisCustomer.ShowModal;
-  finally
-    frmAddJenisCustomer.Free;
-  end;
-
 end;
 
 procedure TfrmBank.btnEditClick(Sender: TObject);

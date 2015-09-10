@@ -65,7 +65,6 @@ object frmCabang: TfrmCabang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
-        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -86,7 +85,6 @@ object frmCabang: TfrmCabang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
-        OnClick = btnEditClick
       end
       object btnHapus: TAdvGlassButton
         Left = 176
@@ -292,6 +290,7 @@ object frmCabang: TfrmCabang
         Font.Style = [fsBold]
         Header.Caption = 'NO.TELP'
         Header.Alignment = taCenter
+        ParentFont = False
         Position = 4
         SortType = stAlphabetic
         Width = 100
@@ -305,6 +304,7 @@ object frmCabang: TfrmCabang
         Font.Style = [fsBold]
         Header.Caption = 'NO.FAX'
         Header.Alignment = taCenter
+        ParentFont = False
         Position = 5
         SortType = stAlphabetic
       end
@@ -315,6 +315,7 @@ object frmCabang: TfrmCabang
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'NO.HP'
+        ParentFont = False
         Position = 6
         SortType = stAlphabetic
       end
@@ -325,6 +326,7 @@ object frmCabang: TfrmCabang
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'CATATAN'
+        ParentFont = False
         Position = 7
         SortType = stAlphabetic
       end
@@ -335,6 +337,7 @@ object frmCabang: TfrmCabang
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'STATUS'
+        ParentFont = False
         Position = 8
         SortType = stAlphabetic
       end
@@ -345,6 +348,7 @@ object frmCabang: TfrmCabang
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'ID USER'
+        ParentFont = False
         Position = 9
         SortType = stAlphabetic
       end
@@ -356,6 +360,7 @@ object frmCabang: TfrmCabang
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Header.Caption = 'TGL.AKSES'
+        ParentFont = False
         Position = 10
         SortType = stAlphabetic
         Width = 180

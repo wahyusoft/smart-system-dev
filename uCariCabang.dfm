@@ -1,0 +1,182 @@
+object frmCariCabang: TfrmCariCabang
+  Left = 632
+  Top = 265
+  BorderStyle = bsNone
+  Caption = 'frmCariCabang'
+  ClientHeight = 338
+  ClientWidth = 436
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object wwwww: TNxHeaderPanel
+    Left = 0
+    Top = 0
+    Width = 436
+    Height = 338
+    Align = alClient
+    Caption = 'Pilih Cabang'
+    HeaderFont.Charset = ANSI_CHARSET
+    HeaderFont.Color = clWindowText
+    HeaderFont.Height = -19
+    HeaderFont.Name = 'Arial'
+    HeaderFont.Style = []
+    HeaderSize = 40
+    ParentHeaderFont = False
+    TabOrder = 0
+    FullWidth = 436
+    object Panel2: TPanel
+      Left = 9
+      Top = 45
+      Width = 417
+      Height = 59
+      Align = alTop
+      Color = clWhite
+      TabOrder = 0
+      object Label2: TLabel
+        Left = 16
+        Top = 8
+        Width = 72
+        Height = 13
+        Caption = 'Text Pencarian'
+      end
+      object edCariSupplier: TEdit
+        Left = 16
+        Top = 27
+        Width = 377
+        Height = 19
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 0
+        Text = 'edCariSupplier'
+      end
+    end
+    object GridKelompok: TNextGrid
+      Left = 9
+      Top = 104
+      Width = 417
+      Height = 177
+      Align = alTop
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      HeaderSize = 20
+      Options = [goGrid, goHeader, goIndicator, goMultiSelect]
+      ParentFont = False
+      TabOrder = 1
+      TabStop = True
+      object NxTextColumn13: TNxTextColumn
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Header.Caption = 'KODE'
+        Header.Alignment = taCenter
+        ParentFont = False
+        Position = 0
+        SortType = stAlphabetic
+      end
+      object NxTextColumn2: TNxTextColumn
+        DefaultWidth = 150
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Header.Caption = 'NAMA'
+        Header.Alignment = taCenter
+        ParentFont = False
+        Position = 1
+        SortType = stAlphabetic
+        Width = 150
+      end
+      object NxTextColumn1: TNxTextColumn
+        Alignment = taCenter
+        DefaultWidth = 200
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Header.Caption = 'ALAMAT'
+        Header.Alignment = taCenter
+        ParentFont = False
+        Position = 2
+        SortType = stAlphabetic
+        Width = 200
+      end
+    end
+    object btnBaru: TAdvGlassButton
+      Left = 24
+      Top = 288
+      Width = 89
+      Height = 39
+      BackColor = clGreen
+      Caption = 'Menu'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ForeColor = clWhite
+      GlowColor = 16760205
+      InnerBorderColor = clBlack
+      OuterBorderColor = clWhite
+      ParentFont = False
+      ShineColor = clWhite
+      Version = '1.0.1.0'
+    end
+    object btnEdit: TAdvGlassButton
+      Left = 248
+      Top = 288
+      Width = 89
+      Height = 39
+      BackColor = clYellow
+      Caption = 'OK'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ForeColor = clWhite
+      GlowColor = 16760205
+      InnerBorderColor = clBlack
+      OuterBorderColor = clWhite
+      ParentFont = False
+      ShineColor = clWhite
+      Version = '1.0.1.0'
+    end
+    object btnHapus: TAdvGlassButton
+      Left = 336
+      Top = 288
+      Width = 89
+      Height = 39
+      BackColor = clRed
+      Caption = 'TUTUP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ForeColor = clWhite
+      GlowColor = 16760205
+      InnerBorderColor = clBlack
+      OuterBorderColor = clWhite
+      ParentFont = False
+      ShineColor = clWhite
+      Version = '1.0.1.0'
+      OnClick = btnHapusClick
+    end
+  end
+end
