@@ -1,9 +1,9 @@
 object fUtama: TfUtama
-  Left = 348
-  Top = 380
+  Left = 133
+  Top = 675
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'ah'
+  Caption = 'is'
   ClientHeight = 532
   ClientWidth = 1073
   Color = clWhite

@@ -83,6 +83,8 @@ type
     procedure BtnTutupClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnRefreshClick(Sender: TObject);
+    procedure btnBaruClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
     procedure Kosongkan(const All : boolean);
@@ -101,7 +103,7 @@ var
 
 implementation
 
-uses uDM, DB, DBTables, uAddSatuan;
+uses uDM, DB, DBTables, uAddSatuan, uAddPurchase;
 
 {$R *.dfm}
 
@@ -128,6 +130,7 @@ procedure TfrmPurchase.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
      if Key=VK_RETURN then Perform(WM_NEXTDLGCTL, 0, 0);
+     if Key=VK_F6 then Button1Click(Self);
 end;
 
 procedure TfrmPurchase.CBKelaminKeyPress(Sender: TObject; var Key: Char);
@@ -193,6 +196,27 @@ end;
 procedure TfrmPurchase.btnRefreshClick(Sender: TObject);
 begin
   FormShow(Self);
+end;
+
+procedure TfrmPurchase.btnBaruClick(Sender: TObject);
+begin
+  frmAddPurchase := TfrmAddPurchase.Create(Application);
+  try
+    frmAddPurchase.panelfrmkelompok.Caption := 'Tambah Purchase Order';
+    frmAddPurchase.ShowModal;
+  finally
+    frmAddPurchase.Free;
+  end;
+end;
+
+procedure TfrmPurchase.Button1Click(Sender: TObject);
+begin
+   frmCariSupplier := TfrmCariSupplier.Create(Application);
+  try
+    frmCariSupplier.ShowModal;
+  finally
+    frmCariSupplier.Free;
+  end;
 end;
 
 end.

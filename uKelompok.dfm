@@ -1,6 +1,6 @@
 object frmKelompok: TfrmKelompok
-  Left = 623
-  Top = 71
+  Left = 196
+  Top = 472
   Width = 905
   Height = 661
   Caption = 'Data Kelompok'

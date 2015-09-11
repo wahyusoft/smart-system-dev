@@ -381,9 +381,9 @@ procedure TfUtama.AdvGlowButton16Click(Sender: TObject);
 begin
     if not(isAktif('frmPurchase'))then
     begin
-      frmCabang  := TfrmCabang.Create(Self);
-      tbSet.AddTab(frmCabang);
-      frmCabang.Show;
+      frmPurchase  := TfrmPurchase.Create(Self);
+      tbSet.AddTab(frmPurchase);
+      frmPurchase.Show;
     end;
 end;
 

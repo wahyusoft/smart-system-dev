@@ -1,6 +1,6 @@
 object frmPurchase: TfrmPurchase
-  Left = 295
-  Top = 135
+  Left = 176
+  Top = 405
   BorderStyle = bsNone
   Caption = 'Data Purchase Order Barang'
   ClientHeight = 629
@@ -66,6 +66,7 @@ object frmPurchase: TfrmPurchase
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -559,6 +560,7 @@ object frmPurchase: TfrmPurchase
         Height = 20
         Caption = 'F6'
         TabOrder = 7
+        OnClick = Button1Click
       end
       object Edit1: TEdit
         Left = 390

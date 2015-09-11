@@ -21,7 +21,7 @@ uses
   uAddCustomer in 'uAddCustomer.pas' {frmAddCustomer},
   uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
   uKelompok in 'uKelompok.pas' {frmKelompok},
-  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
+  uAddPurchase in 'uAddPurchase.pas' {frmAddPurchase},
   uSupplier in 'uSupplier.pas' {frmSupplier},
   uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier},
   uCustomer in 'uCustomer.pas' {frmCustomer},
@@ -30,7 +30,8 @@ uses
   uAddKassa in 'uAddKassa.pas' {frmAddKassa},
   uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer},
   uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
-  uSatuan in 'uSatuan.pas' {frmSatuan};
+  uSatuan in 'uSatuan.pas' {frmSatuan},
+  uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok};
 
 {$R *.res}
 

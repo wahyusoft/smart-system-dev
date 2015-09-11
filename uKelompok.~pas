@@ -231,8 +231,8 @@ end;
 
 procedure TfrmKelompok.btnCariClick(Sender: TObject);
 begin
-    if Trim(edKataKunci.Text)='' then exit;
-  TampilBarang('WHERE satuan LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
+  if Trim(edKataKunci.Text)='' then exit;
+  TampilBarang('WHERE kategori LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
 end;
 
 end.

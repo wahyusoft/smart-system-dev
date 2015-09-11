@@ -5,7 +5,7 @@ uses
   uDM in 'uDM.pas' {DM: TDataModule},
   uVirtualEngine in 'uVirtualEngine.pas',
   uLogin in 'uLogin.pas' {fLogin},
-  uSatuan in 'uSatuan.pas' {frmSatuan},
+  uPurchase in 'uPurchase.pas' {frmPurchase},
   uUtama in 'uUtama.pas' {fUtama},
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
@@ -29,7 +29,8 @@ uses
   uKassa in 'uKassa.pas' {frmKassa},
   uAddKassa in 'uAddKassa.pas' {frmAddKassa},
   uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer},
-  uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan};
+  uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
+  uSatuan in 'uSatuan.pas' {frmSatuan};
 
 {$R *.res}
 

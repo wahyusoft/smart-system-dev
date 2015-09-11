@@ -1,6 +1,6 @@
 object frmPurchase: TfrmPurchase
-  Left = 384
-  Top = 424
+  Left = 259
+  Top = 295
   BorderStyle = bsNone
   Caption = 'Data Purchase Order Barang'
   ClientHeight = 629
@@ -66,6 +66,7 @@ object frmPurchase: TfrmPurchase
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnBaruClick
       end
       object btnEdit: TAdvGlassButton
         Left = 88
@@ -210,11 +211,11 @@ object frmPurchase: TfrmPurchase
       end
     end
     object GridSatuan: TNextGrid
-      Left = 561
+      Left = 657
       Top = 86
-      Width = 552
+      Width = 222
       Height = 368
-      Align = alLeft
+      Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -559,6 +560,7 @@ object frmPurchase: TfrmPurchase
         Height = 20
         Caption = 'F6'
         TabOrder = 7
+        OnClick = Button1Click
       end
       object Edit1: TEdit
         Left = 390
@@ -649,7 +651,7 @@ object frmPurchase: TfrmPurchase
     object NextGrid1: TNextGrid
       Left = 9
       Top = 86
-      Width = 552
+      Width = 648
       Height = 368
       Align = alLeft
       Font.Charset = DEFAULT_CHARSET
