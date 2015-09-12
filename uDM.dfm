@@ -81,6 +81,7 @@ object DM: TDM
     Top = 24
   end
   object QTemp1: TZQuery
+    Connection = connection
     Params = <>
     Left = 192
     Top = 112
@@ -92,6 +93,7 @@ object DM: TDM
     Top = 72
   end
   object QPengguna: TZQuery
+    Connection = connection
     Params = <>
     Left = 24
     Top = 128

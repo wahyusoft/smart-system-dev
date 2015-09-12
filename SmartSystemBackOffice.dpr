@@ -31,6 +31,7 @@ uses
   uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer},
   uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
   uSatuan in 'uSatuan.pas' {frmSatuan},
+  uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
   uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok};
 
 {$R *.res}

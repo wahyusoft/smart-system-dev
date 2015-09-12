@@ -75,6 +75,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
+    procedure AdvGlassButton1Click(Sender: TObject);
   private
     { Private declarations }
     procedure Kosongkan(const All : boolean);
@@ -87,7 +88,7 @@ var
 
 implementation
 
-uses uDM, uVirtualEngine, uCariSupplier;
+uses uDM, uVirtualEngine, uCariSupplier, uAddDetailOrder;
 
 {$R *.dfm}
 
@@ -132,6 +133,17 @@ procedure TfrmAddPurchase.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key=VK_F6 then Button1Click(Self);
+end;
+
+procedure TfrmAddPurchase.AdvGlassButton1Click(Sender: TObject);
+begin
+  frmAddDetailOrderKelompok := TfrmAddDetailOrderKelompok.Create(Application); 
+  try
+    frmAddDetailOrderKelompok.ShowModal;
+  finally
+    frmAddDetailOrderKelompok.Free;
+  end;
+
 end;
 
 end.

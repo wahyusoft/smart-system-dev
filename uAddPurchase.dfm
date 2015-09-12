@@ -1,6 +1,6 @@
 object frmAddPurchase: TfrmAddPurchase
-  Left = 262
-  Top = 70
+  Left = 459
+  Top = 172
   BorderStyle = bsNone
   Caption = 'frmAddPurchase'
   ClientHeight = 581
@@ -368,6 +368,7 @@ object frmAddPurchase: TfrmAddPurchase
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           Header.Caption = 'NAMA'
+          ParentFont = False
           Position = 2
           SortType = stAlphabetic
           Width = 200
@@ -426,6 +427,7 @@ object frmAddPurchase: TfrmAddPurchase
           Font.Style = [fsBold]
           Header.Caption = '%'
           Header.Alignment = taCenter
+          ParentFont = False
           Position = 6
           SortType = stAlphabetic
           Width = 50
@@ -440,6 +442,7 @@ object frmAddPurchase: TfrmAddPurchase
           Font.Style = [fsBold]
           Header.Caption = 'Rp.'
           Header.Alignment = taCenter
+          ParentFont = False
           Position = 7
           SortType = stAlphabetic
           Width = 50
@@ -454,6 +457,7 @@ object frmAddPurchase: TfrmAddPurchase
           Font.Style = [fsBold]
           Header.Caption = 'HARGA NET'
           Header.Alignment = taCenter
+          ParentFont = False
           Position = 8
           SortType = stAlphabetic
           Width = 100
@@ -467,6 +471,7 @@ object frmAddPurchase: TfrmAddPurchase
           Font.Style = [fsBold]
           Header.Caption = 'JUMLAH'
           Header.Alignment = taCenter
+          ParentFont = False
           Position = 9
           SortType = stAlphabetic
           Width = 100
@@ -647,6 +652,7 @@ object frmAddPurchase: TfrmAddPurchase
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = AdvGlassButton1Click
       end
       object AdvGlassButton2: TAdvGlassButton
         Left = 100

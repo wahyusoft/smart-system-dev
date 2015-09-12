@@ -1,10 +1,10 @@
 object fUtama: TfUtama
-  Left = 133
-  Top = 675
+  Left = -267
+  Top = 625
   Align = alClient
   BorderStyle = bsNone
   Caption = 'is'
-  ClientHeight = 532
+  ClientHeight = 542
   ClientWidth = 1073
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -21,7 +21,7 @@ object fUtama: TfUtama
   TextHeight = 13
   object StatusBar1: TAdvOfficeStatusBar
     Left = 0
-    Top = 513
+    Top = 523
     Width = 1073
     Height = 19
     AnchorHint = False
