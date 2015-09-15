@@ -1,10 +1,10 @@
 object fUtama: TfUtama
-  Left = 270
-  Top = 588
+  Left = 375
+  Top = 463
   Align = alClient
   BorderStyle = bsNone
   Caption = 'is'
-  ClientHeight = 532
+  ClientHeight = 746
   ClientWidth = 1073
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -13,6 +13,7 @@ object fUtama: TfUtama
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIForm
+  KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
@@ -21,7 +22,7 @@ object fUtama: TfUtama
   TextHeight = 13
   object StatusBar1: TAdvOfficeStatusBar
     Left = 0
-    Top = 513
+    Top = 727
     Width = 1073
     Height = 19
     AnchorHint = False
@@ -91,7 +92,7 @@ object fUtama: TfUtama
     Left = 0
     Top = 0
     Width = 1073
-    Height = 137
+    Height = 142
     Cursor = crHandPoint
     ActivePage = AdvToolBarPager13
     CanMove = True
@@ -106,13 +107,13 @@ object fUtama: TfUtama
       Left = 4
       Top = 51
       Width = 1065
-      Height = 81
+      Height = 86
       Caption = 'Master Data'
       object AdvToolBar1: TAdvToolBar
         Left = 658
         Top = 3
         Width = 86
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Data Cabang'
@@ -134,7 +135,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 82
-          Height = 58
+          Height = 64
           Caption = 'Cabang         [Alt + G]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -272,7 +273,7 @@ object fUtama: TfUtama
         Left = 3
         Top = 3
         Width = 198
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoPositionControls = False
         AutoSize = False
@@ -293,9 +294,9 @@ object fUtama: TfUtama
         ToolBarIndex = 0
         object AdvGlowButton1: TAdvGlowButton
           Left = 81
-          Top = 32
+          Top = 34
           Width = 116
-          Height = 28
+          Height = 31
           Caption = 'Kelompok [Ctrl+K]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -344,7 +345,7 @@ object fUtama: TfUtama
           Left = 0
           Top = 0
           Width = 81
-          Height = 60
+          Height = 65
           Caption = 'Barang  [Ctrl+B]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -469,7 +470,7 @@ object fUtama: TfUtama
           Left = 81
           Top = 1
           Width = 116
-          Height = 31
+          Height = 33
           Caption = 'Satuan [Ctrl+T]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -519,7 +520,7 @@ object fUtama: TfUtama
         Left = 204
         Top = 3
         Width = 101
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Disc. dan Promo'
@@ -541,7 +542,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 97
-          Height = 58
+          Height = 62
           Caption = 'Promo'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -723,7 +724,7 @@ object fUtama: TfUtama
         Left = 308
         Top = 3
         Width = 93
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Data Supplier'
@@ -745,7 +746,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 87
-          Height = 58
+          Height = 63
           Caption = 'Supplier   [Ctrl+S]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -861,7 +862,7 @@ object fUtama: TfUtama
         Left = 508
         Top = 3
         Width = 71
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Data Bank'
@@ -883,7 +884,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 66
-          Height = 58
+          Height = 62
           Caption = 'Data Bank [Alt+N]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1018,7 +1019,7 @@ object fUtama: TfUtama
         Left = 404
         Top = 3
         Width = 101
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Data Customer'
@@ -1039,8 +1040,8 @@ object fUtama: TfUtama
         object AdvGlowMenuButton1: TAdvGlowMenuButton
           Left = 2
           Top = 2
-          Width = 95
-          Height = 58
+          Width = 97
+          Height = 63
           Caption = 'Customer'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1186,7 +1187,7 @@ object fUtama: TfUtama
         Left = 582
         Top = 3
         Width = 73
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Data Kassa'
@@ -1208,7 +1209,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 69
-          Height = 58
+          Height = 63
           Caption = 'Data Kassa [Alt+A]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1331,13 +1332,13 @@ object fUtama: TfUtama
       Left = 4
       Top = 51
       Width = 1065
-      Height = 81
+      Height = 86
       Caption = 'Transaksi'
       object AdvToolBar10: TAdvToolBar
-        Left = 804
+        Left = 880
         Top = 3
-        Width = 117
-        Height = 75
+        Width = 115
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Transaksi Umum'
@@ -1359,7 +1360,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 111
-          Height = 58
+          Height = 63
           Caption = 'Input Kas dan Biaya [Alt+F8]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1498,8 +1499,8 @@ object fUtama: TfUtama
       object AdvToolBar11: TAdvToolBar
         Left = 3
         Top = 3
-        Width = 364
-        Height = 75
+        Width = 443
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Pembelian'
@@ -1521,7 +1522,7 @@ object fUtama: TfUtama
           Left = 281
           Top = 2
           Width = 80
-          Height = 58
+          Height = 63
           Caption = 'Konsinyasi [Alt+F6]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1661,7 +1662,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 95
-          Height = 58
+          Height = 63
           Caption = 'Purchase Order [Alt+F2]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1794,7 +1795,7 @@ object fUtama: TfUtama
           Left = 97
           Top = 2
           Width = 88
-          Height = 58
+          Height = 63
           Caption = 'Pembelian [Alt+F3]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1892,6 +1893,7 @@ object fUtama: TfUtama
             D6BACD8B2CEE3ACD9F5FBCDCCA6AC1EF41FF052DF01225A407A09A0000000049
             454E44AE426082}
           TabOrder = 2
+          OnClick = AdvGlowButton17Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -1927,7 +1929,7 @@ object fUtama: TfUtama
           Left = 185
           Top = 2
           Width = 96
-          Height = 58
+          Height = 63
           Caption = 'Retur Pembelian [Alt+F3]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -2014,12 +2016,142 @@ object fUtama: TfUtama
           Appearance.GradientChecked = ggVertical
           Layout = blGlyphTop
         end
+        object AdvGlowButton4: TAdvGlowButton
+          Left = 361
+          Top = 2
+          Width = 80
+          Height = 63
+          Caption = 'Mutasi Barang [Alt+F7]'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          ParentFont = False
+          Picture.Data = {
+            89504E470D0A1A0A0000000D494844520000002700000020080600000091A661
+            8D0000000467414D410000B18E7CFB5193000000206348524D00007A25000080
+            830000F9FF000080E9000075300000EA6000003A980000176F925FC546000000
+            097048597300000B1100000B11017F645F910000096B494441545847ED956954
+            936716C73B9DE5B4D82220A8C8BE43D8144C04439045C842028194C52312B455
+            5007EB522A0AEE0A28887BB52A5B95258201220121400401C3A284B5880AEE60
+            A5239E6A3BA7A7E53FCF4B3DD8CEF454FD30335FCC39FF739FE5BEF7FEDEFBDC
+            27EF3BEFBCFDBDADC0DB0ABCADC0DB0AFCA602B76B8ED3EE56EC2FBC5D91AE1C
+            94A7D58CA8F22B46BB2A2F8CA8F22A86C89C5ABF7331BDE85ECD31A7FF79E9FA
+            8B138F8FC836E14E713CEE14C5E3892A1BCFFAE4F8B6F9146E4BD663A8701D1E
+            962460E07C62B63A2D6DCA378B82784F851EFCA7C1BE01CF22059CA72B23E72B
+            81BFFC57C07BCFAC3DD77F76353AB356A0333B16BD859FA3BF28097D85F1501D
+            5E82AA2D01B8921E8E6EC9FA738FA223767CB738108F9745BC50388643B9E34F
+            42798A7B49F1566F0CF8A05DA6315871503C244B5D7FA73E3B76B443B6F4EEC5
+            8CB87BD5E99FDE6D3AEDD0951597DB95B51CED5F2E9B50DB71315114AE7EB914
+            0D69A190C52F44DD0E01D4F96BCF8D88FC0B065393D13EF010577B86D0DE750B
+            1D953578121385C7A1ECF66F36AFD57F23C0EEC22DCC1B92CFC8B17D8611E511
+            3C6ECBC71D692206F3D6A0B76083B42D6BB584026A3E1A892B4722D1FC42AAA3
+            4BA0DC2B823CC11FCA5D4168CB5959FC206461EEADCC2CB4FC00343F051A9E00
+            75946DECC6E84A311E857195A3870E69BE36A03A7B15A73B2706D74E7D0C7556
+            0C3AB257A3E9A01855495CB41C89565C39B9AAA4F950381A3242514F44D9970A
+            C3E58C3072BC8BD0747269F1FD60CE5703274EA1720428BF3D8EE25B40EED7E3
+            D8D503641D2BC358A4100F2204C5434AE57BAF05D8FAC572EED513E289AA5C39
+            1C09D591C5B894168EBA9450341D5E56DD787499AC312D1897528593AA4B0944
+            6D4A106A920550EC124CACD71F5974FEAE909D7BEB7426AAC780F3F780A37DC0
+            6615105E0BAC3F5C87D4B060DC8D14E1F6E2E06C00EFBE12B0296371C0958311
+            A8DF2722502228F78590E312E272FA47B87450ACA8CB8894D7A684A07C870815
+            BB4321DF2942D52E3EAAB673208D5F808C2013E4C7BAA2EE6068C92D0277FFF0
+            01B43C7A86EAC1EF90AB7E8E7D4DCFB04EF13DD28E55225A14883CF1623C8EE0
+            E3C6A2B0E3DB5E05A84816F0EB48722A69F9CE105CDCCD47D9466FE4443B40BE
+            95A7ACDE2FAEADD82144617C004A1283519C2020EB1CC8367B4196E0854CE257
+            16CF4265AA403EF0113FFBDEA2200CAE89C1CD352B70FDEF2BD0B73A063D2B63
+            D1B73C0A9D4B44E88908C40DA11F6E8BB818888EDAF687D52BCE0861966DE3FE
+            5494188073896C9C4F5A80A28D4CE47DEA82D29D5CD98503E28C1252A5A2445F
+            146DF69ED039B22FF9DC8DC81D67E25C504C6C59AAF0D8D7E102E980C017BD6C
+            0FF4B13D27F4359B85EB1C4FF4F3BC3020F0477F903F7A8338C4FAA12FC0F7E7
+            5E9E28E83F00BB3F1633FBA3C23776C646EDAFFFC4FF79AD98859A280F28A298
+            508899502EF5C49558615D476CE4E1DAE5EC7F562FF785229A05C51226AA885F
+            35B1946AC41EA8F9C4EF077574A8A23390FDBC9B00740AFCD019E88F2E024189
+            ACA38B5A637BA3C3CB0DED0C27A8ECCD71D562269ADCCD5B48FFFD7512B03F3D
+            5DB723983F7833848FEB422EBA0248401E1B1D7C36D4019C0975F238E8E673D1
+            13C8859AEC5D1370D0111208B58047F67FE5477C3B28BF20E217C8C1D5003FB4
+            B37DD0B6D013AD9EEE68993707CDCEB668B4314583E94CD41B4C8372A61694D3
+            B5D068AA89075FE80F8E8F8FE94CC25DE5799B5CB2327DAAA499A3CAD51917DD
+            5DA064D2D1CCA2A395350F2D2C065444AD0BDCD0E2EB89665F169A7C3C709924
+            6CE4F9A1D98785460F3A1A9973D148925F767542BD932D94344BD45A99A0D654
+            1F3506BA50CE20103A1AA8D5D6401DD125BD0F5133531B8A993A50E8EBA05E7F
+            2ABA057ABDE3E3E35326E16E5EBBC6EDF9F2C46839DD19FB6DCD91666F857C4B
+            4354EA68E294B93152E873B1DD9D8103CEF62832D4433509249FA58B0A7D5D5C
+            30980EB9B90919EB41AEA7890BA402E57A5A904FD34439D105DDA9A820F32A62
+            0BF5A761BFA31DB633E622D97536324D0D5041ED4FD799F0ADF3F440F757E786
+            869F0C9B4DC2B5AB3BE5030F8721F5F5428EE92CE45A19A3C0501F9FD1ECE0EB
+            ED05C77974D8B9BA80E1C142C47C779CD09F0119012F21814BA74D45C98C6928
+            313144E90C5D9450733D6D94129510A8125D6DC888DF11835908637980414473
+            7585A31B03FE24F6263B6B48C933A59A1A908942706B6C0CAA56D5E64938995C
+            BE5E9A9A02A9A505E41F6A403EF5036C343282137943336B0B303DDCC1253D67
+            47B381A59303784E8EF84A5B0B322D4D946A4D451951A9AE0ECA0C67111062B5
+            7F59A77461AA263275B4E0377B362C1DED61EF40032F800BB7F9F3606E6D8939
+            745724191840364503C5739C519C71E0A7F2CAEA25BFB9B1394666FB2406B37A
+            25C6C63DB9C6C6FDBE0E0E3F9A1330A13008D9D9D9904824D8BA752BECEDED60
+            EBE8884D96968FA446C6DD1243A35E4A858686BD056666BD125B9B5E890935FF
+            655D6A64D4BDCEDA6AD4C6C11ECECE0ED8BD7B370A49ACD399991390E63656E0
+            DA3BFC78C6C478A0D8C0A82BDFC266C3EFFED7912BFC01A58339394E0C37F751
+            6B1B4BECDCB90367CE9C41260946597FF642D8DAD9C08FC7DF43352ED187BFD6
+            E37F9B533EC28F44D936B656080C14E0ECD9B393B19292926069690E1706FDCE
+            D153A72C89EFFBAFFC842D49489846A7CFBD6F4DCABE6EDD5AE4E7E7232F2F0F
+            274F9E0473BE1B1CC8D12CF0F65EF7CA402F1CFCFCFDF7D0EC6DE1E5B580809D
+            9E00A462AE5A150B2B2B0B301873AFFB6DD8F0F286FE51E06DDBB6BDEBE5E595
+            4F41CC71998D356BE2B0654B1279733E2860171797EF83C3829D5F178ECFE77B
+            B8B8CCF9C99AB449484830698F2D58BD7A259C48FF3A3AD2E0E3E3F5C5EBC69A
+            F00B0F0FB76630E83768E4C65A58984D94DFDCDC940474FA99807FFE46C18833
+            93C9DAE3442E929999C9442C333353D8DADAC0CD6D5EBB8F8FCF8C57C623FDF6
+            A79E9E9EBF1151BDA7919292B2502814D693B23F70759D33CAE170BEDDBA75FB
+            8DF2F2F2A4A2A2A22D8585853B0A0A0A769163DA436C32B12994480BA4BEB0C9
+            649C4CF9959696A62524248CF8F92D1CA3D35DC7DCDDDDFE11131B334A2EDABE
+            8E8E0E666B6B2BBDABAB6B0691F6F0F0F094F6F6F6979F308A9C8223FA3305D8
+            DCDCFC3E35A69498986814131363A55028ACC91E8D249A4B82BA93A44C92DC83
+            5C141681F1FC3D517B049C25954ADDDBDADA1CC973B4B8B838DADEBD7B6D6EDE
+            BC69A552A9684AA57276434383B55AAD9E323434F41E959FCAFBCA6AFE3F1DFE
+            05AB6E13AE7905A58A0000000049454E44AE426082}
+          TabOrder = 4
+          Appearance.BorderColor = 14727579
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15653832
+          Appearance.ColorTo = 16178633
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = 15921906
+          Appearance.ColorDisabledTo = 15921906
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 15586496
+          Appearance.ColorMirrorTo = 16245200
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = 11974326
+          Appearance.ColorMirrorDisabledTo = 15921906
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+          Layout = blGlyphTop
+        end
       end
       object AdvToolBar12: TAdvToolBar
-        Left = 370
+        Left = 449
         Top = 3
-        Width = 79
-        Height = 75
+        Width = 80
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Penjualan'
@@ -2040,8 +2172,8 @@ object fUtama: TfUtama
         object AdvGlowButton19: TAdvGlowButton
           Left = 2
           Top = 2
-          Width = 75
-          Height = 58
+          Width = 76
+          Height = 64
           Caption = 'Penjualan [Alt+F7]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -2169,10 +2301,10 @@ object fUtama: TfUtama
         end
       end
       object AdvToolBar13: TAdvToolBar
-        Left = 452
+        Left = 532
         Top = 3
-        Width = 221
-        Height = 75
+        Width = 219
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Pembayaran'
@@ -2194,7 +2326,7 @@ object fUtama: TfUtama
           Left = 113
           Top = 2
           Width = 104
-          Height = 58
+          Height = 64
           Caption = 'Penerimaan Piutang [Alt+F10]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -2328,7 +2460,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 111
-          Height = 58
+          Height = 64
           Caption = 'Pembayaran Hutang [Alt+F9]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -2442,10 +2574,10 @@ object fUtama: TfUtama
         end
       end
       object AdvToolBar14: TAdvToolBar
-        Left = 676
+        Left = 754
         Top = 3
-        Width = 125
-        Height = 75
+        Width = 123
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Stock Opname'
@@ -2467,7 +2599,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 119
-          Height = 58
+          Height = 63
           Caption = 'Stok Opname Barang [Alt+F8]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -2591,13 +2723,13 @@ object fUtama: TfUtama
       Left = 4
       Top = 51
       Width = 1065
-      Height = 81
+      Height = 86
       Caption = 'Laporan'
       object AdvToolBar15: TAdvToolBar
         Left = 671
         Top = 3
         Width = 93
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Daftar Piutang'
@@ -2619,7 +2751,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 87
-          Height = 58
+          Height = 63
           Caption = 'Daftar Piutang'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -2662,7 +2794,7 @@ object fUtama: TfUtama
         Left = 3
         Top = 3
         Width = 100
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Laporan Barang'
@@ -2684,7 +2816,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 95
-          Height = 57
+          Height = 64
           Caption = 'Kartu Stok [Shift+F1]'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -2808,7 +2940,7 @@ object fUtama: TfUtama
         Left = 106
         Top = 3
         Width = 116
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Laporan Pembelian'
@@ -2830,7 +2962,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 111
-          Height = 58
+          Height = 63
           Caption = 'Pembelian Barang [Shift+F2]'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -2873,7 +3005,7 @@ object fUtama: TfUtama
         Left = 225
         Top = 3
         Width = 443
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Laporan Penjualan'
@@ -2895,7 +3027,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 87
-          Height = 58
+          Height = 64
           Caption = 'Total Penjualan [Shift+F3]'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -2937,7 +3069,7 @@ object fUtama: TfUtama
           Left = 89
           Top = 2
           Width = 87
-          Height = 58
+          Height = 64
           Caption = 'Penjualan Dengan Detail Items [Shift+F4]'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -2979,7 +3111,7 @@ object fUtama: TfUtama
           Left = 176
           Top = 2
           Width = 87
-          Height = 58
+          Height = 64
           Caption = 'Profit Penjualan [Shift+F5]'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -3021,7 +3153,7 @@ object fUtama: TfUtama
           Left = 263
           Top = 2
           Width = 98
-          Height = 57
+          Height = 63
           Caption = 'Penjualan Berdasarkan'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -3065,7 +3197,7 @@ object fUtama: TfUtama
           Left = 361
           Top = 2
           Width = 80
-          Height = 57
+          Height = 63
           Caption = 'Status Penjualan Barang [Shift+F9]'
           FocusType = ftHot
           NotesFont.Charset = DEFAULT_CHARSET
@@ -3110,13 +3242,13 @@ object fUtama: TfUtama
       Left = 4
       Top = 51
       Width = 1065
-      Height = 81
+      Height = 86
       Caption = 'Pengaturan'
       object AdvToolBar20: TAdvToolBar
         Left = 380
         Top = 3
         Width = 130
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Konfigurasi'
@@ -3138,7 +3270,7 @@ object fUtama: TfUtama
           Left = 65
           Top = 2
           Width = 63
-          Height = 57
+          Height = 62
           Caption = 'Setting Point'
           FocusType = ftHot
           NotesFont.Charset = DEFAULT_CHARSET
@@ -3181,7 +3313,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 63
-          Height = 57
+          Height = 62
           Caption = 'Options [Ctrl + Shift + F8]'
           FocusType = ftHot
           NotesFont.Charset = DEFAULT_CHARSET
@@ -3225,7 +3357,7 @@ object fUtama: TfUtama
         Left = 3
         Top = 3
         Width = 102
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Company Profile'
@@ -3247,7 +3379,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 97
-          Height = 58
+          Height = 62
           Caption = 'Profile Perusahaan'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -3290,7 +3422,7 @@ object fUtama: TfUtama
         Left = 108
         Top = 3
         Width = 102
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'User Account'
@@ -3312,7 +3444,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 97
-          Height = 58
+          Height = 63
           Caption = 'User Account'
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -3355,7 +3487,7 @@ object fUtama: TfUtama
         Left = 213
         Top = 3
         Width = 164
-        Height = 75
+        Height = 80
         AllowFloating = True
         AutoSize = False
         Caption = 'Tarik / Kirim Data'
@@ -3377,7 +3509,7 @@ object fUtama: TfUtama
           Left = 2
           Top = 2
           Width = 79
-          Height = 57
+          Height = 63
           Caption = 'Tarik Data Penjualan'
           FocusType = ftHot
           NotesFont.Charset = DEFAULT_CHARSET
@@ -3421,7 +3553,7 @@ object fUtama: TfUtama
           Left = 81
           Top = 2
           Width = 80
-          Height = 57
+          Height = 63
           Caption = 'Tarik Data Pembelian'
           FocusType = ftHot
           NotesFont.Charset = DEFAULT_CHARSET
@@ -4425,7 +4557,7 @@ object fUtama: TfUtama
   end
   object tbSet: TAdvOfficeMDITabSet
     Left = 0
-    Top = 137
+    Top = 142
     Width = 1073
     Height = 25
     Cursor = crHandPoint

@@ -115,6 +115,7 @@ type
     AdvGlowButton25: TAdvGlowButton;
     AdvGlowButton34: TAdvGlowButton;
     AdvGlowMenuButton1: TAdvGlowMenuButton;
+    AdvGlowButton4: TAdvGlowButton;
     procedure Exit1Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure Login1Click(Sender: TObject);
@@ -137,6 +138,7 @@ type
     procedure AdvGlowButton6Click(Sender: TObject);
     procedure AdvGlowButton9Click(Sender: TObject);
     procedure AdvGlowButton16Click(Sender: TObject);
+    procedure AdvGlowButton17Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -155,7 +157,7 @@ var
 implementation
 
 uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
-  uJenisCustomer, uCustomer, uBank, uKassa, uCabang, uPurchase;
+  uJenisCustomer, uCustomer, uBank, uKassa, uCabang, uPurchase, uPembelian;
 
 {$R *.dfm}
 
@@ -384,6 +386,16 @@ begin
       frmPurchase  := TfrmPurchase.Create(Self);
       tbSet.AddTab(frmPurchase);
       frmPurchase.Show;
+    end;
+end;
+
+procedure TfUtama.AdvGlowButton17Click(Sender: TObject);
+begin
+    if not(isAktif('frmPembelian'))then
+    begin
+      frmPembelian  := TfrmPembelian.Create(Self);
+      tbSet.AddTab(frmPembelian);
+      frmPembelian.Show;
     end;
 end;
 
