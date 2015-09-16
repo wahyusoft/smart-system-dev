@@ -52,7 +52,7 @@ type
       Shift: TShiftState);
   private
     { Private declarations }
-  procedure Tampil(strSQL : String);
+
   procedure Kosongkan(const All : boolean);
   public
     { Public declarations }
@@ -67,38 +67,6 @@ uses uDM, uVirtualEngine, uCariSupplier;
 
 {$R *.dfm}
 
-procedure TfrmCariFaktur.Tampil(strSQL : String);
-var x : integer;
-begin
-  strSQL := 'SELECT * FROM tblsupplier '+strSQL+' ORDER BY nama ASC';
-  CommandSQL(DM.QTemp,strSQL,True);
-  GridSupplier.ClearRows;
-  with DM.QTemp do
-  begin
-        First;
-        while not eof do
-        begin
-             with GridSupplier do
-             begin
-                for x:= 0 to RecordCount-1 do
-                begin
-                   AddRow; 
-                   Cell[0,x].AsString := FieldbyName('kdsup').AsString;
-                   Cell[1,x].AsString := FieldbyName('nama').AsString;
-                   Cell[2,x].AsString := FieldbyName('alamat').AsString;
-                   Cell[3,x].AsString := FieldbyName('telp').AsString;
-                   Cell[4,x].AsString := FieldbyName('hp').AsString;
-                   Cell[5,x].AsString := FieldbyName('fax').AsString;
-                   Cell[6,x].AsString := FieldbyName('email').AsString;
-                   Cell[7,x].AsString := FieldbyName('nmproduk').AsString;
-                   Cell[8,x].AsString := FieldbyName('kontak').AsString;
-                   Cell[9,x].AsString := TampilDuit(FieldbyName('batashutang').AsString);
-                   Next;
-                end;
-             end;
-        end;
-  end;
-end;
 
 
 

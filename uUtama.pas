@@ -139,6 +139,7 @@ type
     procedure AdvGlowButton9Click(Sender: TObject);
     procedure AdvGlowButton16Click(Sender: TObject);
     procedure AdvGlowButton17Click(Sender: TObject);
+    procedure AdvGlowButton18Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -157,7 +158,8 @@ var
 implementation
 
 uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
-  uJenisCustomer, uCustomer, uBank, uKassa, uCabang, uPurchase, uPembelian;
+  uJenisCustomer, uCustomer, uBank, uKassa, uCabang, uPurchase, uPembelian,
+  uRetur;
 
 {$R *.dfm}
 
@@ -397,6 +399,16 @@ begin
       tbSet.AddTab(frmPembelian);
       frmPembelian.Show;
     end;
+end;
+
+procedure TfUtama.AdvGlowButton18Click(Sender: TObject);
+begin
+   if not(isAktif('frmRetur'))then
+   begin
+      frmRetur  := TfrmRetur.Create(Self);
+      tbSet.AddTab(frmRetur);
+      frmRetur.Show;
+   end;
 end;
 
 end.

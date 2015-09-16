@@ -1,6 +1,6 @@
 object frmCariFaktur: TfrmCariFaktur
-  Left = 617
-  Top = 226
+  Left = 215
+  Top = 194
   BorderStyle = bsNone
   Caption = 'frmCariFaktur'
   ClientHeight = 436

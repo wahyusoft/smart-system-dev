@@ -5,7 +5,7 @@ uses
   uDM in 'uDM.pas' {DM: TDataModule},
   uVirtualEngine in 'uVirtualEngine.pas',
   uLogin in 'uLogin.pas' {fLogin},
-  uPembelian in 'uPembelian.pas' {frmPembelian},
+  uRetur in 'uRetur.pas' {frmRetur},
   uUtama in 'uUtama.pas' {fUtama},
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
@@ -19,9 +19,9 @@ uses
   uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
   uBarang in 'uBarang.pas' {frmBarang},
   uAddCustomer in 'uAddCustomer.pas' {frmAddCustomer},
-  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uCariBarang in 'uCariBarang.pas' {frmCariBarang},
   uKelompok in 'uKelompok.pas' {frmKelompok},
-  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
   uSupplier in 'uSupplier.pas' {frmSupplier},
   uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier},
   uCustomer in 'uCustomer.pas' {frmCustomer},
@@ -31,11 +31,15 @@ uses
   uAddJenisCustomer in 'uAddJenisCustomer.pas' {frmAddJenisCustomer},
   uCariSatuan in 'uCariSatuan.pas' {frmCariSatuan},
   uSatuan in 'uSatuan.pas' {frmSatuan},
-  uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
+  uAddDetailRetur in 'uAddDetailRetur.pas' {frmAddDetailRetur},
   uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
   uPurchase in 'uPurchase.pas' {frmPurchase},
   uAddPurchase in 'uAddPurchase.pas' {frmAddPurchase},
-  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier};
+  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
+  uPembelian in 'uPembelian.pas' {frmPembelian},
+  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
+  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok};
 
 {$R *.res}
 
@@ -44,5 +48,6 @@ begin
   Application.Title := 'Sistem Informasi Kependudukan';
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfUtama, fUtama);
+  Application.CreateForm(TfrmCariKelompok, frmCariKelompok);
   Application.Run;
 end.
