@@ -5,7 +5,7 @@ uses
   uDM in 'uDM.pas' {DM: TDataModule},
   uVirtualEngine in 'uVirtualEngine.pas',
   uLogin in 'uLogin.pas' {fLogin},
-  uRetur in 'uRetur.pas' {frmRetur},
+  uKonsinyasi in 'uKonsinyasi.pas' {frmKonsinyasi},
   uUtama in 'uUtama.pas' {fUtama},
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
@@ -21,7 +21,7 @@ uses
   uAddCustomer in 'uAddCustomer.pas' {frmAddCustomer},
   uCariBarang in 'uCariBarang.pas' {frmCariBarang},
   uKelompok in 'uKelompok.pas' {frmKelompok},
-  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
+  uAddKonsinyasi in 'uAddKonsinyasi.pas' {frmAddKonsinyasi},
   uSupplier in 'uSupplier.pas' {frmSupplier},
   uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier},
   uCustomer in 'uCustomer.pas' {frmCustomer},
@@ -39,7 +39,9 @@ uses
   uPembelian in 'uPembelian.pas' {frmPembelian},
   uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
   uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
-  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok};
+  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uRetur in 'uRetur.pas' {frmRetur},
+  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian};
 
 {$R *.res}
 
@@ -48,6 +50,5 @@ begin
   Application.Title := 'Sistem Informasi Kependudukan';
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfUtama, fUtama);
-  Application.CreateForm(TfrmCariKelompok, frmCariKelompok);
   Application.Run;
 end.

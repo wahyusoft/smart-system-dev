@@ -1,0 +1,752 @@
+object frmAddKonsinyasi: TfrmAddKonsinyasi
+  Left = 215
+  Top = 74
+  BorderStyle = bsNone
+  Caption = 'frmAddKonsinyasi'
+  ClientHeight = 579
+  ClientWidth = 1160
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object panelfrmkelompok: TNxHeaderPanel
+    Left = 0
+    Top = 0
+    Width = 1160
+    Height = 579
+    Align = alClient
+    Caption = 'Tambah Konsinyasi'
+    HeaderFont.Charset = ANSI_CHARSET
+    HeaderFont.Color = clWindowText
+    HeaderFont.Height = -19
+    HeaderFont.Name = 'Arial'
+    HeaderFont.Style = []
+    HeaderSize = 40
+    ParentHeaderFont = False
+    TabOrder = 0
+    FullWidth = 1160
+    object Panel2: TPanel
+      Left = 9
+      Top = 45
+      Width = 1141
+      Height = 473
+      Align = alClient
+      Color = clWhite
+      TabOrder = 0
+      object Label11: TLabel
+        Left = 9
+        Top = 347
+        Width = 56
+        Height = 13
+        Caption = 'CATATAN :'
+      end
+      object Label12: TLabel
+        Left = 81
+        Top = 347
+        Width = 86
+        Height = 13
+        Caption = 'TOT. QTY (PCS) :'
+      end
+      object Label21: TLabel
+        Left = 283
+        Top = 347
+        Width = 53
+        Height = 13
+        Caption = 'TOT. QTY:'
+      end
+      object Label8: TLabel
+        Left = 443
+        Top = 347
+        Width = 31
+        Height = 13
+        Caption = 'Item(s)'
+      end
+      object Label14: TLabel
+        Left = 785
+        Top = 349
+        Width = 57
+        Height = 13
+        Caption = 'SUBTOTAL'
+      end
+      object Label15: TLabel
+        Left = 785
+        Top = 373
+        Width = 79
+        Height = 13
+        Caption = 'TOTAL DISKON'
+      end
+      object Label16: TLabel
+        Left = 785
+        Top = 397
+        Width = 23
+        Height = 13
+        Caption = 'DDP'
+      end
+      object Label17: TLabel
+        Left = 785
+        Top = 421
+        Width = 22
+        Height = 13
+        Caption = 'PPN'
+      end
+      object Label18: TLabel
+        Left = 785
+        Top = 445
+        Width = 35
+        Height = 13
+        Caption = 'TOTAL'
+      end
+      object GroupBox1: TGroupBox
+        Left = 1
+        Top = 1
+        Width = 1139
+        Height = 160
+        Align = alTop
+        TabOrder = 0
+        object Label2: TLabel
+          Left = 8
+          Top = 14
+          Width = 46
+          Height = 13
+          Caption = 'No. Retur'
+        end
+        object Label3: TLabel
+          Left = 8
+          Top = 39
+          Width = 39
+          Height = 13
+          Caption = 'Tanggal'
+        end
+        object Label1: TLabel
+          Left = 248
+          Top = 14
+          Width = 38
+          Height = 13
+          Caption = 'Supplier'
+        end
+        object Label4: TLabel
+          Left = 252
+          Top = 62
+          Width = 35
+          Height = 13
+          Caption = 'Hutang'
+        end
+        object Label5: TLabel
+          Left = 254
+          Top = 90
+          Width = 22
+          Height = 13
+          Caption = 'PPN'
+        end
+        object Label6: TLabel
+          Left = 460
+          Top = 90
+          Width = 60
+          Height = 13
+          Caption = 'Faktur Pajak'
+        end
+        object Label7: TLabel
+          Left = 11
+          Top = 123
+          Width = 48
+          Height = 13
+          Caption = 'Pencarian'
+        end
+        object DateTimePicker1: TDateTimePicker
+          Left = 104
+          Top = 36
+          Width = 113
+          Height = 21
+          Date = 42257.739134618050000000
+          Time = 42257.739134618050000000
+          TabOrder = 0
+        end
+        object IDSatuan: TEdit
+          Left = 104
+          Top = 11
+          Width = 113
+          Height = 19
+          Color = 16744576
+          Ctl3D = False
+          ParentCtl3D = False
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object edNamaKelompok: TEdit
+          Left = 304
+          Top = 11
+          Width = 201
+          Height = 19
+          Ctl3D = False
+          ParentCtl3D = False
+          TabOrder = 2
+          Text = 'edCariSupplier'
+        end
+        object Edit1: TEdit
+          Left = 536
+          Top = 11
+          Width = 134
+          Height = 19
+          Color = 16744576
+          Ctl3D = False
+          ParentCtl3D = False
+          ReadOnly = True
+          TabOrder = 3
+        end
+        object Button1: TButton
+          Left = 504
+          Top = 10
+          Width = 23
+          Height = 21
+          Caption = 'F6'
+          TabOrder = 4
+          OnClick = Button1Click
+        end
+        object Edit2: TEdit
+          Left = 304
+          Top = 35
+          Width = 366
+          Height = 19
+          Color = 16744576
+          Ctl3D = False
+          ParentCtl3D = False
+          ReadOnly = True
+          TabOrder = 5
+        end
+        object ComboBox1: TComboBox
+          Left = 304
+          Top = 59
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          ItemIndex = 0
+          TabOrder = 6
+          Text = 'TIDAK'
+          Items.Strings = (
+            'TIDAK'
+            'YA')
+        end
+        object ComboBox2: TComboBox
+          Left = 304
+          Top = 86
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          ItemIndex = 0
+          TabOrder = 7
+          Text = 'TIDAK PPN'
+          Items.Strings = (
+            'TIDAK PPN'
+            'ADA PPN'
+            'INCLUDE PPN')
+        end
+        object ComboBox3: TComboBox
+          Left = 528
+          Top = 87
+          Width = 145
+          Height = 21
+          ItemHeight = 13
+          ItemIndex = 0
+          TabOrder = 8
+          Text = 'TIDAK'
+          Items.Strings = (
+            'TIDAK'
+            'YA')
+        end
+        object Edit3: TEdit
+          Left = 83
+          Top = 122
+          Width = 203
+          Height = 19
+          Ctl3D = False
+          ParentCtl3D = False
+          TabOrder = 9
+          Text = 'Edit3'
+        end
+        object Button2: TButton
+          Left = 285
+          Top = 120
+          Width = 26
+          Height = 22
+          Caption = 'OK'
+          TabOrder = 10
+        end
+        object CheckBox1: TCheckBox
+          Left = 352
+          Top = 128
+          Width = 97
+          Height = 17
+          Caption = 'Sudah diperiksa'
+          TabOrder = 11
+        end
+      end
+      object GridKelompok: TNextGrid
+        Left = 1
+        Top = 161
+        Width = 1139
+        Height = 176
+        Align = alTop
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        HeaderSize = 30
+        HeaderStyle = hsFlatBorders
+        Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
+        ParentFont = False
+        TabOrder = 1
+        TabStop = True
+        object NxTextColumn10: TNxCheckBoxColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = '#'
+          Header.Alignment = taCenter
+          Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
+          ParentFont = False
+          Position = 0
+          SortType = stBoolean
+          Width = 30
+        end
+        object NxTextColumn6: TNxTextColumn
+          DefaultWidth = 70
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'NO.URUT'
+          Header.Alignment = taCenter
+          Position = 1
+          SortType = stAlphabetic
+          Width = 70
+        end
+        object NxTextColumn2: TNxTextColumn
+          DefaultWidth = 100
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Header.Caption = 'KODE BARANG'
+          Header.Alignment = taCenter
+          ParentFont = False
+          Position = 2
+          SortType = stAlphabetic
+          Width = 100
+        end
+        object NxTextColumn9: TNxTextColumn
+          DefaultWidth = 250
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'NAMA BARANG'
+          Header.Alignment = taCenter
+          ParentFont = False
+          Position = 3
+          SortType = stAlphabetic
+          Width = 250
+        end
+        object NxTextColumn3: TNxTextColumn
+          Alignment = taCenter
+          DefaultWidth = 50
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Header.Caption = 'QTY'
+          Header.Alignment = taCenter
+          ParentFont = False
+          Position = 4
+          SortType = stAlphabetic
+          Width = 50
+        end
+        object NxTextColumn4: TNxTextColumn
+          Alignment = taCenter
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Footer.Alignment = taCenter
+          Header.Caption = 'TERJUAL'
+          Header.Alignment = taCenter
+          ParentFont = False
+          Position = 5
+          SortType = stAlphabetic
+          MultiLine = True
+        end
+        object NxTextColumn1: TNxTextColumn
+          Alignment = taCenter
+          DefaultWidth = 100
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          Header.Caption = 'RETUR'
+          Header.Alignment = taCenter
+          ParentFont = False
+          Position = 6
+          SortType = stAlphabetic
+          Width = 100
+        end
+        object NxTextColumn5: TNxTextColumn
+          DefaultWidth = 100
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'SISA'
+          Header.Alignment = taCenter
+          ParentFont = False
+          Position = 7
+          SortType = stAlphabetic
+          Width = 100
+          MultiLine = True
+        end
+        object NxTextColumn7: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'SATUAN'
+          Header.Alignment = taCenter
+          Position = 8
+          SortType = stAlphabetic
+        end
+        object NxTextColumn8: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'HARGA BELI'
+          Header.Alignment = taCenter
+          Position = 9
+          SortType = stAlphabetic
+        end
+        object NxTextColumn11: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'DISKON (%)'
+          Header.Alignment = taCenter
+          Position = 10
+          SortType = stAlphabetic
+        end
+        object NxTextColumn12: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'DISKON (Rp)'
+          Header.Alignment = taCenter
+          Position = 11
+          SortType = stAlphabetic
+        end
+        object NxTextColumn13: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'PPN'
+          Header.Alignment = taCenter
+          Position = 12
+          SortType = stAlphabetic
+        end
+        object NxTextColumn14: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'HARGA NET'
+          Header.Alignment = taCenter
+          Position = 13
+          SortType = stAlphabetic
+        end
+        object NxTextColumn15: TNxTextColumn
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          Header.Caption = 'JUMLAH'
+          Header.Alignment = taCenter
+          Position = 14
+          SortType = stAlphabetic
+        end
+      end
+      object Memo1: TMemo
+        Left = 8
+        Top = 368
+        Width = 595
+        Height = 83
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 2
+      end
+      object Edit5: TEdit
+        Left = 176
+        Top = 345
+        Width = 89
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object Edit15: TEdit
+        Left = 346
+        Top = 345
+        Width = 87
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 4
+      end
+      object Edit4: TEdit
+        Left = 498
+        Top = 345
+        Width = 103
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 5
+      end
+      object AdvGlassButton4: TAdvGlassButton
+        Left = 612
+        Top = 368
+        Width = 89
+        Height = 39
+        BackColor = clYellow
+        Caption = 'Kembali'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+      end
+      object Edit7: TEdit
+        Left = 878
+        Top = 347
+        Width = 139
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 7
+      end
+      object Edit8: TEdit
+        Left = 878
+        Top = 371
+        Width = 139
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 8
+      end
+      object Edit9: TEdit
+        Left = 878
+        Top = 395
+        Width = 139
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 9
+      end
+      object Edit10: TEdit
+        Left = 878
+        Top = 419
+        Width = 139
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 10
+      end
+      object Edit11: TEdit
+        Left = 878
+        Top = 442
+        Width = 139
+        Height = 19
+        Color = 16744576
+        Ctl3D = False
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 11
+      end
+    end
+    object Panel1: TPanel
+      Left = 9
+      Top = 518
+      Width = 1141
+      Height = 55
+      Align = alBottom
+      Color = clWhite
+      TabOrder = 1
+      object btnBaru: TAdvGlassButton
+        Left = 533
+        Top = 8
+        Width = 89
+        Height = 39
+        BackColor = clGreen
+        Caption = 'Simpan Faktur'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+      end
+      object btnHapus: TAdvGlassButton
+        Left = 627
+        Top = 8
+        Width = 89
+        Height = 39
+        BackColor = clRed
+        Caption = 'TUTUP'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+        OnClick = btnHapusClick
+      end
+      object btnEdit: TAdvGlassButton
+        Left = 284
+        Top = 8
+        Width = 89
+        Height = 39
+        BackColor = clYellow
+        Caption = 'Reset'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+      end
+      object AdvGlassButton1: TAdvGlassButton
+        Left = 8
+        Top = 8
+        Width = 89
+        Height = 39
+        BackColor = clGreen
+        Caption = 'Tambah Brg'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+        OnClick = AdvGlassButton1Click
+      end
+      object AdvGlassButton2: TAdvGlassButton
+        Left = 100
+        Top = 8
+        Width = 89
+        Height = 39
+        BackColor = clYellow
+        Caption = 'Edit Brg'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+      end
+      object AdvGlassButton3: TAdvGlassButton
+        Left = 192
+        Top = 8
+        Width = 89
+        Height = 39
+        BackColor = clRed
+        Caption = 'Hapus Brg'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ForeColor = clWhite
+        GlowColor = 16760205
+        InnerBorderColor = clBlack
+        OuterBorderColor = clWhite
+        ParentFont = False
+        ShineColor = clWhite
+        Version = '1.0.1.0'
+      end
+    end
+  end
+end

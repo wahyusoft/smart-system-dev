@@ -1,6 +1,6 @@
 object frmAddPembelian: TfrmAddPembelian
-  Left = 308
-  Top = 216
+  Left = 99
+  Top = 43
   BorderStyle = bsNone
   Caption = 'frmAddPembelian'
   ClientHeight = 581
@@ -384,6 +384,7 @@ object frmAddPembelian: TfrmAddPembelian
           Header.Caption = '#'
           Header.Alignment = taCenter
           Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
+          ParentFont = False
           Position = 0
           SortType = stBoolean
           Width = 30
@@ -424,6 +425,7 @@ object frmAddPembelian: TfrmAddPembelian
           Font.Style = [fsBold]
           Header.Caption = 'BARCODE'
           Header.Alignment = taCenter
+          ParentFont = False
           Position = 3
           SortType = stAlphabetic
           Width = 100
@@ -526,6 +528,7 @@ object frmAddPembelian: TfrmAddPembelian
           Font.Style = [fsBold]
           Header.Caption = 'PPN'
           Header.Alignment = taCenter
+          ParentFont = False
           Position = 10
           SortType = stAlphabetic
           Width = 50

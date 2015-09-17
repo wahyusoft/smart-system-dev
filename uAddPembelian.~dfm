@@ -1,6 +1,6 @@
 object frmAddPembelian: TfrmAddPembelian
-  Left = 247
-  Top = 504
+  Left = 308
+  Top = 216
   BorderStyle = bsNone
   Caption = 'frmAddPembelian'
   ClientHeight = 581

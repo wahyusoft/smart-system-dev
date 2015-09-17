@@ -5,7 +5,7 @@ uses
   uDM in 'uDM.pas' {DM: TDataModule},
   uVirtualEngine in 'uVirtualEngine.pas',
   uLogin in 'uLogin.pas' {fLogin},
-  uRetur in 'uRetur.pas' {frmRetur},
+  uKonsinyasi in 'uKonsinyasi.pas' {frmKonsinyasi},
   uUtama in 'uUtama.pas' {fUtama},
   uSetting in 'uSetting.pas' {frmSetting},
   JpegConv in 'JpegConv.pas',
@@ -19,7 +19,7 @@ uses
   uAddSatuan in 'uAddSatuan.pas' {frmAddSatuan},
   uBarang in 'uBarang.pas' {frmBarang},
   uAddCustomer in 'uAddCustomer.pas' {frmAddCustomer},
-  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uCariBarang in 'uCariBarang.pas' {frmCariBarang},
   uKelompok in 'uKelompok.pas' {frmKelompok},
   uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
   uSupplier in 'uSupplier.pas' {frmSupplier},
@@ -38,7 +38,9 @@ uses
   uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
   uPembelian in 'uPembelian.pas' {frmPembelian},
   uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
-  uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok};
+  uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
+  uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
+  uRetur in 'uRetur.pas' {frmRetur};
 
 {$R *.res}
 

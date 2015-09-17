@@ -1,6 +1,6 @@
 object fUtama: TfUtama
-  Left = 652
-  Top = 418
+  Left = 374
+  Top = 269
   Align = alClient
   BorderStyle = bsNone
   Caption = 'is'
@@ -1627,6 +1627,7 @@ object fUtama: TfUtama
             56A1D6A1427D9D86000C686A36A1E5B0156D1D95E8ECB6E3486F2DFAFA0F60FC
             D4F08D6B379CCB7E08F32FAEB25838613F51410000000049454E44AE426082}
           TabOrder = 0
+          OnClick = AdvGlowButton15Click
           Appearance.BorderColor = 14727579
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
