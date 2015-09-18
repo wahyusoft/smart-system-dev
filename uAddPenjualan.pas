@@ -89,7 +89,7 @@ end;
 procedure TfrmAddPenjualan.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if Key=VK_F6 then Button1Click(Self);
+
   if Key=VK_F7 then Button2Click(Self);
 end;
 

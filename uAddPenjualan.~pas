@@ -15,15 +15,6 @@ type
     Panel1: TPanel;
     GroupBox1: TGroupBox;
     Label3: TLabel;
-    Edit1: TEdit;
-    Button1: TButton;
-    Edit2: TEdit;
-    Label4: TLabel;
-    Label5: TLabel;
-    ComboBox1: TComboBox;
-    ComboBox2: TComboBox;
-    Label7: TLabel;
-    ComboBox3: TComboBox;
     GridKelompok: TNextGrid;
     NxTextColumn13: TNxTextColumn;
     NxTextColumn2: TNxTextColumn;
@@ -46,6 +37,7 @@ type
     Label9: TLabel;
     Label10: TLabel;
     btnHapus: TAdvGlassButton;
+    Label1: TLabel;
     procedure btnHapusClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word;

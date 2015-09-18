@@ -89,7 +89,7 @@ begin
   _SQL        := ExtractFilePath(Application.ExeName)+ 'setting.ini';
   MyIniFile   := TIniFile.Create(_SQL);
   Edit1.Text := MyIniFile.ReadString('setting','hostname','localhost');
-  Edit2.Text := MyIniFile.ReadString('setting','dbname','dbposretail');
+  Edit2.Text := MyIniFile.ReadString('setting','dbname','dbpostretail');
   Edit3.Text := MyIniFile.ReadString('setting','user','postgres');
   Edit4.Text := MyIniFile.ReadString('setting','pass','bismillah');
   MyIniFile.Free;

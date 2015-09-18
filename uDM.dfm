@@ -16,10 +16,9 @@ object DM: TDM
     Protocol = 'postgresql'
     HostName = 'localhost'
     Port = 5432
-    Database = 'dbposretail'
+    Database = 'dbpostretailalkhaibar'
     User = 'postgres'
-    Password = 'bismillah'
-    Connected = True
+    Password = 'software16'
     Left = 24
     Top = 16
   end

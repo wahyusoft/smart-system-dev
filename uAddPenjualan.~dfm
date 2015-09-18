@@ -1,6 +1,6 @@
 object frmAddPenjualan: TfrmAddPenjualan
-  Left = 219
-  Top = 111
+  Left = 218
+  Top = 109
   BorderStyle = bsNone
   Caption = 'frmAddPenjualan'
   ClientHeight = 581
@@ -50,115 +50,45 @@ object frmAddPenjualan: TfrmAddPenjualan
         Caption = 'Informasi :'
       end
       object GroupBox1: TGroupBox
-        Left = 1
-        Top = 43
+        Left = -7
+        Top = 67
         Width = 934
-        Height = 129
-        Align = alTop
+        Height = 110
+        Color = clBlack
+        ParentColor = False
         TabOrder = 0
         object Label3: TLabel
-          Left = 8
+          Left = 40
           Top = 39
-          Width = 39
-          Height = 13
-          Caption = 'Tanggal'
+          Width = 131
+          Height = 37
+          Caption = 'TOTAL :'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clYellow
+          Font.Height = -32
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
-        object Label4: TLabel
-          Left = 249
-          Top = 68
-          Width = 35
-          Height = 13
-          Caption = 'Hutang'
-        end
-        object Label5: TLabel
-          Left = 250
-          Top = 96
-          Width = 22
-          Height = 13
-          Caption = 'PPN'
-        end
-        object Label7: TLabel
-          Left = 449
-          Top = 92
-          Width = 60
-          Height = 13
-          Caption = 'Faktur Pajak'
-        end
-        object Edit1: TEdit
-          Left = 536
-          Top = 11
-          Width = 113
-          Height = 19
-          Color = 16744576
-          Ctl3D = False
-          ParentCtl3D = False
-          ReadOnly = True
-          TabOrder = 0
-        end
-        object Button1: TButton
-          Left = 504
-          Top = 10
-          Width = 23
-          Height = 21
-          Caption = 'F6'
-          TabOrder = 1
-        end
-        object Edit2: TEdit
-          Left = 304
-          Top = 35
-          Width = 345
-          Height = 19
-          Color = 16744576
-          Ctl3D = False
-          ParentCtl3D = False
-          ReadOnly = True
-          TabOrder = 2
-        end
-        object ComboBox1: TComboBox
-          Left = 304
-          Top = 64
-          Width = 105
-          Height = 21
-          ItemHeight = 13
-          ItemIndex = 0
-          TabOrder = 3
-          Text = 'TIDAK'
-          Items.Strings = (
-            'TIDAK'
-            'YA')
-        end
-        object ComboBox2: TComboBox
-          Left = 304
-          Top = 91
-          Width = 105
-          Height = 21
-          ItemHeight = 13
-          TabOrder = 4
-          Text = 'TIDAK'
-          Items.Strings = (
-            'TIDAK PPN'
-            'ADA PPN'
-            'INCLUDE PPN')
-        end
-        object ComboBox3: TComboBox
-          Left = 536
-          Top = 88
-          Width = 113
-          Height = 21
-          ItemHeight = 13
-          ItemIndex = 0
-          TabOrder = 5
-          Text = 'TIDAK'
-          Items.Strings = (
-            'TIDAK'
-            'YA')
+        object Label1: TLabel
+          Left = 720
+          Top = 39
+          Width = 20
+          Height = 37
+          Caption = '0'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clYellow
+          Font.Height = -32
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
       end
       object GridKelompok: TNextGrid
         Left = 1
-        Top = 176
+        Top = 177
         Width = 934
-        Height = 273
+        Height = 339
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
