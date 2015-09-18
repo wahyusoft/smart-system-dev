@@ -21,7 +21,7 @@ uses
   uAddCustomer in 'uAddCustomer.pas' {frmAddCustomer},
   uCariBarang in 'uCariBarang.pas' {frmCariBarang},
   uKelompok in 'uKelompok.pas' {frmKelompok},
-  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
+  uAddKonsinyasi in 'uAddKonsinyasi.pas' {frmAddKonsinyasi},
   uSupplier in 'uSupplier.pas' {frmSupplier},
   uAddSupplier in 'uAddSupplier.pas' {frmAddSupplier},
   uCustomer in 'uCustomer.pas' {frmCustomer},
@@ -35,12 +35,17 @@ uses
   uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
   uPurchase in 'uPurchase.pas' {frmPurchase},
   uAddPurchase in 'uAddPurchase.pas' {frmAddPurchase},
-  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
-  uPembelian in 'uPembelian.pas' {frmPembelian},
-  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uCariCustomer in 'uCariCustomer.pas' {frmCariCustomer},
+  uMutasi in 'uMutasi.pas' {frmMutasi},
+  uAddMutasi in 'uAddMutasi.pas' {frmAddMutasi},
   uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
   uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
-  uRetur in 'uRetur.pas' {frmRetur};
+  uRetur in 'uRetur.pas' {frmRetur},
+  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
+  uPenjualan in 'uPenjualan.pas' {frmPenjualan},
+  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uPembelian in 'uPembelian.pas' {frmPembelian},
+  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier};
 
 {$R *.res}
 

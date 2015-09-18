@@ -35,13 +35,18 @@ uses
   uAddKelompok in 'uAddKelompok.pas' {frmAddKelompok},
   uPurchase in 'uPurchase.pas' {frmPurchase},
   uAddPurchase in 'uAddPurchase.pas' {frmAddPurchase},
-  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
-  uPembelian in 'uPembelian.pas' {frmPembelian},
-  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uCariCustomer in 'uCariCustomer.pas' {frmCariCustomer},
+  uMutasi in 'uMutasi.pas' {frmMutasi},
+  uAddMutasi in 'uAddMutasi.pas' {frmAddMutasi},
   uAddDetailOrder in 'uAddDetailOrder.pas' {frmAddDetailOrderKelompok},
   uCariKelompok in 'uCariKelompok.pas' {frmCariKelompok},
   uRetur in 'uRetur.pas' {frmRetur},
-  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian};
+  uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
+  uPenjualan in 'uPenjualan.pas' {frmPenjualan},
+  uAddPenjualan in 'uAddPenjualan.pas' {frmAddPenjualan},
+  uPembelian in 'uPembelian.pas' {frmPembelian},
+  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
+  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian};
 
 {$R *.res}
 

@@ -91,7 +91,6 @@ type
     AdvGlowButton20: TAdvGlowButton;
     AdvGlowButton21: TAdvGlowButton;
     AdvGlowButton22: TAdvGlowButton;
-    AdvGlowButton23: TAdvGlowButton;
     AdvToolBar15: TAdvToolBar;
     AdvToolBar16: TAdvToolBar;
     AdvGlowButton24: TAdvGlowButton;
@@ -115,6 +114,8 @@ type
     AdvGlowButton25: TAdvGlowButton;
     AdvGlowButton34: TAdvGlowButton;
     AdvGlowMenuButton1: TAdvGlowMenuButton;
+    AdvToolBar3: TAdvToolBar;
+    AdvGlowButton7: TAdvGlowButton;
     AdvGlowButton4: TAdvGlowButton;
     procedure Exit1Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -141,6 +142,7 @@ type
     procedure AdvGlowButton17Click(Sender: TObject);
     procedure AdvGlowButton18Click(Sender: TObject);
     procedure AdvGlowButton15Click(Sender: TObject);
+    procedure AdvGlowButton4Click(Sender: TObject);
   private
     { Private declarations }
     procedure Awal;
@@ -160,7 +162,7 @@ implementation
 
 uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
   uJenisCustomer, uCustomer, uBank, uKassa, uCabang, uPurchase, uPembelian,
-  uRetur, uKonsinyasi;
+  uRetur, uKonsinyasi, uMutasi, uPenjualan;
 
 {$R *.dfm}
 
@@ -248,12 +250,12 @@ end;
 
 procedure TfUtama.AdvGlowButton19Click(Sender: TObject);
 begin
-  frmSetting := TfrmSetting.Create(Application);
-  try
-    frmSetting.ShowModal;
-  finally
-    frmSetting.Free;
-  end;
+   if not(isAktif('frmPenjualan'))then
+   begin
+      frmPenjualan  := TfrmPenjualan.Create(Self);
+      tbSet.AddTab(frmPenjualan);
+      frmPenjualan.Show;
+   end;
 
 end;
 
@@ -417,8 +419,18 @@ begin
    if not(isAktif('frmKonsinyasi'))then
    begin
       frmKonsinyasi  := TfrmKonsinyasi.Create(Self);
-      tbSet.AddTab(frmRetur);
+      tbSet.AddTab(frmKonsinyasi);
       frmKonsinyasi.Show;
+   end;
+end;
+
+procedure TfUtama.AdvGlowButton4Click(Sender: TObject);
+begin
+  if not(isAktif('frmMutasi'))then
+   begin
+      frmMutasi  := TfrmMutasi.Create(Self);
+      tbSet.AddTab(frmMutasi);
+      frmMutasi.Show;
    end;
 end;
 
