@@ -8,7 +8,10 @@ uses
   XiButton, jpeg, AdvPreviewMenu,
   AdvPreviewMenuStylers, AdvOfficeStatusBar, AdvOfficeStatusBarStylers,
   AdvShapeButton, AdvGlowButton, AdvToolBar, AdvOfficeTabSet,
-  AdvOfficeTabSetStylers, AdvMenus, AdvMenuStylers, NxCollection, AdvOfficeHint, uVirtualEngine;
+  AdvOfficeTabSetStylers, AdvMenus, AdvMenuStylers, NxCollection, AdvOfficeHint, uVirtualEngine,
+  NxPropertyItems, NxPropertyItemClasses, NxDBPropertyItems,
+  NxScrollControl, NxInspector, NxDBInspector, NxDBColumns, NxColumns,
+  NxCustomGridControl, NxCustomGrid, NxDBGrid;
 
 type
   TfUtama = class(TForm)
@@ -143,13 +146,13 @@ type
     procedure AdvGlowButton18Click(Sender: TObject);
     procedure AdvGlowButton15Click(Sender: TObject);
     procedure AdvGlowButton4Click(Sender: TObject);
+    procedure FormShortCut(var Msg: TWMKey; var Handled: Boolean);
   private
     { Private declarations }
     procedure Awal;
   public
     function GetPengguna : String;
     function isAktif(nmForm: string):boolean;
-    procedure GetInstansi;
     { Public declarations }
 
   end;
@@ -166,17 +169,6 @@ uses uDM, uLogin, uSetting, uBarang, uKelompok, uSatuan, uPromo, uSupplier,
 
 {$R *.dfm}
 
-procedure TfUtama.GetInstansi;
-begin
-  CommandSQL(DM.QTemp,'SELECT * FROM identitas',True);
-  if not DM.QTemp.IsEmpty then
-  begin
-    with DM.QTemp do
-    begin
-    
-    end;
-  end;
-end;
 
 function TfUtama.isAktif(nmForm : String):boolean;
 var i : integer;
@@ -432,6 +424,17 @@ begin
       tbSet.AddTab(frmMutasi);
       frmMutasi.Show;
    end;
+end;
+
+procedure TfUtama.FormShortCut(var Msg: TWMKey; var Handled: Boolean);
+begin
+  if (Msg.CharCode = Ord('B')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton10Click(Self);
+  if (Msg.CharCode = Ord('T')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton14Click(Self);
+  if (Msg.CharCode = Ord('K')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton1Click(Self);
+  if (Msg.CharCode = Ord('S')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton3Click(Self);
+  if (Msg.CharCode = Ord('N')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton5Click(Self);
+  if (Msg.CharCode = Ord('A')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton6Click(Self);
+  if (Msg.CharCode = Ord('G')) and (GetKeyState(VK_CONTROL) < 0) then AdvGlowButton9Click(Self);
 end;
 
 end.

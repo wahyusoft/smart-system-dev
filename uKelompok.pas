@@ -56,6 +56,9 @@ type
     procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure btnCariClick(Sender: TObject);
+    procedure GridKelompokCellColoring(Sender: TObject; ACol,
+      ARow: Integer; var CellColor, GridColor: TColor;
+      CellState: TCellState);
   private
     { Private declarations }
     procedure TampilBarang(strSQL : String);
@@ -233,6 +236,12 @@ procedure TfrmKelompok.btnCariClick(Sender: TObject);
 begin
   if Trim(edKataKunci.Text)='' then exit;
   TampilBarang('WHERE kategori LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
+end;
+
+procedure TfrmKelompok.GridKelompokCellColoring(Sender: TObject; ACol,
+  ARow: Integer; var CellColor, GridColor: TColor; CellState: TCellState);
+begin
+  if ARow mod 2 <> 0 then CellColor := clSkyBlue;
 end;
 
 end.

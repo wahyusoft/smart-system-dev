@@ -1,6 +1,6 @@
 object frmCabang: TfrmCabang
-  Left = 645
-  Top = 199
+  Left = 526
+  Top = 465
   Width = 905
   Height = 541
   Caption = 'Data Cabang'

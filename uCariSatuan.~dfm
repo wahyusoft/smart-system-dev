@@ -71,10 +71,13 @@ object frmCariSatuan: TfrmCariSatuan
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator]
+      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
       ParentFont = False
       TabOrder = 1
       TabStop = True
+      OnCellColoring = GridKelompokCellColoring
+      OnDblClick = GridKelompokDblClick
+      OnSelectCell = GridKelompokSelectCell
       object NxTextColumn13: TNxTextColumn
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -102,13 +105,15 @@ object frmCariSatuan: TfrmCariSatuan
         Width = 250
       end
       object NxTextColumn1: TNxTextColumn
+        Alignment = taCenter
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
+        Font.Style = []
         Header.Caption = 'QTY'
         Header.Alignment = taCenter
+        ParentFont = False
         Position = 2
         SortType = stAlphabetic
       end
@@ -152,6 +157,7 @@ object frmCariSatuan: TfrmCariSatuan
       ParentFont = False
       ShineColor = clWhite
       Version = '1.0.1.0'
+      OnClick = btnEditClick
     end
     object btnHapus: TAdvGlassButton
       Left = 320

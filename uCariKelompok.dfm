@@ -1,6 +1,6 @@
 object frmCariKelompok: TfrmCariKelompok
-  Left = 842
-  Top = 261
+  Left = 449
+  Top = 167
   BorderStyle = bsNone
   Caption = 'frmCariKelompok'
   ClientHeight = 338
@@ -53,10 +53,12 @@ object frmCariKelompok: TfrmCariKelompok
         Top = 27
         Width = 377
         Height = 19
+        CharCase = ecUpperCase
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'edCariSupplier'
+        Text = 'EDCARISUPPLIER'
+        OnChange = edCariSupplierChange
       end
     end
     object GridKelompok: TNextGrid
@@ -71,10 +73,14 @@ object frmCariKelompok: TfrmCariKelompok
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator]
+      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
       ParentFont = False
+      SlideSelectionColor = clMenuText
       TabOrder = 1
       TabStop = True
+      OnCellColoring = GridKelompokCellColoring
+      OnDblClick = GridKelompokDblClick
+      OnSelectCell = GridKelompokSelectCell
       object NxTextColumn13: TNxTextColumn
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -141,6 +147,7 @@ object frmCariKelompok: TfrmCariKelompok
       ParentFont = False
       ShineColor = clWhite
       Version = '1.0.1.0'
+      OnClick = btnEditClick
     end
     object btnHapus: TAdvGlassButton
       Left = 320

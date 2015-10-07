@@ -1,6 +1,6 @@
 object frmSatuan: TfrmSatuan
-  Left = 261
-  Top = 78
+  Left = 616
+  Top = 105
   BorderStyle = bsNone
   Caption = 'Data Satuan'
   ClientHeight = 629
@@ -39,19 +39,6 @@ object frmSatuan: TfrmSatuan
     ParentHeaderFont = False
     TabOrder = 0
     FullWidth = 889
-    object Label1: TLabel
-      Left = 10
-      Top = 508
-      Width = 60
-      Height = 13
-      Caption = 'Record >>'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Panel2: TPanel
       Left = 9
       Top = 45
@@ -162,6 +149,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnFirstClick
       end
       object btnPrior: TAdvGlassButton
         Left = 537
@@ -182,6 +170,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnPriorClick
       end
       object btnNext: TAdvGlassButton
         Left = 594
@@ -202,6 +191,7 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnNextClick
       end
       object btnLast: TAdvGlassButton
         Left = 652
@@ -222,40 +212,47 @@ object frmSatuan: TfrmSatuan
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnLastClick
       end
     end
-    object GridSatuan: TNextGrid
+    object GridSatuan: TNextDBGrid
       Left = 9
       Top = 86
       Width = 870
-      Height = 403
-      Align = alTop
+      Height = 424
+      Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
-      HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
+      GridLinesColor = clActiveCaption
+      GridLinesStyle = lsFramed
+      HeaderSize = 25
+      Options = [goFooter, goGrid, goHeader, goIndicator, goSelectFullRow]
+      ReadOnly = True
       ParentFont = False
       TabOrder = 1
       TabStop = True
-      object NxTextColumn13: TNxTextColumn
-        DefaultWidth = 50
+      OnCellColoring = GridSatuanCellColoring
+      DataSource = DM.dsSatuan
+      object TNxDBTextColumn1: TNxDBTextColumn
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = []
-        Header.Caption = 'ID.SAT'
+        Header.Caption = 'IDSAT'
         Header.Alignment = taCenter
+        Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
         ParentFont = False
         Position = 0
         SortType = stAlphabetic
-        Width = 50
+        FieldName = 'IDSAT'
+        DataAwareOptions = [daAutoAssign, daAutoDelete]
       end
-      object NxTextColumn2: TNxTextColumn
-        DefaultWidth = 200
+      object TNxDBTextColumn2: TNxDBTextColumn
+        DefaultWidth = 150
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -263,12 +260,16 @@ object frmSatuan: TfrmSatuan
         Font.Style = []
         Header.Caption = 'SATUAN'
         Header.Alignment = taCenter
+        Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
         ParentFont = False
         Position = 1
         SortType = stAlphabetic
-        Width = 200
+        Width = 150
+        FieldName = 'SATUAN'
+        DataAwareOptions = [daAutoAssign, daAutoDelete]
       end
-      object NxTextColumn3: TNxTextColumn
+      object TNxDBNumberColumn1: TNxDBNumberColumn
+        DefaultValue = '0'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -278,81 +279,120 @@ object frmSatuan: TfrmSatuan
         Header.Alignment = taCenter
         ParentFont = False
         Position = 2
-        SortType = stAlphabetic
+        SortType = stNumeric
+        FieldName = 'QTY'
+        DataAwareOptions = [daAutoAssign, daAutoDelete]
+        Precision = 0
+        Increment = 1.000000000000000000
       end
     end
-    object GroupBox7: TGroupBox
+    object Panel1: TPanel
       Left = 9
-      Top = 536
+      Top = 510
       Width = 870
-      Height = 87
+      Height = 113
       Align = alBottom
-      Caption = '[ISIAN PENCARIAN]'
-      Ctl3D = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ParentCtl3D = False
-      ParentFont = False
+      Color = clWhite
       TabOrder = 2
-      object Label3: TLabel
-        Left = 53
-        Top = 44
-        Width = 113
-        Height = 13
-        Caption = 'Masukan Pencarian'
+      object Label1: TLabel
+        Left = 10
+        Top = 1
+        Width = 84
+        Height = 20
+        Caption = 'Record >>'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -16
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
-      object edKataKunci: TEdit
-        Left = 171
-        Top = 41
-        Width = 230
-        Height = 19
-        CharCase = ecUpperCase
+      object lcount: TLabel
+        Left = 108
+        Top = 1
+        Width = 13
+        Height = 20
+        Caption = '()'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -16
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object GroupBox7: TGroupBox
+        Left = 1
+        Top = 25
+        Width = 868
+        Height = 87
+        Align = alBottom
+        Caption = '[ISIAN PENCARIAN]'
+        Ctl3D = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentCtl3D = False
+        ParentFont = False
         TabOrder = 0
-        OnKeyDown = edKataKunciKeyDown
-      end
-      object btnCari: TAdvGlassButton
-        Left = 408
-        Top = 36
-        Width = 57
-        Height = 37
-        BackColor = clSilver
-        Caption = 'Cari'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ForeColor = clWhite
-        GlowColor = 16760205
-        InnerBorderColor = clBlack
-        OuterBorderColor = clWhite
-        ParentFont = False
-        ShineColor = clWhite
-        Version = '1.0.1.0'
-        OnClick = btnCariClick
-      end
-      object btnCetak: TAdvGlassButton
-        Left = 469
-        Top = 36
-        Width = 57
-        Height = 37
-        BackColor = clSilver
-        Caption = 'Cetak'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ForeColor = clWhite
-        GlowColor = 16760205
-        InnerBorderColor = clBlack
-        OuterBorderColor = clWhite
-        ParentFont = False
-        ShineColor = clWhite
-        Version = '1.0.1.0'
+        object Label3: TLabel
+          Left = 53
+          Top = 44
+          Width = 113
+          Height = 13
+          Caption = 'Masukan Pencarian'
+        end
+        object edKataKunci: TEdit
+          Left = 171
+          Top = 41
+          Width = 230
+          Height = 19
+          CharCase = ecUpperCase
+          TabOrder = 0
+          OnKeyDown = edKataKunciKeyDown
+        end
+        object btnCari: TAdvGlassButton
+          Left = 408
+          Top = 36
+          Width = 57
+          Height = 37
+          BackColor = clSilver
+          Caption = 'Cari'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ForeColor = clWhite
+          GlowColor = 16760205
+          InnerBorderColor = clBlack
+          OuterBorderColor = clWhite
+          ParentFont = False
+          ShineColor = clWhite
+          Version = '1.0.1.0'
+          OnClick = btnCariClick
+        end
+        object btnCetak: TAdvGlassButton
+          Left = 469
+          Top = 36
+          Width = 57
+          Height = 37
+          BackColor = clSilver
+          Caption = 'Cetak'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ForeColor = clWhite
+          GlowColor = 16760205
+          InnerBorderColor = clBlack
+          OuterBorderColor = clWhite
+          ParentFont = False
+          ShineColor = clWhite
+          Version = '1.0.1.0'
+        end
       end
     end
   end

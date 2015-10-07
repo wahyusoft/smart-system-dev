@@ -1,16 +1,17 @@
 object frmtambahbrg: Tfrmtambahbrg
-  Left = 404
-  Top = 99
+  Left = 345
+  Top = 64
   BorderStyle = bsNone
   Caption = 'frm_tambahbarang'
-  ClientHeight = 557
-  ClientWidth = 946
+  ClientHeight = 611
+  ClientWidth = 954
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
@@ -21,8 +22,8 @@ object frmtambahbrg: Tfrmtambahbrg
   object panelfrmbarang: TNxHeaderPanel
     Left = 0
     Top = 0
-    Width = 946
-    Height = 557
+    Width = 954
+    Height = 611
     Align = alClient
     Caption = 'Tambah Barang'
     HeaderFont.Charset = ANSI_CHARSET
@@ -33,7 +34,7 @@ object frmtambahbrg: Tfrmtambahbrg
     HeaderSize = 35
     ParentHeaderFont = False
     TabOrder = 0
-    FullWidth = 946
+    FullWidth = 954
     object Label1: TLabel
       Left = 24
       Top = 56
@@ -106,8 +107,8 @@ object frmtambahbrg: Tfrmtambahbrg
     end
     object Panel1: TPanel
       Left = 9
-      Top = 494
-      Width = 927
+      Top = 548
+      Width = 935
       Height = 57
       Align = alBottom
       BorderStyle = bsSingle
@@ -132,6 +133,7 @@ object frmtambahbrg: Tfrmtambahbrg
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
+        OnClick = btnBaruClick
       end
       object btnHapus: TAdvGlassButton
         Left = 824
@@ -220,6 +222,7 @@ object frmtambahbrg: Tfrmtambahbrg
       ReadOnly = True
       TabOrder = 4
       Text = 'edKode'
+      OnKeyDown = edKelompokKeyDown
     end
     object edSatuan: TEdit
       Left = 118
@@ -296,7 +299,7 @@ object frmtambahbrg: Tfrmtambahbrg
       TabOrder = 11
       Text = 'edKode'
     end
-    object Edit1: TEdit
+    object edqty: TEdit
       Left = 440
       Top = 154
       Width = 49
@@ -320,27 +323,34 @@ object frmtambahbrg: Tfrmtambahbrg
       TabOrder = 13
       Text = 'edKode'
     end
-    object edhpppcs: TEdit
+    object rpedhpppcs: TEdit
       Left = 118
       Top = 206
       Width = 121
       Height = 19
+      BiDiMode = bdRightToLeft
       Color = clWhite
       Ctl3D = False
+      ParentBiDiMode = False
       ParentCtl3D = False
       TabOrder = 14
       Text = 'edKode'
+      OnChange = rpedhpppcsChange
+      OnKeyPress = rpedhpppcsKeyPress
     end
-    object edHargabeli: TEdit
+    object rpedHargabeli: TEdit
       Left = 118
       Top = 232
       Width = 121
       Height = 19
+      BiDiMode = bdRightToLeft
       Color = clWhite
       Ctl3D = False
+      ParentBiDiMode = False
       ParentCtl3D = False
       TabOrder = 15
       Text = 'edKode'
+      OnKeyPress = rpedHargabeliKeyPress
     end
     object edsatbeli: TEdit
       Left = 313
@@ -360,21 +370,22 @@ object frmtambahbrg: Tfrmtambahbrg
       Height = 21
       Ctl3D = False
       ItemHeight = 13
-      ItemIndex = 0
+      ItemIndex = 1
       ParentCtl3D = False
       TabOrder = 17
-      Text = 'RATA-RATA'
+      Text = 'TERAKHIR'
+      OnKeyPress = cbjenishppKeyPress
       Items.Strings = (
         'RATA-RATA'
         'TERAKHIR')
     end
     object NxPageControl1: TNxPageControl
       Left = 9
-      Top = 264
-      Width = 927
-      Height = 230
-      ActivePage = Halaman1
-      ActivePageIndex = 0
+      Top = 272
+      Width = 935
+      Height = 276
+      ActivePage = NxTabSheet8
+      ActivePageIndex = 6
       Align = alBottom
       TabOrder = 18
       BackgroundColor = clSilver
@@ -393,8 +404,8 @@ object frmtambahbrg: Tfrmtambahbrg
         object GroupBox1: TGroupBox
           Left = 8
           Top = 5
-          Width = 297
-          Height = 196
+          Width = 545
+          Height = 236
           Caption = '[HARGA JUAL]'
           Ctl3D = False
           ParentCtl3D = False
@@ -462,7 +473,28 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = 'Harga Grosir 2'
           end
-          object edMargin: TEdit
+          object Label50: TLabel
+            Left = 16
+            Top = 193
+            Width = 68
+            Height = 13
+            Caption = 'Harga Grosir 3'
+          end
+          object Label51: TLabel
+            Left = 296
+            Top = 169
+            Width = 68
+            Height = 13
+            Caption = 'Harga Grosir 5'
+          end
+          object Label52: TLabel
+            Left = 296
+            Top = 145
+            Width = 68
+            Height = 13
+            Caption = 'Harga Grosir 4'
+          end
+          object rpedMargin: TEdit
             Left = 102
             Top = 22
             Width = 67
@@ -472,8 +504,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 0
             Text = 'edKode'
+            OnChange = rpedMarginChange
           end
-          object edhargajual: TEdit
+          object rpedhargajual: TEdit
             Left = 102
             Top = 46
             Width = 179
@@ -494,7 +527,7 @@ object frmtambahbrg: Tfrmtambahbrg
             State = cbChecked
             TabOrder = 2
           end
-          object eddiscjual: TEdit
+          object rpeddiscjual: TEdit
             Left = 102
             Top = 70
             Width = 67
@@ -504,8 +537,10 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 3
             Text = 'edKode'
+            OnChange = rpeddiscjualChange
+            OnKeyPress = rpeddiscjualKeyPress
           end
-          object eddiscjualrp: TEdit
+          object rpeddiscjualrp: TEdit
             Left = 102
             Top = 94
             Width = 179
@@ -515,8 +550,10 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 4
             Text = 'edKode'
+            OnChange = rpeddiscjualrpChange
+            OnKeyPress = rpeddiscjualrpKeyPress
           end
-          object Edit2: TEdit
+          object rpedhargajualfix: TEdit
             Left = 102
             Top = 118
             Width = 179
@@ -527,7 +564,7 @@ object frmtambahbrg: Tfrmtambahbrg
             TabOrder = 5
             Text = 'edKode'
           end
-          object Edit3: TEdit
+          object rpedgrosir1: TEdit
             Left = 102
             Top = 142
             Width = 179
@@ -537,8 +574,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 6
             Text = 'edKode'
+            OnKeyPress = rpedgrosir1KeyPress
           end
-          object Edit4: TEdit
+          object rpedgrosir2: TEdit
             Left = 102
             Top = 166
             Width = 179
@@ -548,13 +586,50 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 7
             Text = 'edKode'
+            OnKeyPress = rpedgrosir2KeyPress
+          end
+          object rpedgrosir3: TEdit
+            Left = 102
+            Top = 190
+            Width = 179
+            Height = 19
+            Color = clWhite
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 8
+            Text = 'edKode'
+            OnKeyPress = rpedgrosir3KeyPress
+          end
+          object rpedgrosir5: TEdit
+            Left = 374
+            Top = 166
+            Width = 162
+            Height = 19
+            Color = clWhite
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 9
+            Text = 'edKode'
+            OnKeyPress = rpedgrosir5KeyPress
+          end
+          object rpedgrosir4: TEdit
+            Left = 374
+            Top = 142
+            Width = 162
+            Height = 19
+            Color = clWhite
+            Ctl3D = False
+            ParentCtl3D = False
+            TabOrder = 10
+            Text = 'edKode'
+            OnKeyPress = rpedgrosir4KeyPress
           end
         end
         object GroupBox4: TGroupBox
-          Left = 315
+          Left = 563
           Top = 5
           Width = 358
-          Height = 197
+          Height = 175
           Caption = '[HARGA GROSIR QTY]'
           Ctl3D = False
           Font.Charset = DEFAULT_CHARSET
@@ -663,190 +738,213 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = '%'
           end
-          object Edit5: TEdit
+          object rpedqty1: TEdit
             Left = 40
             Top = 48
             Width = 49
             Height = 19
             TabOrder = 0
             Text = '0'
+            OnChange = rpedqty1Change
+            OnKeyPress = rpedqty1KeyPress
           end
-          object Edit6: TEdit
+          object rpedqty2: TEdit
             Left = 40
             Top = 72
             Width = 49
             Height = 19
             TabOrder = 1
             Text = '0'
+            OnKeyPress = rpedqty2KeyPress
           end
-          object Edit7: TEdit
+          object rpedqty3: TEdit
             Left = 40
             Top = 96
             Width = 49
             Height = 19
             TabOrder = 2
             Text = '0'
+            OnKeyPress = rpedqty3KeyPress
           end
-          object Edit8: TEdit
+          object rpedqty4: TEdit
             Left = 40
             Top = 120
             Width = 49
             Height = 19
             TabOrder = 3
             Text = '0'
+            OnKeyPress = rpedqty4KeyPress
           end
-          object Edit9: TEdit
+          object rpedqty5: TEdit
             Left = 40
             Top = 144
             Width = 49
             Height = 19
             TabOrder = 4
             Text = '0'
+            OnKeyPress = rpedqty5KeyPress
           end
-          object Edit10: TEdit
-            Left = 100
+          object rpedmar1: TEdit
+            Left = 94
             Top = 48
-            Width = 32
+            Width = 39
             Height = 19
             TabOrder = 5
             Text = '0'
+            OnChange = rpedmar1Change
+            OnKeyPress = rpedmar1KeyPress
           end
-          object Edit11: TEdit
-            Left = 100
+          object rpedmar2: TEdit
+            Left = 94
             Top = 72
-            Width = 32
+            Width = 39
             Height = 19
             TabOrder = 6
             Text = '0'
+            OnKeyPress = rpedmar2KeyPress
           end
-          object Edit12: TEdit
-            Left = 100
+          object rpedmar3: TEdit
+            Left = 94
             Top = 96
-            Width = 32
+            Width = 39
             Height = 19
             TabOrder = 7
             Text = '0'
+            OnKeyPress = rpedmar3KeyPress
           end
-          object Edit13: TEdit
-            Left = 100
+          object rpedmar4: TEdit
+            Left = 94
             Top = 120
-            Width = 32
+            Width = 39
             Height = 19
             TabOrder = 8
             Text = '0'
+            OnKeyPress = rpedmar4KeyPress
           end
-          object Edit14: TEdit
-            Left = 100
+          object rpedmar5: TEdit
+            Left = 94
             Top = 144
-            Width = 32
+            Width = 39
             Height = 19
             TabOrder = 9
             Text = '0'
+            OnKeyPress = rpedmar5KeyPress
           end
-          object Edit15: TEdit
+          object rpedhrgjual1: TEdit
             Left = 176
             Top = 48
             Width = 81
             Height = 19
             TabOrder = 10
             Text = '0'
+            OnKeyPress = rpedhrgjual1KeyPress
           end
-          object Edit16: TEdit
+          object rpedhrgjual2: TEdit
             Left = 176
             Top = 72
             Width = 81
             Height = 19
             TabOrder = 11
             Text = '0'
+            OnKeyPress = rpedhrgjual2KeyPress
           end
-          object Edit17: TEdit
+          object rpedhrgjual3: TEdit
             Left = 176
             Top = 96
             Width = 81
             Height = 19
             TabOrder = 12
             Text = '0'
+            OnKeyPress = rpedhrgjual3KeyPress
           end
-          object Edit18: TEdit
+          object rpedhrgjual4: TEdit
             Left = 176
             Top = 120
             Width = 81
             Height = 19
             TabOrder = 13
             Text = '0'
+            OnKeyPress = rpedhrgjual4KeyPress
           end
-          object Edit19: TEdit
+          object rpedhrgjual5: TEdit
             Left = 176
             Top = 144
             Width = 81
             Height = 19
             TabOrder = 14
             Text = '0'
+            OnKeyPress = rpedhrgjual5KeyPress
           end
-          object Edit20: TEdit
+          object rpedjuml1: TEdit
             Left = 264
             Top = 48
             Width = 81
             Height = 19
             TabOrder = 15
             Text = '0'
+            OnKeyPress = rpedjuml1KeyPress
           end
-          object Edit21: TEdit
+          object rpedjuml2: TEdit
             Left = 264
             Top = 72
             Width = 81
             Height = 19
             TabOrder = 16
             Text = '0'
+            OnKeyPress = rpedjuml2KeyPress
           end
-          object Edit22: TEdit
+          object rpedjuml3: TEdit
             Left = 264
             Top = 96
             Width = 81
             Height = 19
             TabOrder = 17
             Text = '0'
+            OnKeyPress = rpedjuml3KeyPress
           end
-          object Edit23: TEdit
+          object rpedjuml4: TEdit
             Left = 264
             Top = 120
             Width = 81
             Height = 19
             TabOrder = 18
             Text = '0'
+            OnKeyPress = rpedjuml4KeyPress
           end
-          object Edit24: TEdit
+          object rpedjuml5: TEdit
             Left = 264
             Top = 144
             Width = 81
             Height = 19
             TabOrder = 19
             Text = '0'
+            OnKeyPress = rpedjuml5KeyPress
           end
         end
         object GroupBox2: TGroupBox
-          Left = 680
-          Top = 5
-          Width = 209
+          Left = 563
+          Top = 188
+          Width = 361
           Height = 54
           Caption = '[BIAYA EKTRA]'
           Ctl3D = False
           ParentCtl3D = False
           TabOrder = 2
           object Label34: TLabel
-            Left = 6
+            Left = 22
             Top = 24
             Width = 54
             Height = 13
             Caption = 'Biaya Ektra'
           end
-          object Edit25: TEdit
-            Left = 72
+          object rpedextra: TEdit
+            Left = 88
             Top = 22
-            Width = 129
+            Width = 257
             Height = 19
             TabOrder = 0
             Text = '0'
+            OnKeyPress = rpedextraKeyPress
           end
         end
       end
@@ -1168,7 +1266,7 @@ object frmtambahbrg: Tfrmtambahbrg
           Ctl3D = False
           ParentCtl3D = False
           TabOrder = 0
-          object LabeledEdit1: TLabeledEdit
+          object rpedstokskr: TLabeledEdit
             Left = 24
             Top = 40
             Width = 121
@@ -1177,8 +1275,9 @@ object frmtambahbrg: Tfrmtambahbrg
             EditLabel.Height = 13
             EditLabel.Caption = 'Stock Sekarang'
             TabOrder = 0
+            OnKeyPress = rpedstokskrKeyPress
           end
-          object LabeledEdit2: TLabeledEdit
+          object rpedminstok: TLabeledEdit
             Left = 168
             Top = 40
             Width = 121
@@ -1187,8 +1286,9 @@ object frmtambahbrg: Tfrmtambahbrg
             EditLabel.Height = 13
             EditLabel.Caption = 'Min Stock'
             TabOrder = 1
+            OnKeyPress = rpedminstokKeyPress
           end
-          object LabeledEdit3: TLabeledEdit
+          object rpedmakstok: TLabeledEdit
             Left = 312
             Top = 40
             Width = 121
@@ -1197,6 +1297,7 @@ object frmtambahbrg: Tfrmtambahbrg
             EditLabel.Height = 13
             EditLabel.Caption = 'Max Stock'
             TabOrder = 2
+            OnKeyPress = rpedmakstokKeyPress
           end
         end
       end
@@ -1211,7 +1312,7 @@ object frmtambahbrg: Tfrmtambahbrg
         object GroupBox7: TGroupBox
           Left = 8
           Top = 16
-          Width = 241
+          Width = 249
           Height = 177
           Caption = '[ HARGA PROMO MEMBER ]'
           Ctl3D = False
@@ -1238,7 +1339,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = 'Rupiah Diskon'
           end
-          object Edit26: TEdit
+          object rpedpromojual: TEdit
             Left = 96
             Top = 42
             Width = 137
@@ -1248,8 +1349,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 0
             Text = 'edKode'
+            OnKeyPress = rpedpromojualKeyPress
           end
-          object Edit27: TEdit
+          object rpedpromodiskonpersen: TEdit
             Left = 96
             Top = 71
             Width = 137
@@ -1259,8 +1361,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 1
             Text = 'edKode'
+            OnKeyPress = rpedpromodiskonpersenKeyPress
           end
-          object Edit28: TEdit
+          object rpedpromodiskonrp: TEdit
             Left = 96
             Top = 99
             Width = 137
@@ -1270,12 +1373,13 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 2
             Text = 'edKode'
+            OnKeyPress = rpedpromodiskonrpKeyPress
           end
         end
         object GroupBox8: TGroupBox
           Left = 264
           Top = 16
-          Width = 241
+          Width = 249
           Height = 177
           Caption = '[ HARGA PROMO NON MEMBER ]'
           Ctl3D = False
@@ -1302,7 +1406,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = 'Rupiah Diskon'
           end
-          object Edit29: TEdit
+          object rpedjualnomem: TEdit
             Left = 96
             Top = 42
             Width = 137
@@ -1312,8 +1416,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 0
             Text = 'edKode'
+            OnKeyPress = rpedjualnomemKeyPress
           end
-          object Edit30: TEdit
+          object rpeddiskonnomem: TEdit
             Left = 96
             Top = 71
             Width = 137
@@ -1323,8 +1428,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 1
             Text = 'edKode'
+            OnKeyPress = rpeddiskonnomemKeyPress
           end
-          object Edit31: TEdit
+          object rpedrpdisknomem: TEdit
             Left = 96
             Top = 99
             Width = 137
@@ -1334,6 +1440,7 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 2
             Text = 'edKode'
+            OnKeyPress = rpedrpdisknomemKeyPress
           end
         end
       end
@@ -1396,7 +1503,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = 'Harga Jual Pack'
           end
-          object Edit32: TEdit
+          object edpack: TEdit
             Left = 96
             Top = 27
             Width = 62
@@ -1404,6 +1511,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Color = clWhite
             Ctl3D = False
             ParentCtl3D = False
+            ReadOnly = True
             TabOrder = 0
             Text = 'edKode'
           end
@@ -1414,8 +1522,9 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 19
             Caption = 'F7'
             TabOrder = 1
+            OnClick = Button4Click
           end
-          object Edit33: TEdit
+          object ednmpack: TEdit
             Left = 166
             Top = 26
             Width = 163
@@ -1423,10 +1532,11 @@ object frmtambahbrg: Tfrmtambahbrg
             Color = 16765390
             Ctl3D = False
             ParentCtl3D = False
+            ReadOnly = True
             TabOrder = 2
             Text = 'edKode'
           end
-          object Edit34: TEdit
+          object edjmlpack: TEdit
             Left = 96
             Top = 55
             Width = 62
@@ -1436,8 +1546,9 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 3
             Text = 'edKode'
+            OnKeyPress = edjmlpackKeyPress
           end
-          object Edit35: TEdit
+          object rpedhppperpack: TEdit
             Left = 96
             Top = 81
             Width = 233
@@ -1445,10 +1556,11 @@ object frmtambahbrg: Tfrmtambahbrg
             Color = 16765390
             Ctl3D = False
             ParentCtl3D = False
+            ReadOnly = True
             TabOrder = 4
             Text = 'edKode'
           end
-          object Edit36: TEdit
+          object rpedmarginpack: TEdit
             Left = 96
             Top = 108
             Width = 67
@@ -1458,6 +1570,7 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 5
             Text = 'edKode'
+            OnKeyPress = rpedmarginpackKeyPress
           end
           object CheckBox2: TCheckBox
             Left = 186
@@ -1469,7 +1582,7 @@ object frmtambahbrg: Tfrmtambahbrg
             State = cbChecked
             TabOrder = 6
           end
-          object Edit37: TEdit
+          object edhargajualpack: TEdit
             Left = 97
             Top = 134
             Width = 232
@@ -1479,6 +1592,8 @@ object frmtambahbrg: Tfrmtambahbrg
             ParentCtl3D = False
             TabOrder = 7
             Text = 'edKode'
+            OnChange = edhargajualpackChange
+            OnKeyPress = edhargajualpackKeyPress
           end
           object BitBtn1: TBitBtn
             Left = 96
@@ -1487,34 +1602,37 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 25
             Caption = 'SIMPAN'
             TabOrder = 8
+            OnClick = BitBtn1Click
           end
         end
         object GroupBox10: TGroupBox
           Left = 360
           Top = 8
-          Width = 409
+          Width = 473
           Height = 193
           Caption = '[ HARGA JUAL PACK ]'
           Ctl3D = False
           ParentCtl3D = False
           TabOrder = 1
           object BitBtn2: TBitBtn
-            Left = 168
+            Left = 8
             Top = 160
             Width = 75
             Height = 25
             Caption = 'DELETE'
             TabOrder = 0
+            OnClick = BitBtn2Click
           end
-          object NextGrid3: TNextGrid
+          object GridJualPack: TNextGrid
             Left = 1
             Top = 14
-            Width = 407
+            Width = 471
             Height = 139
             Align = alTop
+            Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
             TabOrder = 1
             TabStop = True
-            object NxTextColumn13: TNxTextColumn
+            object satuan: TNxTextColumn
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -1525,7 +1643,7 @@ object frmtambahbrg: Tfrmtambahbrg
               Position = 0
               SortType = stAlphabetic
             end
-            object NxTextColumn14: TNxTextColumn
+            object qty: TNxNumberColumn
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -1533,10 +1651,13 @@ object frmtambahbrg: Tfrmtambahbrg
               Font.Style = []
               Header.Caption = 'QTY PCS'
               Header.Alignment = taCenter
+              Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
               Position = 1
-              SortType = stAlphabetic
+              SortType = stNumeric
+              Increment = 1.000000000000000000
+              Precision = 0
             end
-            object NxTextColumn15: TNxTextColumn
+            object hpp: TNxNumberColumn
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -1544,10 +1665,14 @@ object frmtambahbrg: Tfrmtambahbrg
               Font.Style = []
               Header.Caption = 'HPP'
               Header.Alignment = taCenter
+              Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
               Position = 2
-              SortType = stAlphabetic
+              SortType = stNumeric
+              FormatMask = '#,##0'
+              Increment = 1.000000000000000000
+              Precision = 0
             end
-            object NxTextColumn16: TNxTextColumn
+            object margin: TNxNumberColumn
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -1555,10 +1680,13 @@ object frmtambahbrg: Tfrmtambahbrg
               Font.Style = []
               Header.Caption = 'MARGIN'
               Header.Alignment = taCenter
+              Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
               Position = 3
-              SortType = stAlphabetic
+              SortType = stNumeric
+              Increment = 1.000000000000000000
+              Precision = 0
             end
-            object NxTextColumn17: TNxTextColumn
+            object hrgjual: TNxNumberColumn
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -1566,8 +1694,12 @@ object frmtambahbrg: Tfrmtambahbrg
               Font.Style = []
               Header.Caption = 'HARGA JUAL'
               Header.Alignment = taCenter
+              Options = [coCanClick, coCanInput, coCanSort, coPublicUsing, coShowTextFitHint]
               Position = 4
-              SortType = stAlphabetic
+              SortType = stNumeric
+              FormatMask = '#,##0'
+              Increment = 1.000000000000000000
+              Precision = 0
             end
           end
         end
@@ -1589,7 +1721,7 @@ object frmtambahbrg: Tfrmtambahbrg
           Ctl3D = False
           ParentCtl3D = False
           TabOrder = 0
-          object CheckBox3: TCheckBox
+          object cbppn: TCheckBox
             Left = 16
             Top = 24
             Width = 97
@@ -1597,7 +1729,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Caption = 'PPN'
             TabOrder = 0
           end
-          object CheckBox4: TCheckBox
+          object cbbrgmewah: TCheckBox
             Left = 16
             Top = 48
             Width = 113
@@ -1605,7 +1737,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Caption = 'PPN Brg. Mewah'
             TabOrder = 1
           end
-          object CheckBox5: TCheckBox
+          object cbincppn: TCheckBox
             Left = 16
             Top = 72
             Width = 113
@@ -1613,7 +1745,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Caption = 'Include PPN'
             TabOrder = 2
           end
-          object CheckBox6: TCheckBox
+          object cbbrgcurah: TCheckBox
             Left = 144
             Top = 24
             Width = 113
@@ -1621,7 +1753,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Caption = 'Barang Curah'
             TabOrder = 3
           end
-          object CheckBox7: TCheckBox
+          object cbopenprice: TCheckBox
             Left = 144
             Top = 48
             Width = 113
@@ -1646,7 +1778,7 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = 'Tgl. Expired'
           end
-          object NxDatePicker1: TNxDatePicker
+          object tglexpired: TNxDatePicker
             Left = 24
             Top = 48
             Width = 177
@@ -1683,13 +1815,13 @@ object frmtambahbrg: Tfrmtambahbrg
             Height = 13
             Caption = 'Hari'
           end
-          object Edit38: TEdit
+          object edgaransi: TEdit
             Left = 16
             Top = 48
             Width = 113
             Height = 19
             TabOrder = 0
-            Text = 'Edit38'
+            Text = 'edgaransi'
           end
         end
       end

@@ -24,6 +24,13 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnHapusClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure GridKelompokSelectCell(Sender: TObject; ACol, ARow: Integer);
+    procedure GridKelompokCellColoring(Sender: TObject; ACol,
+      ARow: Integer; var CellColor, GridColor: TColor;
+      CellState: TCellState);
+    procedure btnEditClick(Sender: TObject);
+    procedure GridKelompokDblClick(Sender: TObject);
+    procedure edCariSupplierChange(Sender: TObject);
   private
     { Private declarations }
   procedure Tampil(strSQL : String);
@@ -96,6 +103,36 @@ procedure TfrmCariSatuan.FormShow(Sender: TObject);
 begin
   Kosongkan(true);
   Tampil('');
+end;
+
+procedure TfrmCariSatuan.GridKelompokSelectCell(Sender: TObject; ACol,
+  ARow: Integer);
+begin
+  idsat := GridKelompok.Cell[0,ARow].AsString;
+  nmsat := GridKelompok.Cell[1,ARow].AsString;
+  theqty:= GridKelompok.Cell[2,ARow].AsString;
+end;
+
+procedure TfrmCariSatuan.GridKelompokCellColoring(Sender: TObject; ACol,
+  ARow: Integer; var CellColor, GridColor: TColor; CellState: TCellState);
+begin
+   if ARow mod 2 <> 0 then CellColor := clSkyBlue;
+end;
+
+procedure TfrmCariSatuan.btnEditClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmCariSatuan.GridKelompokDblClick(Sender: TObject);
+begin
+  btnHapusClick(Self);
+end;
+
+procedure TfrmCariSatuan.edCariSupplierChange(Sender: TObject);
+begin
+  if trim(edCariSupplier.Text)='' then exit;
+  Tampil(' WHERE satuan LIKE ''%'+edCariSupplier.Text+'%''');
 end;
 
 end.

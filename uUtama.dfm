@@ -1,10 +1,11 @@
 object fUtama: TfUtama
-  Left = 202
-  Top = 452
+  Left = 453
+  Top = 396
   Align = alClient
   BorderStyle = bsNone
-  ClientHeight = 746
-  ClientWidth = 1073
+  Caption = 'p'
+  ClientHeight = 520
+  ClientWidth = 782
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,12 +18,13 @@ object fUtama: TfUtama
   Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
+  OnShortCut = FormShortCut
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TAdvOfficeStatusBar
     Left = 0
-    Top = 727
-    Width = 1073
+    Top = 501
+    Width = 782
     Height = 19
     AnchorHint = False
     Panels = <
@@ -90,10 +92,10 @@ object fUtama: TfUtama
   object Halaman: TAdvToolBarPager
     Left = 0
     Top = 0
-    Width = 1073
+    Width = 782
     Height = 142
     Cursor = crHandPoint
-    ActivePage = AdvToolBarPager13
+    ActivePage = AdvToolBarPager12
     CanMove = True
     CaptionButtons = [cbClose, cbMinimize]
     TabGroups = <>
@@ -105,7 +107,7 @@ object fUtama: TfUtama
     object AdvToolBarPager12: TAdvPage
       Left = 4
       Top = 51
-      Width = 1065
+      Width = 774
       Height = 86
       Caption = 'Master Data'
       object AdvToolBar1: TAdvToolBar
@@ -1330,7 +1332,7 @@ object fUtama: TfUtama
     object AdvToolBarPager13: TAdvPage
       Left = 4
       Top = 51
-      Width = 1065
+      Width = 774
       Height = 86
       Caption = 'Transaksi'
       object AdvToolBar10: TAdvToolBar
@@ -2748,7 +2750,7 @@ object fUtama: TfUtama
     object AdvPage1: TAdvPage
       Left = 4
       Top = 51
-      Width = 1065
+      Width = 774
       Height = 86
       Caption = 'Laporan'
       object AdvToolBar15: TAdvToolBar
@@ -3267,7 +3269,7 @@ object fUtama: TfUtama
     object AdvPage6: TAdvPage
       Left = 4
       Top = 51
-      Width = 1065
+      Width = 774
       Height = 86
       Caption = 'Pengaturan'
       object AdvToolBar20: TAdvToolBar
@@ -4584,7 +4586,7 @@ object fUtama: TfUtama
   object tbSet: TAdvOfficeMDITabSet
     Left = 0
     Top = 142
-    Width = 1073
+    Width = 782
     Height = 25
     Cursor = crHandPoint
     AdvOfficeTabSetStyler = AdvOfficeTabSetOfficeStyler1

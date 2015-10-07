@@ -29,12 +29,12 @@ type
     Button3: TButton;
     ednmkelompok: TEdit;
     ednmsatuan: TEdit;
-    Edit1: TEdit;
+    edqty: TEdit;
     ednmsupplier: TEdit;
     Label7: TLabel;
-    edhpppcs: TEdit;
+    rpedhpppcs: TEdit;
     Label8: TLabel;
-    edHargabeli: TEdit;
+    rpedHargabeli: TEdit;
     Label9: TLabel;
     edsatbeli: TEdit;
     Label10: TLabel;
@@ -52,22 +52,22 @@ type
     NxTabSheet8: TNxTabSheet;
     GroupBox1: TGroupBox;
     Label11: TLabel;
-    edMargin: TEdit;
+    rpedMargin: TEdit;
     Label12: TLabel;
-    edhargajual: TEdit;
+    rpedhargajual: TEdit;
     Label13: TLabel;
     CheckBox1: TCheckBox;
     Label14: TLabel;
-    eddiscjual: TEdit;
+    rpeddiscjual: TEdit;
     Label15: TLabel;
     Label16: TLabel;
-    eddiscjualrp: TEdit;
+    rpeddiscjualrp: TEdit;
     Label17: TLabel;
-    Edit2: TEdit;
+    rpedhargajualfix: TEdit;
     Label18: TLabel;
-    Edit3: TEdit;
+    rpedgrosir1: TEdit;
     Label19: TLabel;
-    Edit4: TEdit;
+    rpedgrosir2: TEdit;
     GroupBox4: TGroupBox;
     Label20: TLabel;
     Label21: TLabel;
@@ -75,16 +75,16 @@ type
     Label23: TLabel;
     Label24: TLabel;
     Label25: TLabel;
-    Edit5: TEdit;
-    Edit6: TEdit;
-    Edit7: TEdit;
-    Edit8: TEdit;
-    Edit9: TEdit;
-    Edit10: TEdit;
-    Edit11: TEdit;
-    Edit12: TEdit;
-    Edit13: TEdit;
-    Edit14: TEdit;
+    rpedqty1: TEdit;
+    rpedqty2: TEdit;
+    rpedqty3: TEdit;
+    rpedqty4: TEdit;
+    rpedqty5: TEdit;
+    rpedmar1: TEdit;
+    rpedmar2: TEdit;
+    rpedmar3: TEdit;
+    rpedmar4: TEdit;
+    rpedmar5: TEdit;
     Label26: TLabel;
     Label27: TLabel;
     Label28: TLabel;
@@ -93,19 +93,19 @@ type
     Label31: TLabel;
     Label32: TLabel;
     Label33: TLabel;
-    Edit15: TEdit;
-    Edit16: TEdit;
-    Edit17: TEdit;
-    Edit18: TEdit;
-    Edit19: TEdit;
-    Edit20: TEdit;
-    Edit21: TEdit;
-    Edit22: TEdit;
-    Edit23: TEdit;
-    Edit24: TEdit;
+    rpedhrgjual1: TEdit;
+    rpedhrgjual2: TEdit;
+    rpedhrgjual3: TEdit;
+    rpedhrgjual4: TEdit;
+    rpedhrgjual5: TEdit;
+    rpedjuml1: TEdit;
+    rpedjuml2: TEdit;
+    rpedjuml3: TEdit;
+    rpedjuml4: TEdit;
+    rpedjuml5: TEdit;
     GroupBox2: TGroupBox;
     Label34: TLabel;
-    Edit25: TEdit;
+    rpedextra: TEdit;
     GroupBox3: TGroupBox;
     NextGrid1: TNextGrid;
     NxTextColumn1: TNxTextColumn;
@@ -128,60 +128,66 @@ type
     AdvGlassButton5: TAdvGlassButton;
     AdvGlassButton6: TAdvGlassButton;
     GroupBox6: TGroupBox;
-    LabeledEdit1: TLabeledEdit;
-    LabeledEdit2: TLabeledEdit;
-    LabeledEdit3: TLabeledEdit;
+    rpedstokskr: TLabeledEdit;
+    rpedminstok: TLabeledEdit;
+    rpedmakstok: TLabeledEdit;
     GroupBox7: TGroupBox;
     Label35: TLabel;
-    Edit26: TEdit;
+    rpedpromojual: TEdit;
     Label36: TLabel;
-    Edit27: TEdit;
+    rpedpromodiskonpersen: TEdit;
     Label37: TLabel;
-    Edit28: TEdit;
+    rpedpromodiskonrp: TEdit;
     GroupBox8: TGroupBox;
     Label38: TLabel;
     Label39: TLabel;
     Label40: TLabel;
-    Edit29: TEdit;
-    Edit30: TEdit;
-    Edit31: TEdit;
+    rpedjualnomem: TEdit;
+    rpeddiskonnomem: TEdit;
+    rpedrpdisknomem: TEdit;
     GroupBox9: TGroupBox;
-    Edit32: TEdit;
+    edpack: TEdit;
     Button4: TButton;
-    Edit33: TEdit;
+    ednmpack: TEdit;
     Label41: TLabel;
     Label42: TLabel;
-    Edit34: TEdit;
+    edjmlpack: TEdit;
     Label43: TLabel;
-    Edit35: TEdit;
+    rpedhppperpack: TEdit;
     Label44: TLabel;
-    Edit36: TEdit;
+    rpedmarginpack: TEdit;
     Label45: TLabel;
     CheckBox2: TCheckBox;
     Label46: TLabel;
-    Edit37: TEdit;
+    edhargajualpack: TEdit;
     BitBtn1: TBitBtn;
     GroupBox10: TGroupBox;
     BitBtn2: TBitBtn;
-    NextGrid3: TNextGrid;
-    NxTextColumn13: TNxTextColumn;
-    NxTextColumn14: TNxTextColumn;
-    NxTextColumn15: TNxTextColumn;
-    NxTextColumn16: TNxTextColumn;
-    NxTextColumn17: TNxTextColumn;
+    GridJualPack: TNextGrid;
+    satuan: TNxTextColumn;
     GroupBox11: TGroupBox;
-    CheckBox3: TCheckBox;
-    CheckBox4: TCheckBox;
-    CheckBox5: TCheckBox;
-    CheckBox6: TCheckBox;
-    CheckBox7: TCheckBox;
+    cbppn: TCheckBox;
+    cbbrgmewah: TCheckBox;
+    cbincppn: TCheckBox;
+    cbbrgcurah: TCheckBox;
+    cbopenprice: TCheckBox;
     GroupBox12: TGroupBox;
     Label47: TLabel;
-    NxDatePicker1: TNxDatePicker;
+    tglexpired: TNxDatePicker;
     GroupBox13: TGroupBox;
-    Edit38: TEdit;
+    edgaransi: TEdit;
     Label48: TLabel;
     Label49: TLabel;
+    Label50: TLabel;
+    rpedgrosir3: TEdit;
+    Label51: TLabel;
+    rpedgrosir5: TEdit;
+    Label52: TLabel;
+    rpedgrosir4: TEdit;
+    qty: TNxNumberColumn;
+    hpp: TNxNumberColumn;
+    margin: TNxNumberColumn;
+    hrgjual: TNxNumberColumn;
     procedure btnHapusClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button3Click(Sender: TObject);
@@ -191,22 +197,87 @@ type
       Shift: TShiftState);
     procedure Button2Click(Sender: TObject);
     procedure edKodeChange(Sender: TObject);
+    procedure edKelompokKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure btnBaruClick(Sender: TObject);
+    procedure cbjenishppKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhpppcsKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedHargabeliKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhpppcsChange(Sender: TObject);
+    procedure rpedMarginChange(Sender: TObject);
+    procedure rpeddiscjualrpChange(Sender: TObject);
+    procedure rpeddiscjualChange(Sender: TObject);
+    procedure rpedgrosir1KeyPress(Sender: TObject; var Key: Char);
+    procedure rpeddiscjualrpKeyPress(Sender: TObject; var Key: Char);
+    procedure rpeddiscjualKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedgrosir2KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedgrosir3KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedgrosir4KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedgrosir5KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedqty1KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmar1KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhrgjual1KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedjuml1KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedqty2KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmar2KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhrgjual2KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedjuml2KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedqty3KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmar3KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhrgjual3KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedjuml3KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedqty4KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmar4KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhrgjual4KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedjuml4KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedqty5KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmar5KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedhrgjual5KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedjuml5KeyPress(Sender: TObject; var Key: Char);
+    procedure rpedextraKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedqty1Change(Sender: TObject);
+    procedure rpedmar1Change(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure rpedstokskrKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedminstokKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmakstokKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedpromojualKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedpromodiskonpersenKeyPress(Sender: TObject;
+      var Key: Char);
+    procedure rpedpromodiskonrpKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedjualnomemKeyPress(Sender: TObject; var Key: Char);
+    procedure rpeddiskonnomemKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedrpdisknomemKeyPress(Sender: TObject; var Key: Char);
+    procedure edjmlpackKeyPress(Sender: TObject; var Key: Char);
+    procedure rpedmarginpackKeyPress(Sender: TObject; var Key: Char);
+    procedure edhargajualpackKeyPress(Sender: TObject; var Key: Char);
+    procedure edhargajualpackChange(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
-  procedure Kosongkan(const All: boolean);  
+  procedure Kosongkan(const All: boolean);
+  procedure Autocode();
   public
     { Public declarations }
   end;
 
 var
   frmtambahbrg: Tfrmtambahbrg;
-
+  nmField, nmValue  : TStringList;
+  
 implementation
 
 uses uVirtualEngine, uDM, uCariSupplier, uCariKelompok, uCariSatuan,uBarang,
   DB;
 
 {$R *.dfm}
+
+procedure Tfrmtambahbrg.Autocode;
+begin
+  CommandSQL(DM.QTemp2,'SELECT MAX(kodebrg) FROM tblbarang',True);
+  edKode.Text:= idKat+DM.QTemp2.Fields[0].AsString;
+end;
 
 procedure Tfrmtambahbrg.Kosongkan(const All: boolean);
 var i  : integer;
@@ -218,12 +289,12 @@ begin
         if Components[i] is TEdit then begin
           if All then begin TEdit(Components[i]).Clear; end else
           if not (copy(TEdit(Components[i]).Name,1,5) = 'edKode') then TEdit(Components[i]).Clear;
-        end;  
-        if Components[i] is TComboBox then TComboBox(Components[i]).Text :='';
+          if (copy(TEdit(Components[i]).Name,1,2) = 'rp') then TEdit(Components[i]).Text:='0';
+        end;
         if Components[i] is TMemo then TMemo(Components[i]).Clear;
     end;
   if not All then edKode.Text:= sl;
-  edKode.SetFocus;
+  edKelompok.SetFocus;
   edKode.Text := kode;
   Halaman1.PageIndex:=0;
 end;
@@ -243,8 +314,10 @@ procedure Tfrmtambahbrg.Button3Click(Sender: TObject);
 begin
   frmCariSupplier  := tfrmCariSupplier.Create(Application);
   try
-    frmCariSupplier.ShowModal
+    frmCariSupplier.ShowModal;
   finally
+    edSupplier.Text := idSup;
+    ednmsupplier.Text := nmSup;
     frmCariSupplier.Free;
   end;
 end;
@@ -255,14 +328,17 @@ begin
   try
     frmCariKelompok.ShowModal;
   finally
+    edKelompok.Text :=  idKat;
+    ednmkelompok.Text := nmKat;
     frmCariKelompok.Free;
   end;
-
+  Autocode;
 end;
 
 procedure Tfrmtambahbrg.FormShow(Sender: TObject);
 begin
   Kosongkan(true);
+  Halaman1.PageIndex:=0;
 end;
 
 procedure Tfrmtambahbrg.FormKeyDown(Sender: TObject; var Key: Word;
@@ -271,7 +347,8 @@ begin
    if Key=VK_RETURN then Perform(WM_NEXTDLGCTL, 0, 0);
    if Key=VK_F4 then Button1Click(Self);
    if Key=VK_F5 then Button2Click(Self);
-   if Key=VK_F7 then Button3Click(Self);
+   if Key=VK_F6 then Button3Click(Self);
+   if Key=VK_F7 then Button4Click(Self);
 end;
 
 procedure Tfrmtambahbrg.Button2Click(Sender: TObject);
@@ -280,36 +357,428 @@ begin
   try
     frmCariSatuan.ShowModal;
   finally
+    edSatuan.Text := idsat;
+    ednmsatuan.Text := nmsat;
+    edqty.Text := theqty;
     frmCariSatuan.Free;
   end;
-
 end;
 
 procedure Tfrmtambahbrg.edKodeChange(Sender: TObject);
 var
  strSQL : String;
 begin
-  if trim(edKode.Text)='' then exit;
-  strSQL := 'SELECT * FROM tblbarang AS b JOIN tblkategori AS k ON b.idkat=k.idkat '+
-            'JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsupplier AS p ON b.kdsup =p.kdsup '+
-            'AND b.kodebrg='''+Trim(edKode.Text)+'''';
-  CommandSQL(DM.QTemp2,strSQL,True);
-  if DM.QTemp2.IsEmpty then
+  if stsEdit then
   begin
-    Kosongkan(true);
-  end else
-  begin
-    with DM.QTemp2 do
-    begin
-       edBarcode.Text  := FieldbyName('kdbarcode').AsString;
-       edNamaBrg.Text  := FieldbyName('namabrg').AsString;
-       edKelompok.Text := FieldbyName('idkat').AsString;
-       edSatuan.Text   := FieldbyName('idsatuan').AsString;
-       edSupplier.Text := FieldbyName('kdsup').AsString;
-       edhpppcs.Text   := FieldbyName('hpp').AsString;
-       edHargabeli.Text:= FieldbyName('hrgbeli').AsString;
+    if trim(edKode.Text)='' then exit;
+        strSQL := 'SELECT * FROM tblbarang AS b JOIN tblkategori AS k ON b.idkat=k.idkat '+
+                  'JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsupplier AS p ON b.kdsup =p.kdsup '+
+                  'AND b.kodebrg='''+Trim(edKode.Text)+'''';
+        CommandSQL(DM.QTemp2,strSQL,True);
+        if DM.QTemp2.IsEmpty then
+        begin
+          Kosongkan(true);
+        end else
+        begin
+        with DM.QTemp2 do
+        begin
+           edBarcode.Text  := FieldbyName('kdbarcode').AsString;
+           edNamaBrg.Text  := FieldbyName('namabrg').AsString;
+           edKelompok.Text := FieldbyName('idkat').AsString;
+           edSatuan.Text   := FieldbyName('idsatuan').AsString;
+           edSupplier.Text := FieldbyName('kdsup').AsString;
+           rpedhpppcs.Text   := FieldbyName('hpp').AsString;
+           rpedHargabeli.Text:= FieldbyName('hrgbeli').AsString;
+        end;
     end;
+  end;  
+end;
+
+procedure Tfrmtambahbrg.edKelompokKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key=13 then Button1Click(Self);
+end;
+
+procedure Tfrmtambahbrg.btnBaruClick(Sender: TObject);
+begin
+  CekNullEdit(edKode,'kode barang');
+  CekNullEdit(edNamaBrg,'nama barang');
+  CekNullEdit(edKelompok,'kelompok barang');
+  CekNullEdit(edSatuan,'satuan barang');
+  CekNullEdit(edSupplier,'supplier barang');
+  CekNullEdit(rpedhpppcs,'hppcs');
+  NoSelectCombo(cbjenishpp,'jenis HPP');
+  CekNullEdit(rpedhargabeli,'harga beli');
+  CekNullEdit(edsatbeli,'satuan beli');
+
+  nmField := TStringList.Create;       nmValue := TStringList.Create;
+  nmField.Clear;                       nmValue.Clear;
+  nmField.Add('kodebrg');              nmValue.Add(edKode.Text);
+  nmField.Add('kdbrg');                nmValue.Add(edKode.Text);
+  nmField.Add('idkat');                nmValue.Add(edKelompok.Text);
+  nmField.Add('namabrg');              nmValue.Add(edNamaBrg.Text);
+  nmField.Add('kdbarcode');            nmValue.Add(edBarcode.Text);
+  nmField.Add('idsatuan');             nmValue.Add(edSatuan.Text);
+  nmField.Add('kdsup');                nmValue.Add(edSupplier.Text);
+  nmField.Add('hpp');                  nmValue.Add(rpedhpppcs.Text);
+  nmField.Add('jnshpp');               nmValue.Add(cbjenishpp.Text);
+  nmField.Add('hrgbeli');              nmValue.Add(rpedHargabeli.Text);
+  nmField.Add('satbeli');              nmValue.Add(edsatbeli.Text);
+  nmField.Add('disc');                 nmValue.Add(rpeddiscjual.Text);
+  nmField.Add('discrp');               nmValue.Add(rpeddiscjualrp.Text);
+  nmField.Add('hrgjual');              nmValue.Add(rpedhargajualfix.Text);
+  nmField.Add('hrggrosir1');           nmValue.Add(rpedgrosir1.Text);
+  nmField.Add('hrggrosir2');           nmValue.Add(rpedgrosir2.Text);
+  nmField.Add('hrggrosir3');           nmValue.Add(rpedgrosir3.Text);
+  nmField.Add('hrggrosir4');           nmValue.Add(rpedgrosir4.Text);
+  nmField.Add('hrggrosir5');           nmValue.Add(rpedgrosir5.Text);
+  nmField.Add('qty1');                 nmValue.Add(rpedqty1.Text);
+  nmField.Add('qty2');                 nmValue.Add(rpedqty2.Text);
+  nmField.Add('qty3');                 nmValue.Add(rpedqty3.Text);
+  nmField.Add('qty4');                 nmValue.Add(rpedqty4.Text);
+  nmField.Add('qty5');                 nmValue.Add(rpedqty5.Text);
+  nmField.Add('profit1');              nmValue.Add(rpedmar1.Text);
+  nmField.Add('profit2');              nmValue.Add(rpedmar2.Text);
+  nmField.Add('profit3');              nmValue.Add(rpedmar3.Text);
+  nmField.Add('profit4');              nmValue.Add(rpedmar4.Text);
+  nmField.Add('profit5');              nmValue.Add(rpedmar5.Text);
+  nmField.Add('biaya');                nmValue.Add(rpedextra.Text);
+  nmField.Add('stock');                nmValue.Add(rpedstokskr.Text);
+  nmField.Add('minstock');             nmValue.Add(rpedminstok.Text);
+  nmField.Add('maxstock');             nmValue.Add(rpedmakstok.Text);
+  nmField.Add('hargaspesialmember');             nmValue.Add(rpedpromojual.Text);
+  nmField.Add('persendiskonspesialmember');      nmValue.Add(rpedpromodiskonpersen.Text);
+  nmField.Add('rupiahdiskonspesialmember');      nmValue.Add(rpedpromodiskonrp.Text);
+  nmField.Add('hargaspesialnonmember');          nmValue.Add(rpedjualnomem.Text);
+  nmField.Add('persendiskonspesialnonmember');   nmValue.Add(rpeddiskonnomem.Text);
+  nmField.Add('rupiahdiskonspesialnonmember');   nmValue.Add(rpeddiskonnomem.Text);
+  nmField.Add('idpack');                nmValue.Add(edpack.Text);
+
+
+  if stsEdit then
+     Tambah(DM.QTemp2,'tblbarang',nmField,nmValue)
+  else
+     Ubah(DM.QTemp2,'kodebrg',edKode.Text,'tblbarang',nmField,nmValue);
+  Berhasil('Data berhasil disimpan...');
+
+end;
+
+procedure Tfrmtambahbrg.cbjenishppKeyPress(Sender: TObject; var Key: Char);
+begin
+ Key:=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhpppcsKeyPress(Sender: TObject; var Key: Char);
+begin
+ if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedHargabeliKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhpppcsChange(Sender: TObject);
+begin
+  if (Trim(rpedhpppcs.Text)='') or (Trim(rpedhpppcs.Text)='0') then exit;
+  rpedHargabeli.Text:= rpedhpppcs.Text;
+  rpedhargajual.Text:= rpedhpppcs.Text;
+  rpedhargajualfix.Text := rpedhpppcs.Text;
+end;
+
+procedure Tfrmtambahbrg.rpedMarginChange(Sender: TObject);
+begin
+  if (Trim(rpedMargin.Text)='') or (Trim(rpedMargin.Text)='0') then exit;
+  rpedhargajual.Text:=  FloatToStr((StrToFloat(rpedMargin.Text) /100) * StrToFloat(rpedhpppcs.Text) + StrToFloat(rpedhpppcs.Text));
+  rpedhargajualfix.Text := rpedhargajual.Text;
+end;
+
+procedure Tfrmtambahbrg.rpeddiscjualrpChange(Sender: TObject);
+begin
+ if trim(rpeddiscjualrp.Text)='' then exit;
+ rpedhargajualfix.Text:= FloatToStr(strtoFloat(rpedhargajual.Text) - strtofloat(rpeddiscjualrp.Text));
+end;
+
+procedure Tfrmtambahbrg.rpeddiscjualChange(Sender: TObject);
+begin
+  if (trim(rpeddiscjual.Text)='') or (trim(rpeddiscjual.Text)='0') then exit;
+  rpeddiscjualrp.Text:='0';
+  rpedhargajualfix.Text:= FloatToStr(StrToFloat(rpedhargajual.Text) - ((StrToFloat(rpeddiscjual.Text) / 100) * StrToFloat(rpedhargajual.Text)));
+end;
+
+procedure Tfrmtambahbrg.rpedgrosir1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpeddiscjualrpKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpeddiscjualKeyPress(Sender: TObject; var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedgrosir2KeyPress(Sender: TObject; var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedgrosir3KeyPress(Sender: TObject; var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedgrosir4KeyPress(Sender: TObject; var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedgrosir5KeyPress(Sender: TObject; var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedqty1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmar1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhrgjual1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedjuml1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedqty2KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmar2KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhrgjual2KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedjuml2KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedqty3KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmar3KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhrgjual3KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedjuml3KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedqty4KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmar4KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhrgjual4KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedjuml4KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedqty5KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmar5KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedhrgjual5KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedjuml5KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedextraKeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedqty1Change(Sender: TObject);
+begin
+   if (trim(rpedqty1.Text)='') or (trim(rpedqty1.Text)='0') then exit;
+   rpedjuml1.Text := FloatToStr(strtofloat(rpedqty1.Text) * strtofloat(rpedhrgjual1.Text));
+end;
+
+procedure Tfrmtambahbrg.rpedmar1Change(Sender: TObject);
+begin
+ { if (trim(rpedmar1.Text)='') and (trim(rpedhrgjual1.Text)='') and (trim(rpedjuml1.Text)='') then exit;
+  rpedhrgjual1.Text := FloatToStr(((strtofloat(rpedmar1.Text)/100) * strtofloat(rpedhrgjual1.Text)) + strtofloat(rpedhrgjual1.Text));
+  rpedjuml1.Text    := FloatToStr(((strtofloat(rpedmar1.Text)/100) * strtofloat(rpedjuml1.Text)) + strtofloat(rpedjuml1.Text));}
+end;
+
+procedure Tfrmtambahbrg.Button4Click(Sender: TObject);
+begin
+  frmCariSatuan := TfrmCariSatuan.Create(Application);
+  try
+    frmCariSatuan.ShowModal;
+  finally
+    edpack.Text := idsat;
+    ednmpack.Text := nmsat;
+    edjmlpack.Text := theqty;
+    frmCariSatuan.Free;
   end;
+end;
+
+procedure Tfrmtambahbrg.BitBtn1Click(Sender: TObject);
+begin
+   CekNullEdit(edpack,'satuan pack');
+   CekNullEdit(edjmlpack,'jumlah pcs');
+   CekNullEdit(rpedhpppcs,'hpp per pack');
+   CekNullEdit(rpedmarginpack,'margin');
+   CekNullEdit(edhargajualpack,'harga jual pack'); 
+   with GridJualPack do
+   begin
+      AddRow();
+      Cell[0,RowCount-1].AsString:=  edpack.Text;
+      Cell[1,RowCount-1].AsFloat:=  StrToFloat(edjmlpack.Text);
+      Cell[2,RowCount-1].AsFloat:=  StrToFloat(rpedhppperpack.Text);
+      Cell[3,RowCount-1].AsFloat:=  StrToFloat(rpedmarginpack.Text);
+      Cell[4,RowCount-1].AsFloat:=  StrToFloat(edhargajualpack.Text);
+   end;
+   edpack.Clear;
+   ednmpack.Clear;
+   edjmlpack.Clear;
+   rpedhppperpack.Clear;
+   rpedmarginpack.Clear;
+   edhargajualpack.Clear;
+end;
+
+procedure Tfrmtambahbrg.rpedstokskrKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedminstokKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmakstokKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedpromojualKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedpromodiskonpersenKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedpromodiskonrpKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedjualnomemKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpeddiskonnomemKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedrpdisknomemKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.edjmlpackKeyPress(Sender: TObject; var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.rpedmarginpackKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.edhargajualpackKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if not ( Key in['0'..'9','.',#8]) then Key :=#0;
+end;
+
+procedure Tfrmtambahbrg.edhargajualpackChange(Sender: TObject);
+begin
+  if Trim(edhargajualpack.Text)='' then exit;
+  rpedhppperpack.Text :=  FloatToStr( StrToFloat(edhargajualpack.Text)-((StrToFloat(rpedmarginpack.Text)/100) * StrToFloat(edhargajualpack.Text)));
+end;
+
+procedure Tfrmtambahbrg.BitBtn2Click(Sender: TObject);
+begin
+  if Tanya('harga jual pack terpilih') then  GridJualPack.DeleteRow(GridJualPack.SelectedRow);
 end;
 
 end.

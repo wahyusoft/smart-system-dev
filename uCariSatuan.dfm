@@ -1,6 +1,6 @@
 object frmCariSatuan: TfrmCariSatuan
-  Left = 842
-  Top = 261
+  Left = 855
+  Top = 175
   BorderStyle = bsNone
   Caption = 'frmCariSatuan'
   ClientHeight = 338
@@ -53,10 +53,12 @@ object frmCariSatuan: TfrmCariSatuan
         Top = 27
         Width = 377
         Height = 19
+        CharCase = ecUpperCase
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'edCariSupplier'
+        Text = 'EDCARISUPPLIER'
+        OnChange = edCariSupplierChange
       end
     end
     object GridKelompok: TNextGrid
@@ -71,10 +73,13 @@ object frmCariSatuan: TfrmCariSatuan
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       HeaderSize = 20
-      Options = [goGrid, goHeader, goIndicator]
+      Options = [goGrid, goHeader, goIndicator, goSelectFullRow]
       ParentFont = False
       TabOrder = 1
       TabStop = True
+      OnCellColoring = GridKelompokCellColoring
+      OnDblClick = GridKelompokDblClick
+      OnSelectCell = GridKelompokSelectCell
       object NxTextColumn13: TNxTextColumn
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -154,6 +159,7 @@ object frmCariSatuan: TfrmCariSatuan
       ParentFont = False
       ShineColor = clWhite
       Version = '1.0.1.0'
+      OnClick = btnEditClick
     end
     object btnHapus: TAdvGlassButton
       Left = 320

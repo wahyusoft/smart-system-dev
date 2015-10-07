@@ -43,9 +43,10 @@ uses
   uRetur in 'uRetur.pas' {frmRetur},
   uAddReturPembelian in 'uAddReturPembelian.pas' {frmAddReturPembelian},
   uPenjualan in 'uPenjualan.pas' {frmPenjualan},
-  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uAddPenjualan in 'uAddPenjualan.pas' {frmAddPenjualan},
   uPembelian in 'uPembelian.pas' {frmPembelian},
-  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier};
+  uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
+  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian};
 
 {$R *.res}
 

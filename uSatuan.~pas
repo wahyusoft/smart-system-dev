@@ -8,7 +8,8 @@ uses
   QRCtrls, QuickRpt, XiPanel, AdvPicture, NxPageControl, XiButton,
   NxCollection, uVirtualEngine,  Mask,
   JpegConv,jpeg, AdvGlassButton, NxColumns, NxColumnClasses,
-  NxScrollControl, NxCustomGridControl, NxCustomGrid, NxGrid;
+  NxScrollControl, NxCustomGridControl, NxCustomGrid, NxGrid, NxDBColumns,
+  NxDBGrid;
 
 type
   TfrmSatuan = class(TForm)
@@ -23,16 +24,18 @@ type
     btnPrior: TAdvGlassButton;
     btnNext: TAdvGlassButton;
     btnLast: TAdvGlassButton;
-    GridSatuan: TNextGrid;
-    NxTextColumn13: TNxTextColumn;
-    NxTextColumn2: TNxTextColumn;
-    NxTextColumn3: TNxTextColumn;
-    Label1: TLabel;
+    GridSatuan: TNextDBGrid;
+    Panel1: TPanel;
     GroupBox7: TGroupBox;
     Label3: TLabel;
     edKataKunci: TEdit;
     btnCari: TAdvGlassButton;
     btnCetak: TAdvGlassButton;
+    Label1: TLabel;
+    lcount: TLabel;
+    TNxDBTextColumn1: TNxDBTextColumn;
+    TNxDBTextColumn2: TNxDBTextColumn;
+    TNxDBNumberColumn1: TNxDBNumberColumn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -54,9 +57,14 @@ type
     procedure edKataKunciKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure btnRefreshClick(Sender: TObject);
+    procedure btnFirstClick(Sender: TObject);
+    procedure btnLastClick(Sender: TObject);
+    procedure btnPriorClick(Sender: TObject);
+    procedure btnNextClick(Sender: TObject);
+    procedure GridSatuanCellColoring(Sender: TObject; ACol, ARow: Integer;
+      var CellColor, GridColor: TColor; CellState: TCellState);
   private
     { Private declarations }
-    procedure TampilBarang(strSQL : String);
     procedure Kosongkan(const All : boolean);
 
   public
@@ -76,34 +84,6 @@ implementation
 uses uDM, DB, DBTables, uAddSatuan;
 
 {$R *.dfm}
-
-
-procedure TfrmSatuan.TampilBarang(strSQL : String);
-var x : integer;
-begin
-  strSQL := 'SELECT * FROM tblsatuan '+strSQL;
-  CommandSQL(DM.QTemp,strSQL,True);
-  GridSatuan.ClearRows;
-  with DM.QTemp do
-  begin
-        First;
-        while not eof do
-        begin
-             with GridSatuan do
-             begin
-                for x:= 0 to RecordCount-1 do
-                begin
-                   AddRow;
-                   Cell[0,x].AsString := FieldbyName('idsat').AsString;
-                   Cell[1,x].AsString := FieldbyName('satuan').AsString;
-                   Cell[2,x].AsString := FieldbyName('qty').AsString;
-                   Next;
-                end;
-             end;
-        end;
-  end;
-end;
-
 
 
 procedure TfrmSatuan.Kosongkan(const All: boolean);
@@ -211,13 +191,19 @@ end;
 procedure TfrmSatuan.FormShow(Sender: TObject);
 begin
   Kosongkan(True);
-  TampilBarang('');
+  with DM do
+  begin
+    connection.Connect;
+    QSatuan.Open;
+    lcount.Caption := '('+IntToStr(QSatuan.RecordCount)+')';
+  end;
 end;
 
 procedure TfrmSatuan.btnCariClick(Sender: TObject);
 begin
   if Trim(edKataKunci.Text)='' then exit;
-  TampilBarang('WHERE satuan LIKE ''%'+Trim(edKataKunci.Text)+'%'' ');
+  CommandSQL(dm.QSatuan,'SELECT * FROM tblsatuan WHERE satuan LIKE ''%'+Trim(edKataKunci.Text)+'%'' ',True);
+  lcount.Caption := '('+IntToStr(dm.QSatuan.RecordCount)+')';
 end;
 
 procedure TfrmSatuan.edKataKunciKeyDown(Sender: TObject; var Key: Word;
@@ -229,6 +215,35 @@ end;
 procedure TfrmSatuan.btnRefreshClick(Sender: TObject);
 begin
   FormShow(Self);
+end;
+
+procedure TfrmSatuan.btnFirstClick(Sender: TObject);
+begin
+  DM.QSatuan.First;
+end;
+
+procedure TfrmSatuan.btnLastClick(Sender: TObject);
+begin
+  DM.QSatuan.Last;
+end;
+
+procedure TfrmSatuan.btnPriorClick(Sender: TObject);
+begin
+  DM.QSatuan.Prior;
+end;
+
+procedure TfrmSatuan.btnNextClick(Sender: TObject);
+begin
+    DM.QSatuan.Next;
+end;
+
+procedure TfrmSatuan.GridSatuanCellColoring(Sender: TObject; ACol,
+  ARow: Integer; var CellColor, GridColor: TColor; CellState: TCellState);
+begin
+   if ARow mod 2 =0 then
+     CellColor := clWhite
+   else
+     CellColor := $D2EFE9;
 end;
 
 end.

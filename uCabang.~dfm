@@ -85,7 +85,6 @@ object frmCabang: TfrmCabang
         ParentFont = False
         ShineColor = clWhite
         Version = '1.0.1.0'
-        OnClick = btnEditClick
       end
       object btnHapus: TAdvGlassButton
         Left = 176

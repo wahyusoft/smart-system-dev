@@ -1,6 +1,6 @@
 object frmCariSupplier: TfrmCariSupplier
-  Left = 557
-  Top = 306
+  Left = 681
+  Top = 419
   BorderStyle = bsNone
   Caption = 'frmCariSupplier'
   ClientHeight = 338
@@ -53,10 +53,11 @@ object frmCariSupplier: TfrmCariSupplier
         Top = 27
         Width = 489
         Height = 19
+        CharCase = ecUpperCase
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 0
-        Text = 'edCariSupplier'
+        Text = 'EDCARISUPPLIER'
         OnChange = edCariSupplierChange
       end
     end
@@ -76,6 +77,9 @@ object frmCariSupplier: TfrmCariSupplier
       ParentFont = False
       TabOrder = 1
       TabStop = True
+      OnCellColoring = GridSupplierCellColoring
+      OnDblClick = GridSupplierDblClick
+      OnSelectCell = GridSupplierSelectCell
       object NxTextColumn13: TNxTextColumn
         DefaultWidth = 50
         Font.Charset = DEFAULT_CHARSET
@@ -241,6 +245,7 @@ object frmCariSupplier: TfrmCariSupplier
       ParentFont = False
       ShineColor = clWhite
       Version = '1.0.1.0'
+      OnClick = btnEditClick
     end
     object btnHapus: TAdvGlassButton
       Left = 504

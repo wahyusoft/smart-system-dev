@@ -1,12 +1,13 @@
 object DM: TDM
   OldCreateOrder = False
-  Left = 764
-  Top = 249
+  Left = 705
+  Top = 282
   Height = 285
   Width = 377
   object dsBarang: TDataSource
-    Left = 176
-    Top = 160
+    DataSet = QBarang
+    Left = 24
+    Top = 120
   end
   object dsPengguna: TDataSource
     Left = 1064
@@ -16,14 +17,31 @@ object DM: TDM
     Protocol = 'postgresql'
     HostName = 'localhost'
     Port = 5432
-    Database = 'dbpostretailalkhaibar'
+    Database = 'dbposretail'
     User = 'postgres'
-    Password = 'software16'
+    Password = 'bismillah'
+    Connected = True
     Left = 24
     Top = 16
   end
   object QBarang: TZQuery
     Connection = connection
+    Active = True
+    SQL.Strings = (
+      
+        'SELECT DISTINCT b.kodebrg,b.kdbarcode, b.namabrg,b.hrgbeli, b.hr' +
+        'gjual,  (b.hrgjual-b.hpp) AS margin,b.stock,s.satuan, SUM(b.stoc' +
+        'k*b.hrgbeli) AS totalaset, '
+      
+        '            SUM(b.hrgjual*b.stock) AS totalomzet,p.nama, k.kateg' +
+        'ori FROM tblbarang AS b JOIN tblkategori AS k ON b.idkat=k.idkat' +
+        ' '
+      
+        '            JOIN tblsatuan AS s ON b.idsatuan=s.idsat JOIN tblsu' +
+        'pplier AS p ON b.kdsup =p.kdsup GROUP BY b.kodebrg,b.kdbarcode, '
+      
+        '            b.namabrg,b.hrgbeli,b.hrgjual,b.hpp,b.stock,s.satuan' +
+        ',p.nama, k.kategori')
     Params = <>
     Left = 24
     Top = 72
@@ -45,6 +63,10 @@ object DM: TDM
     end
     object QBaranghrgjual: TFloatField
       FieldName = 'hrgjual'
+    end
+    object QBarangmargin: TFloatField
+      FieldName = 'margin'
+      ReadOnly = True
     end
     object QBarangstock: TFloatField
       FieldName = 'stock'
@@ -76,8 +98,8 @@ object DM: TDM
   object QTemp2: TZQuery
     Connection = connection
     Params = <>
-    Left = 168
-    Top = 24
+    Left = 232
+    Top = 32
   end
   object QTemp1: TZQuery
     Connection = connection
@@ -88,13 +110,42 @@ object DM: TDM
   object QTemp: TZQuery
     Connection = connection
     Params = <>
-    Left = 80
-    Top = 72
+    Left = 224
+    Top = 96
   end
   object QPengguna: TZQuery
     Connection = connection
     Params = <>
-    Left = 24
-    Top = 128
+    Left = 264
+    Top = 160
+  end
+  object QSatuan: TZQuery
+    Connection = connection
+    Active = True
+    SQL.Strings = (
+      
+        'SELECT idsat AS "IDSAT",satuan AS "SATUAN", qty AS "QTY"  FROM t' +
+        'blsatuan')
+    Params = <>
+    Left = 88
+    Top = 72
+    object QSatuanIDSAT: TStringField
+      FieldName = 'IDSAT'
+      Required = True
+      Size = 5
+    end
+    object QSatuanSATUAN: TStringField
+      FieldName = 'SATUAN'
+      Required = True
+      Size = 50
+    end
+    object QSatuanQTY: TFloatField
+      FieldName = 'QTY'
+    end
+  end
+  object dsSatuan: TDataSource
+    DataSet = QSatuan
+    Left = 88
+    Top = 120
   end
 end

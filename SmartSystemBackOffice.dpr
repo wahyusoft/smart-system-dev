@@ -46,7 +46,8 @@ uses
   uAddPenjualan in 'uAddPenjualan.pas' {frmAddPenjualan},
   uPembelian in 'uPembelian.pas' {frmPembelian},
   uCariSupplier in 'uCariSupplier.pas' {frmCariSupplier},
-  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian};
+  uAddPembelian in 'uAddPembelian.pas' {frmAddPembelian},
+  uMenuLaporanBarang in 'uMenuLaporanBarang.pas' {frmMenuLaporanBarang};
 
 {$R *.res}
 

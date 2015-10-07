@@ -88,10 +88,10 @@ procedure TfrmSetting.bacaFileIni;
 begin
   _SQL        := ExtractFilePath(Application.ExeName)+ 'setting.ini';
   MyIniFile   := TIniFile.Create(_SQL);
-  Edit1.Text := MyIniFile.ReadString('setting','hostname','localhost');
-  Edit2.Text := MyIniFile.ReadString('setting','dbname','dbpostretail');
-  Edit3.Text := MyIniFile.ReadString('setting','user','postgres');
-  Edit4.Text := MyIniFile.ReadString('setting','pass','bismillah');
+  Edit1.Text := MyIniFile.ReadString('setting','hostname','');
+  Edit2.Text := MyIniFile.ReadString('setting','dbname','');
+  Edit3.Text := MyIniFile.ReadString('setting','user','');
+  Edit4.Text := MyIniFile.ReadString('setting','pass','');
   MyIniFile.Free;
 end;
 

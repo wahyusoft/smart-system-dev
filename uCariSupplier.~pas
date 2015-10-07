@@ -32,6 +32,12 @@ type
     procedure btnHapusClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edCariSupplierChange(Sender: TObject);
+    procedure GridSupplierSelectCell(Sender: TObject; ACol, ARow: Integer);
+    procedure GridSupplierCellColoring(Sender: TObject; ACol,
+      ARow: Integer; var CellColor, GridColor: TColor;
+      CellState: TCellState);
+    procedure GridSupplierDblClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }
   procedure Tampil(strSQL : String);
@@ -93,6 +99,7 @@ begin
         end;
     end;
   edCariSupplier.SetFocus;
+  idSup:=''; nmSup :='';
 end;
 
 procedure TfrmCariSupplier.FormClose(Sender: TObject;
@@ -115,7 +122,30 @@ end;
 procedure TfrmCariSupplier.edCariSupplierChange(Sender: TObject);
 begin
   if trim(edCariSupplier.Text)='' then exit;
-  //Tampil(' WHERE nama LIKE "%'+edCariSupplier.Text+'%"');
+  Tampil(' WHERE nama LIKE ''%'+edCariSupplier.Text+'%''');
+end;
+
+procedure TfrmCariSupplier.GridSupplierSelectCell(Sender: TObject; ACol,
+  ARow: Integer);
+begin
+  idSup := GridSupplier.Cell[0,ARow].AsString;
+  nmSup := GridSupplier.Cell[1,ARow].AsString;
+end;
+
+procedure TfrmCariSupplier.GridSupplierCellColoring(Sender: TObject; ACol,
+  ARow: Integer; var CellColor, GridColor: TColor; CellState: TCellState);
+begin
+   if ARow mod 2 <> 0 then CellColor := clSkyBlue;
+end;
+
+procedure TfrmCariSupplier.GridSupplierDblClick(Sender: TObject);
+begin
+  btnHapusClick(Self);
+end;
+
+procedure TfrmCariSupplier.btnEditClick(Sender: TObject);
+begin
+  btnHapusClick(Self);
 end;
 
 end.

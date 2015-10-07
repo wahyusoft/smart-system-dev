@@ -27,6 +27,12 @@ type
     QBarangtotalomzet: TFloatField;
     QBarangnama: TStringField;
     QBarangkategori: TStringField;
+    QSatuan: TZQuery;
+    dsSatuan: TDataSource;
+    QSatuanIDSAT: TStringField;
+    QSatuanSATUAN: TStringField;
+    QSatuanQTY: TFloatField;
+    QBarangmargin: TFloatField;
   private
     { Private declarations }
   public

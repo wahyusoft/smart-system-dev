@@ -1,6 +1,6 @@
 object frmKelompok: TfrmKelompok
-  Left = 196
-  Top = 472
+  Left = 293
+  Top = 232
   Width = 905
   Height = 661
   Caption = 'Data Kelompok'
@@ -239,6 +239,7 @@ object frmKelompok: TfrmKelompok
       ParentFont = False
       TabOrder = 1
       TabStop = True
+      OnCellColoring = GridKelompokCellColoring
       object NxTextColumn13: TNxTextColumn
         DefaultWidth = 50
         Font.Charset = DEFAULT_CHARSET
